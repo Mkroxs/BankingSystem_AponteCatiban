@@ -16,7 +16,5 @@ namespace BankingSystem_AponteCatiban.Models
         public string customerAccountNumber { get; set; }
         public decimal customerBalance { get; set; }
 
-        public string name { get; set; }
-
     }
 }

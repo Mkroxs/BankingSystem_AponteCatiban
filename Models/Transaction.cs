@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankingSystem_AponteCatiban.Models
 {
-    internal class Transaction
+    public class Transaction
     {
         public string customerAccountNumber { get; set; }
         public DateTime date {  get; set; }

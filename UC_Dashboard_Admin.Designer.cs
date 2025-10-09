@@ -45,6 +45,7 @@
             this.lblregister.Size = new System.Drawing.Size(184, 34);
             this.lblregister.TabIndex = 0;
             this.lblregister.Text = "Register Customer";
+            this.lblregister.Click += new System.EventHandler(this.lblregister_Click_1);
             // 
             // lbldeposit
             // 
@@ -100,6 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblcus_prof);
             this.Controls.Add(this.lblcheck_bal);

@@ -13,9 +13,11 @@ namespace BankingSystem_AponteCatiban
 {
     public partial class UC_Dashboard_Admin: UserControl
     {
+
         public UC_Dashboard_Admin()
         {
             InitializeComponent();
+
         }
 
         private void UC_Dashboard_Admin_Load(object sender, EventArgs e)
@@ -25,7 +27,13 @@ namespace BankingSystem_AponteCatiban
 
         private void lblregister_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void lblregister_Click_1(object sender, EventArgs e)
+        {
             var mainform = this.Parent as MainForm;
+
             mainform.registration.BringToFront();
         }
     }

@@ -36,5 +36,10 @@ namespace BankingSystem_AponteCatiban
 
             mainform.registration.BringToFront();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

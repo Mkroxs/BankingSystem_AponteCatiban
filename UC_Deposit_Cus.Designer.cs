@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtbx_amount = new System.Windows.Forms.TextBox();
             this.btn_1000 = new System.Windows.Forms.Button();
@@ -44,17 +43,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_totalamount = new System.Windows.Forms.Label();
             this.btn_deposit = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Deposit";
             // 
             // label2
             // 
@@ -209,11 +203,48 @@
             this.btn_deposit.Text = "Deposit";
             this.btn_deposit.UseVisualStyleBackColor = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(747, 64);
+            this.panel1.TabIndex = 36;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(282, 63);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(288, 412);
+            this.panel2.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Himalaya", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(19, 7);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(135, 54);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "Deposit";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 466);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(749, 10);
+            this.flowLayoutPanel1.TabIndex = 37;
+            // 
             // UC_Deposit_Cus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_deposit);
             this.Controls.Add(this.lbl_totalamount);
             this.Controls.Add(this.label3);
@@ -229,17 +260,16 @@
             this.Controls.Add(this.btn_1000);
             this.Controls.Add(this.txtbx_amount);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "UC_Deposit_Cus";
             this.Size = new System.Drawing.Size(747, 476);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtbx_amount;
         private System.Windows.Forms.Button btn_1000;
@@ -255,5 +285,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbl_totalamount;
         private System.Windows.Forms.Button btn_deposit;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

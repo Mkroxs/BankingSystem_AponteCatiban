@@ -36,7 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtbxpass = new System.Windows.Forms.TextBox();
             this.txtbxuser = new System.Windows.Forms.TextBox();
-            this.lbl_Register = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,8 +44,8 @@
             // 
             this.panel1.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.login_file;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.lbl_Register);
             this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnclose);
             this.panel1.Controls.Add(this.btnlogin);
             this.panel1.Controls.Add(this.label2);
@@ -144,18 +144,20 @@
             this.txtbxuser.TabIndex = 0;
             this.txtbxuser.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // lbl_Register
+            // label3
             // 
-            this.lbl_Register.AutoSize = true;
-            this.lbl_Register.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Register.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Register.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbl_Register.Location = new System.Drawing.Point(86, 300);
-            this.lbl_Register.Name = "lbl_Register";
-            this.lbl_Register.Size = new System.Drawing.Size(58, 12);
-            this.lbl_Register.TabIndex = 8;
-            this.lbl_Register.Text = "Register?";
-            this.lbl_Register.Click += new System.EventHandler(this.lbl_Register_Click);
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.label3.Location = new System.Drawing.Point(83, 301);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Register?";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label3.MouseEnter += new System.EventHandler(this.label3_MouseEnter);
+            this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
             // 
             // MainForm
             // 
@@ -189,7 +191,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnclose;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lbl_Register;
+        private System.Windows.Forms.Label label3;
     }
 }
 

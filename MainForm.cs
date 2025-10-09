@@ -24,6 +24,10 @@ namespace BankingSystem_AponteCatiban
         public UC_TransactionHistory transactionHistory = new UC_TransactionHistory();
         public UC_Withdraw withdraw = new UC_Withdraw();
 
+        private Font originalFont;
+        private Color originalForeColor;
+        private Color originalBackColor;
+
         public MainForm()
         {
             InitializeComponent();
@@ -54,11 +58,18 @@ namespace BankingSystem_AponteCatiban
             withdraw.Dock = DockStyle.Fill;
 
 
+            label3.MouseEnter += label3_MouseEnter;
+            label3.MouseLeave += label3_MouseLeave;
+
+            this.Load += MainForm_Load;
+
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            originalFont = label3.Font;
+            originalForeColor = label3.ForeColor;
+            originalBackColor = label3.BackColor;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -87,14 +98,20 @@ namespace BankingSystem_AponteCatiban
         private void label3_Click (object sender, EventArgs e)
         {
             registration.BringToFront();
+            label3.ForeColor = originalForeColor;
         }
         private void label3_MouseEnter (object sender, EventArgs e)
         {
             
+            label3.ForeColor = Color.SkyBlue;
         }
         private void label3_MouseLeave(object sender, EventArgs e)
         {
             
+            UC_Registration registration = new UC_Registration();
+            this.Controls.Add(registration);
+            registration.Dock = DockStyle.Fill;
+            registration.BringToFront();
         }
     }
 }

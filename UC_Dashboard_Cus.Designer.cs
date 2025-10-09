@@ -33,6 +33,7 @@
             this.lbltransac_history = new System.Windows.Forms.Label();
             this.lblcheck_bal = new System.Windows.Forms.Label();
             this.lbldeposit = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -85,10 +86,21 @@
             this.lbldeposit.TabIndex = 7;
             this.lbldeposit.Text = "Deposit";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(19, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(281, 39);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "KNAB CENTRAL";
+            // 
             // UC_Dashboard_Cus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblprof);
             this.Controls.Add(this.lbltransac_history);
@@ -108,5 +120,6 @@
         private System.Windows.Forms.Label lbltransac_history;
         private System.Windows.Forms.Label lblcheck_bal;
         private System.Windows.Forms.Label lbldeposit;
+        private System.Windows.Forms.Label label2;
     }
 }

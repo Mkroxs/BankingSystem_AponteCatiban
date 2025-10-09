@@ -16,5 +16,10 @@ namespace BankingSystem_AponteCatiban
         {
             InitializeComponent();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -209,10 +209,11 @@
             this.btn_deposit.Text = "Deposit";
             this.btn_deposit.UseVisualStyleBackColor = false;
             // 
-            // UC_Deposit
+            // UC_Deposit_Cus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Controls.Add(this.btn_deposit);
             this.Controls.Add(this.lbl_totalamount);
             this.Controls.Add(this.label3);
@@ -229,7 +230,7 @@
             this.Controls.Add(this.txtbx_amount);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "UC_Deposit";
+            this.Name = "UC_Deposit_Cus";
             this.Size = new System.Drawing.Size(747, 476);
             this.ResumeLayout(false);
             this.PerformLayout();

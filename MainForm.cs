@@ -36,5 +36,11 @@ namespace BankingSystem_AponteCatiban
         {
 
         }
+
+        private void btnclose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
     }
 }

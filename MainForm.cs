@@ -36,5 +36,25 @@ namespace BankingSystem_AponteCatiban
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_MouseClick(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void label3_MouseClick_1(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+ 
+        }
     }
 }

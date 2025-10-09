@@ -34,7 +34,7 @@ namespace BankingSystem_AponteCatiban
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnclose_Click(object sender, EventArgs e)
@@ -42,5 +42,19 @@ namespace BankingSystem_AponteCatiban
             Close();
         }
 
+        private void label3_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

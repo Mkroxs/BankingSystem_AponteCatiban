@@ -28,35 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtbxuser = new System.Windows.Forms.TextBox();
-            this.txtbxpass = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.btnclose = new System.Windows.Forms.Button();
             this.btnlogin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtbxpass = new System.Windows.Forms.TextBox();
+            this.txtbxuser = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtbxuser
-            // 
-            this.txtbxuser.BackColor = System.Drawing.Color.LightGray;
-            this.txtbxuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxuser.Location = new System.Drawing.Point(82, 156);
-            this.txtbxuser.Name = "txtbxuser";
-            this.txtbxuser.Size = new System.Drawing.Size(194, 30);
-            this.txtbxuser.TabIndex = 0;
-            this.txtbxuser.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // txtbxpass
-            // 
-            this.txtbxpass.BackColor = System.Drawing.Color.LightGray;
-            this.txtbxpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxpass.Location = new System.Drawing.Point(82, 220);
-            this.txtbxpass.Name = "txtbxpass";
-            this.txtbxpass.Size = new System.Drawing.Size(194, 30);
-            this.txtbxpass.TabIndex = 1;
             // 
             // panel1
             // 
@@ -99,6 +80,7 @@
             this.btnclose.TabIndex = 5;
             this.btnclose.Text = "Close";
             this.btnclose.UseVisualStyleBackColor = false;
+            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
             // btnlogin
             // 
@@ -139,6 +121,26 @@
             this.label1.Size = new System.Drawing.Size(73, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Username";
+            // 
+            // txtbxpass
+            // 
+            this.txtbxpass.BackColor = System.Drawing.Color.LightGray;
+            this.txtbxpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxpass.Location = new System.Drawing.Point(82, 220);
+            this.txtbxpass.Name = "txtbxpass";
+            this.txtbxpass.PasswordChar = '*';
+            this.txtbxpass.Size = new System.Drawing.Size(194, 26);
+            this.txtbxpass.TabIndex = 1;
+            // 
+            // txtbxuser
+            // 
+            this.txtbxuser.BackColor = System.Drawing.Color.LightGray;
+            this.txtbxuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxuser.Location = new System.Drawing.Point(82, 156);
+            this.txtbxuser.Name = "txtbxuser";
+            this.txtbxuser.Size = new System.Drawing.Size(194, 26);
+            this.txtbxuser.TabIndex = 0;
+            this.txtbxuser.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // MainForm
             // 

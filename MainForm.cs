@@ -58,8 +58,8 @@ namespace BankingSystem_AponteCatiban
             withdraw.Dock = DockStyle.Fill;
 
 
-            label3.MouseEnter += label3_MouseEnter;
-            label3.MouseLeave += label3_MouseLeave;
+            lbl_Register.MouseEnter += lbl_Register_MouseEnter;
+            lbl_Register.MouseLeave += lbl_Register_MouseLeave;
 
             this.Load += MainForm_Load;
 
@@ -67,9 +67,9 @@ namespace BankingSystem_AponteCatiban
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            originalFont = label3.Font;
-            originalForeColor = label3.ForeColor;
-            originalBackColor = label3.BackColor;
+            originalFont = lbl_Register.Font;
+            originalForeColor = lbl_Register.ForeColor;
+            originalBackColor = lbl_Register.BackColor;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -95,23 +95,20 @@ namespace BankingSystem_AponteCatiban
             Close();
         }
 
-        private void label3_Click (object sender, EventArgs e)
+        private void lbl_Register_Click (object sender, EventArgs e)
         {
             registration.BringToFront();
-            label3.ForeColor = originalForeColor;
+            lbl_Register.ForeColor = originalForeColor;
         }
-        private void label3_MouseEnter (object sender, EventArgs e)
+        private void lbl_Register_MouseEnter (object sender, EventArgs e)
         {
             
-            label3.ForeColor = Color.SkyBlue;
+            lbl_Register.ForeColor = Color.SkyBlue;
         }
-        private void label3_MouseLeave(object sender, EventArgs e)
+        private void lbl_Register_MouseLeave(object sender, EventArgs e)
         {
-            
-            UC_Registration registration = new UC_Registration();
-            this.Controls.Add(registration);
-            registration.Dock = DockStyle.Fill;
-            registration.BringToFront();
+            lbl_Register.ForeColor = originalForeColor;
+
         }
     }
 }

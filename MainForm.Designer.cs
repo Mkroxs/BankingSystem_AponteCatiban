@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.lbl_Register = new System.Windows.Forms.Label();
             this.btnclose = new System.Windows.Forms.Button();
             this.btnlogin = new System.Windows.Forms.Button();
@@ -72,20 +71,20 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "KNAB CENTRAL";
             // 
-            // label3
+            // lbl_Register
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.label3.Location = new System.Drawing.Point(83, 301);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Register?";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            this.label3.MouseEnter += new System.EventHandler(this.label3_MouseEnter);
-            this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
+            this.lbl_Register.AutoSize = true;
+            this.lbl_Register.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Register.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Register.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.lbl_Register.Location = new System.Drawing.Point(83, 301);
+            this.lbl_Register.Name = "lbl_Register";
+            this.lbl_Register.Size = new System.Drawing.Size(52, 13);
+            this.lbl_Register.TabIndex = 6;
+            this.lbl_Register.Text = "Register?";
+            this.lbl_Register.Click += new System.EventHandler(this.lbl_Register_Click);
+            this.lbl_Register.MouseEnter += new System.EventHandler(this.lbl_Register_MouseEnter);
+            this.lbl_Register.MouseLeave += new System.EventHandler(this.lbl_Register_MouseLeave);
             // 
             // lbl_Register
             // 
@@ -98,9 +97,9 @@
             this.lbl_Register.Size = new System.Drawing.Size(52, 13);
             this.lbl_Register.TabIndex = 6;
             this.lbl_Register.Text = "Register?";
-            this.lbl_Register.Click += new System.EventHandler(this.label3_Click);
-            this.lbl_Register.MouseEnter += new System.EventHandler(this.label3_MouseEnter);
-            this.lbl_Register.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
+            this.lbl_Register.Click += new System.EventHandler(this.lbl_Register_Click);
+            this.lbl_Register.MouseEnter += new System.EventHandler(this.lbl_Register_MouseEnter);
+            this.lbl_Register.MouseLeave += new System.EventHandler(this.lbl_Register_MouseLeave);
             // 
             // btnclose
             // 

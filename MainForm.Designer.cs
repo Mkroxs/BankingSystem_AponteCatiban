@@ -36,11 +36,13 @@
             this.btnlogin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtbxuser
             // 
+            this.txtbxuser.BackColor = System.Drawing.Color.LightGray;
             this.txtbxuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxuser.Location = new System.Drawing.Point(82, 156);
             this.txtbxuser.Name = "txtbxuser";
@@ -50,6 +52,7 @@
             // 
             // txtbxpass
             // 
+            this.txtbxpass.BackColor = System.Drawing.Color.LightGray;
             this.txtbxpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxpass.Location = new System.Drawing.Point(82, 220);
             this.txtbxpass.Name = "txtbxpass";
@@ -60,6 +63,7 @@
             // 
             this.panel1.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.login_file;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnclose);
             this.panel1.Controls.Add(this.btnlogin);
@@ -138,6 +142,18 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Username";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Himalaya", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(17, 69);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(371, 67);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "KNAB CENTRAL";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,6 +186,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnclose;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 

@@ -45,7 +45,10 @@ namespace BankingSystem_AponteCatiban
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            UC_Dashboard_Admin admin = new UC_Dashboard_Admin();
+            this.Controls.Add(admin);
+            admin.Dock = DockStyle.Fill;
+            admin.BringToFront();
         }
 
         private void btnclose_Click(object sender, EventArgs e)

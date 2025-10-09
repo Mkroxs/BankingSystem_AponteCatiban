@@ -59,7 +59,7 @@
             // 
             this.lbltransac_history.AutoSize = true;
             this.lbltransac_history.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltransac_history.Location = new System.Drawing.Point(74, 192);
+            this.lbltransac_history.Location = new System.Drawing.Point(74, 184);
             this.lbltransac_history.Name = "lbltransac_history";
             this.lbltransac_history.Size = new System.Drawing.Size(189, 34);
             this.lbltransac_history.TabIndex = 9;
@@ -69,7 +69,7 @@
             // 
             this.lblcheck_bal.AutoSize = true;
             this.lblcheck_bal.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcheck_bal.Location = new System.Drawing.Point(74, 142);
+            this.lblcheck_bal.Location = new System.Drawing.Point(74, 130);
             this.lblcheck_bal.Name = "lblcheck_bal";
             this.lblcheck_bal.Size = new System.Drawing.Size(150, 34);
             this.lblcheck_bal.TabIndex = 8;

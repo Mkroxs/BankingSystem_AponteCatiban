@@ -50,7 +50,7 @@
             // 
             this.lbldeposit.AutoSize = true;
             this.lbldeposit.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldeposit.Location = new System.Drawing.Point(75, 145);
+            this.lbldeposit.Location = new System.Drawing.Point(75, 139);
             this.lbldeposit.Name = "lbldeposit";
             this.lbldeposit.Size = new System.Drawing.Size(84, 34);
             this.lbldeposit.TabIndex = 1;
@@ -60,7 +60,7 @@
             // 
             this.lblwithdraw.AutoSize = true;
             this.lblwithdraw.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblwithdraw.Location = new System.Drawing.Point(75, 208);
+            this.lblwithdraw.Location = new System.Drawing.Point(75, 193);
             this.lblwithdraw.Name = "lblwithdraw";
             this.lblwithdraw.Size = new System.Drawing.Size(105, 34);
             this.lblwithdraw.TabIndex = 2;
@@ -70,7 +70,7 @@
             // 
             this.lblcheck_bal.AutoSize = true;
             this.lblcheck_bal.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcheck_bal.Location = new System.Drawing.Point(75, 258);
+            this.lblcheck_bal.Location = new System.Drawing.Point(75, 241);
             this.lblcheck_bal.Name = "lblcheck_bal";
             this.lblcheck_bal.Size = new System.Drawing.Size(150, 34);
             this.lblcheck_bal.TabIndex = 3;
@@ -80,7 +80,7 @@
             // 
             this.lblcus_prof.AutoSize = true;
             this.lblcus_prof.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcus_prof.Location = new System.Drawing.Point(75, 308);
+            this.lblcus_prof.Location = new System.Drawing.Point(75, 296);
             this.lblcus_prof.Name = "lblcus_prof";
             this.lblcus_prof.Size = new System.Drawing.Size(171, 34);
             this.lblcus_prof.TabIndex = 4;

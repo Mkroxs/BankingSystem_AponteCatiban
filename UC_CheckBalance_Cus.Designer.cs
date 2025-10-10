@@ -71,6 +71,7 @@
             this.lbl_accnum.Size = new System.Drawing.Size(89, 24);
             this.lbl_accnum.TabIndex = 29;
             this.lbl_accnum.Text = "Acc Num";
+            this.lbl_accnum.Click += new System.EventHandler(this.lbl_accnum_Click);
             // 
             // label4
             // 
@@ -111,6 +112,7 @@
             this.btn_close.TabIndex = 32;
             this.btn_close.Text = "Close";
             this.btn_close.UseVisualStyleBackColor = true;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -163,6 +165,7 @@
             this.Controls.Add(this.label2);
             this.Name = "UC_CheckBalance_Cus";
             this.Size = new System.Drawing.Size(747, 476);
+            this.Load += new System.EventHandler(this.UC_CheckBalance_Cus_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

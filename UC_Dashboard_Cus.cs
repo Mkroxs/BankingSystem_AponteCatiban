@@ -19,7 +19,32 @@ namespace BankingSystem_AponteCatiban
 
         private void label1_Click(object sender, EventArgs e)
         {
-           
+            var mainform = this.Parent as MainForm;
+            mainform.login.BringToFront();
+        }
+
+        private void lbldeposit_Click(object sender, EventArgs e)
+        {
+            var mainform = this.Parent as MainForm;
+            mainform.deposit_customer.BringToFront();
+        }
+
+        private void lblcheck_bal_Click(object sender, EventArgs e)
+        {
+            var mainform = this.Parent as MainForm;
+            mainform.checkBalance_Cus.BringToFront();
+        }
+
+        private void lbltransac_history_Click(object sender, EventArgs e)
+        {
+            var mainform = this.Parent as MainForm;
+            mainform.transactionHistory.BringToFront();
+        }
+
+        private void lblprof_Click(object sender, EventArgs e)
+        {
+            var mainform = this.Parent as MainForm;
+            mainform.profile.BringToFront();
         }
     }
 }

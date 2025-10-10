@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BankingSystem_AponteCatiban.Models;
+using Newtonsoft.Json;
 
 namespace BankingSystem_AponteCatiban
 {
@@ -30,29 +33,53 @@ namespace BankingSystem_AponteCatiban
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
+            string filePath = Path.Combine(Application.StartupPath, "Data", "customers.txt");
+
             string username = txtbxuser.Text.Trim();
             string password = txtbxpass.Text.Trim();
-
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            try
             {
-                MessageBox.Show("Please enter both username and password.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+                string jsonContent = File.ReadAllText(filePath);
+                List<Customer> customers = JsonConvert.DeserializeObject<List<Customer>>(jsonContent);
 
-           
-            if (username == "admin" && password == "admin")
-            {
-                var mainform = this.Parent as MainForm;
-                if (mainform != null)
+                Customer matchingCustomer = customers.FirstOrDefault(c =>
+                    c.Email == username &&
+                    c.AccountNumber.Replace("-", "") == password);
+
+                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 {
-                    mainform.dashboard_Admin.BringToFront();
+                    MessageBox.Show("Please enter both username and password.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
+
+
+                if (username == "admin" && password == "admin")
+                {
+                    var mainform = this.Parent as MainForm;
+                    if (mainform != null)
+                    {
+                        mainform.dashboard_Admin.BringToFront();
+                    }
+                }
+                else if (matchingCustomer != null)
+                {
+                    var mainform = this.Parent as MainForm;
+                    if (mainform != null)
+                    {
+                        mainform.dashboard_Cus.BringToFront();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username or password.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            
             }
-            else
-            {
-                MessageBox.Show("Invalid username or password.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            clearField();
+            catch { }
+
+
+                clearField();
         }
 
         private void btnclose_Click(object sender, EventArgs e)

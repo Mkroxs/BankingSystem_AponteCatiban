@@ -62,6 +62,7 @@
             this.lblprof.Size = new System.Drawing.Size(77, 34);
             this.lblprof.TabIndex = 10;
             this.lblprof.Text = "Profile";
+            this.lblprof.Click += new System.EventHandler(this.lblprof_Click);
             // 
             // lbltransac_history
             // 
@@ -73,6 +74,7 @@
             this.lbltransac_history.Size = new System.Drawing.Size(189, 34);
             this.lbltransac_history.TabIndex = 9;
             this.lbltransac_history.Text = "Transaction history";
+            this.lbltransac_history.Click += new System.EventHandler(this.lbltransac_history_Click);
             // 
             // lblcheck_bal
             // 
@@ -84,6 +86,7 @@
             this.lblcheck_bal.Size = new System.Drawing.Size(150, 34);
             this.lblcheck_bal.TabIndex = 8;
             this.lblcheck_bal.Text = "Check Balance";
+            this.lblcheck_bal.Click += new System.EventHandler(this.lblcheck_bal_Click);
             // 
             // lbldeposit
             // 
@@ -95,6 +98,7 @@
             this.lbldeposit.Size = new System.Drawing.Size(84, 34);
             this.lbldeposit.TabIndex = 7;
             this.lbldeposit.Text = "Deposit";
+            this.lbldeposit.Click += new System.EventHandler(this.lbldeposit_Click);
             // 
             // panel1
             // 

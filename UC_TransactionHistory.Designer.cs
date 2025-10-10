@@ -158,6 +158,7 @@
             this.btn_close.TabIndex = 39;
             this.btn_close.Text = "Close";
             this.btn_close.UseVisualStyleBackColor = true;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // label5
             // 
@@ -176,6 +177,7 @@
             this.dgv_cuslist.Name = "dgv_cuslist";
             this.dgv_cuslist.Size = new System.Drawing.Size(378, 129);
             this.dgv_cuslist.TabIndex = 40;
+            this.dgv_cuslist.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_cuslist_CellClick);
             // 
             // panel1
             // 

@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using BankingSystem_AponteCatiban.Models;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using Newtonsoft.Json;
 
 namespace BankingSystem_AponteCatiban
 {
@@ -15,6 +19,41 @@ namespace BankingSystem_AponteCatiban
         public UC_CheckBalance_Cus()
         {
             InitializeComponent();
+        }
+
+        private void lbl_accnum_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            var mainform = this.Parent as MainForm;
+            mainform.dashboard_Cus.BringToFront();
+        }
+
+        private void LoadCustomerData()
+        {
+            try
+            {
+                string filePath = Path.Combine(Application.StartupPath, "Data", "customers.txt");
+                string jsonContent = File.ReadAllText(filePath);
+                Customer[] customers = JsonConvert.DeserializeObject<Customer[]>(jsonContent);
+
+                if (customers != null && customers.Length > 0)
+                {
+                    Customer customer = customers[0];
+                    lbl_accnum.Text = $"{customer.AccountNumber}";
+                    lbl_accname.Text = $"{customer.FullName}";
+                    lbl_rembal.Text = $"${customer.Balance:F2}";  
+                }
+            }
+            catch { }
+        }
+
+        private void UC_CheckBalance_Cus_Load(object sender, EventArgs e)
+        {
+            LoadCustomerData();
         }
     }
 }

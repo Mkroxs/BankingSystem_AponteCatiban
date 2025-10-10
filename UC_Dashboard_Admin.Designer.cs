@@ -52,6 +52,7 @@
             this.lblregister.Size = new System.Drawing.Size(184, 34);
             this.lblregister.TabIndex = 0;
             this.lblregister.Text = "Register Customer";
+            this.lblregister.Click += new System.EventHandler(this.lblregister_Click_2);
             // 
             // lbldeposit
             // 
@@ -63,6 +64,7 @@
             this.lbldeposit.Size = new System.Drawing.Size(84, 34);
             this.lbldeposit.TabIndex = 1;
             this.lbldeposit.Text = "Deposit";
+            this.lbldeposit.Click += new System.EventHandler(this.lbldeposit_Click);
             // 
             // lblwithdraw
             // 
@@ -74,6 +76,7 @@
             this.lblwithdraw.Size = new System.Drawing.Size(105, 34);
             this.lblwithdraw.TabIndex = 2;
             this.lblwithdraw.Text = "Withdraw";
+            this.lblwithdraw.Click += new System.EventHandler(this.lblwithdraw_Click);
             // 
             // lblcheck_bal
             // 
@@ -85,6 +88,7 @@
             this.lblcheck_bal.Size = new System.Drawing.Size(150, 34);
             this.lblcheck_bal.TabIndex = 3;
             this.lblcheck_bal.Text = "Check Balance";
+            this.lblcheck_bal.Click += new System.EventHandler(this.lblcheck_bal_Click);
             // 
             // lblcus_prof
             // 
@@ -96,6 +100,7 @@
             this.lblcus_prof.Size = new System.Drawing.Size(171, 34);
             this.lblcus_prof.TabIndex = 4;
             this.lblcus_prof.Text = "Customer Profile";
+            this.lblcus_prof.Click += new System.EventHandler(this.lblcus_prof_Click);
             // 
             // label1
             // 
@@ -159,6 +164,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "UC_Dashboard_Admin";
             this.Size = new System.Drawing.Size(747, 476);
+            this.Load += new System.EventHandler(this.UC_Dashboard_Admin_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);

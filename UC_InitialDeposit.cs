@@ -1,8 +1,9 @@
-﻿using System;
+﻿using BankingSystem_AponteCatiban;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,26 +11,24 @@ using System.Windows.Forms;
 
 namespace BankingSystem_AponteCatiban
 {
-    public partial class UC_Deposit_Cus: UserControl
+    public partial class UC_InitialDeposit : UserControl
     {
-        
         decimal totalAmount = 0;
         public event Action<decimal> OnConfirm;
 
-        private void setValue (object sender, EventArgs e)
+        private void setValue(object sender, EventArgs e)
         {
             Button btn = sender as Button;
             if (btn == null) return;
 
-            
+
             if (decimal.TryParse(btn.Text, out decimal value))
             {
                 totalAmount += value;
                 lbl_totalamount.Text = $"₱{totalAmount:N2}";
             }
         }
-
-        public UC_Deposit_Cus()
+        public UC_InitialDeposit()
         {
             InitializeComponent();
 
@@ -44,36 +43,35 @@ namespace BankingSystem_AponteCatiban
             btn_1.Click += setValue;
         }
 
-        private void btn_1000_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void lbl_totalamount_Click(object sender, EventArgs e)
+        private void UC_InitialDeposit_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void btn_deposit_Click(object sender, EventArgs e)
+        private void btn_confirm_Click(object sender, EventArgs e)
         {
-
-            OnConfirm?.Invoke(totalAmount);
+            OnConfirm?.Invoke(totalAmount); 
             totalAmount = 0;
             lbl_totalamount.Text = "₱0.00";
-
-
-        }
-
-        private void UC_Deposit_Cus_Load(object sender, EventArgs e)
-        {
-
+            this.Hide();
         }
 
         private void btn_clear_Click(object sender, EventArgs e)
         {
             totalAmount = 0;
-            lbl_totalamount.Text = "₱0.00";
+            lbl_totalamount.Text = "₱0";
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+    
+            this.Hide();
+            
+        }
+
+        private void lbl_totalamount_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

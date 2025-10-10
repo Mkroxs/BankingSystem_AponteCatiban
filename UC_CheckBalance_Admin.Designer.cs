@@ -34,90 +34,97 @@
             this.lbl_accnum = new System.Windows.Forms.Label();
             this.lbl_accname = new System.Windows.Forms.Label();
             this.lbl_rembal = new System.Windows.Forms.Label();
-            this.dgv_cuslist = new System.Windows.Forms.DataGridView();
+            this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_close = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_cuslist)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 108);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(16, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 24);
+            this.label2.Size = new System.Drawing.Size(123, 18);
             this.label2.TabIndex = 19;
             this.label2.Text = "Account Number:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(22, 180);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(17, 168);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 24);
+            this.label3.Size = new System.Drawing.Size(110, 18);
             this.label3.TabIndex = 20;
             this.label3.Text = "Account Name:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(22, 248);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(18, 214);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(179, 24);
+            this.label4.Size = new System.Drawing.Size(139, 18);
             this.label4.TabIndex = 21;
             this.label4.Text = "Remaining Balance:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // lbl_accnum
             // 
             this.lbl_accnum.AutoSize = true;
-            this.lbl_accnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_accnum.Location = new System.Drawing.Point(207, 108);
+            this.lbl_accnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_accnum.Location = new System.Drawing.Point(179, 116);
             this.lbl_accnum.Name = "lbl_accnum";
-            this.lbl_accnum.Size = new System.Drawing.Size(89, 24);
+            this.lbl_accnum.Size = new System.Drawing.Size(69, 18);
             this.lbl_accnum.TabIndex = 22;
             this.lbl_accnum.Text = "Acc Num";
+            this.lbl_accnum.Click += new System.EventHandler(this.lbl_accnum_Click);
             // 
             // lbl_accname
             // 
             this.lbl_accname.AutoSize = true;
-            this.lbl_accname.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_accname.Location = new System.Drawing.Point(207, 180);
+            this.lbl_accname.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_accname.Location = new System.Drawing.Point(178, 168);
             this.lbl_accname.Name = "lbl_accname";
-            this.lbl_accname.Size = new System.Drawing.Size(99, 24);
+            this.lbl_accname.Size = new System.Drawing.Size(77, 18);
             this.lbl_accname.TabIndex = 23;
             this.lbl_accname.Text = "Acc Name";
+            this.lbl_accname.Click += new System.EventHandler(this.lbl_accname_Click);
             // 
             // lbl_rembal
             // 
             this.lbl_rembal.AutoSize = true;
-            this.lbl_rembal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_rembal.Location = new System.Drawing.Point(207, 248);
+            this.lbl_rembal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_rembal.Location = new System.Drawing.Point(181, 214);
             this.lbl_rembal.Name = "lbl_rembal";
-            this.lbl_rembal.Size = new System.Drawing.Size(81, 24);
+            this.lbl_rembal.Size = new System.Drawing.Size(65, 18);
             this.lbl_rembal.TabIndex = 24;
             this.lbl_rembal.Text = "Rem Bal";
+            this.lbl_rembal.Click += new System.EventHandler(this.lbl_rembal_Click);
             // 
-            // dgv_cuslist
+            // dgvCustomers
             // 
-            this.dgv_cuslist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_cuslist.Location = new System.Drawing.Point(353, 108);
-            this.dgv_cuslist.Name = "dgv_cuslist";
-            this.dgv_cuslist.Size = new System.Drawing.Size(378, 129);
-            this.dgv_cuslist.TabIndex = 25;
+            this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCustomers.Location = new System.Drawing.Point(396, 108);
+            this.dgvCustomers.Name = "dgvCustomers";
+            this.dgvCustomers.Size = new System.Drawing.Size(330, 129);
+            this.dgvCustomers.TabIndex = 25;
+            this.dgvCustomers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomers_CellClick);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(350, 88);
+            this.label5.Location = new System.Drawing.Point(394, 88);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 17);
             this.label5.TabIndex = 26;
@@ -132,6 +139,7 @@
             this.btn_close.TabIndex = 30;
             this.btn_close.Text = "Close";
             this.btn_close.UseVisualStyleBackColor = true;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // panel1
             // 
@@ -177,7 +185,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dgv_cuslist);
+            this.Controls.Add(this.dgvCustomers);
             this.Controls.Add(this.lbl_rembal);
             this.Controls.Add(this.lbl_accname);
             this.Controls.Add(this.lbl_accnum);
@@ -186,7 +194,8 @@
             this.Controls.Add(this.label2);
             this.Name = "UC_CheckBalance_Admin";
             this.Size = new System.Drawing.Size(747, 476);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_cuslist)).EndInit();
+            this.Load += new System.EventHandler(this.UC_CheckBalance_Admin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -201,7 +210,7 @@
         private System.Windows.Forms.Label lbl_accnum;
         private System.Windows.Forms.Label lbl_accname;
         private System.Windows.Forms.Label lbl_rembal;
-        private System.Windows.Forms.DataGridView dgv_cuslist;
+        private System.Windows.Forms.DataGridView dgvCustomers;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_close;
         private System.Windows.Forms.Panel panel1;

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtbx_cusaccnum = new System.Windows.Forms.TextBox();
+            this.txtbx_accnum = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtbx_amount = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,24 +36,28 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lbl_currbal = new System.Windows.Forms.Label();
-            this.lbl_amount = new System.Windows.Forms.Label();
+            this.lblAmount = new System.Windows.Forms.Label();
             this.lbl_newbal = new System.Windows.Forms.Label();
-            this.btn_deposit = new System.Windows.Forms.Button();
+            this.btn_withdraw = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.btn_clear = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblAccountName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtbx_cusaccnum
+            // txtbx_accnum
             // 
-            this.txtbx_cusaccnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbx_cusaccnum.Location = new System.Drawing.Point(199, 140);
-            this.txtbx_cusaccnum.Name = "txtbx_cusaccnum";
-            this.txtbx_cusaccnum.Size = new System.Drawing.Size(333, 26);
-            this.txtbx_cusaccnum.TabIndex = 38;
+            this.txtbx_accnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_accnum.Location = new System.Drawing.Point(199, 140);
+            this.txtbx_accnum.Name = "txtbx_accnum";
+            this.txtbx_accnum.Size = new System.Drawing.Size(333, 26);
+            this.txtbx_accnum.TabIndex = 38;
+            this.txtbx_accnum.TextChanged += new System.EventHandler(this.txtbx_accnum_TextChanged);
             // 
             // label4
             // 
@@ -72,6 +76,8 @@
             this.txtbx_amount.Name = "txtbx_amount";
             this.txtbx_amount.Size = new System.Drawing.Size(333, 26);
             this.txtbx_amount.TabIndex = 36;
+            this.txtbx_amount.TextChanged += new System.EventHandler(this.txtbx_amount_TextChanged);
+            this.txtbx_amount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbx_amount_KeyPress);
             // 
             // label2
             // 
@@ -87,7 +93,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(195, 266);
+            this.label3.Location = new System.Drawing.Point(196, 284);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 17);
             this.label3.TabIndex = 39;
@@ -97,7 +103,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(195, 289);
+            this.label5.Location = new System.Drawing.Point(196, 307);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 17);
             this.label5.TabIndex = 40;
@@ -107,7 +113,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(196, 312);
+            this.label6.Location = new System.Drawing.Point(197, 330);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 17);
             this.label6.TabIndex = 41;
@@ -117,56 +123,58 @@
             // 
             this.lbl_currbal.AutoSize = true;
             this.lbl_currbal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_currbal.Location = new System.Drawing.Point(309, 266);
+            this.lbl_currbal.Location = new System.Drawing.Point(310, 284);
             this.lbl_currbal.Name = "lbl_currbal";
-            this.lbl_currbal.Size = new System.Drawing.Size(59, 17);
+            this.lbl_currbal.Size = new System.Drawing.Size(45, 17);
             this.lbl_currbal.TabIndex = 42;
-            this.lbl_currbal.Text = "Curr Bal";
+            this.lbl_currbal.Text = "₱0.00";
             // 
-            // lbl_amount
+            // lblAmount
             // 
-            this.lbl_amount.AutoSize = true;
-            this.lbl_amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_amount.Location = new System.Drawing.Point(254, 289);
-            this.lbl_amount.Name = "lbl_amount";
-            this.lbl_amount.Size = new System.Drawing.Size(56, 17);
-            this.lbl_amount.TabIndex = 43;
-            this.lbl_amount.Text = "Amount";
+            this.lblAmount.AutoSize = true;
+            this.lblAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmount.Location = new System.Drawing.Point(310, 308);
+            this.lblAmount.Name = "lblAmount";
+            this.lblAmount.Size = new System.Drawing.Size(45, 17);
+            this.lblAmount.TabIndex = 43;
+            this.lblAmount.Text = "₱0.00";
             // 
             // lbl_newbal
             // 
             this.lbl_newbal.AutoSize = true;
             this.lbl_newbal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_newbal.Location = new System.Drawing.Point(289, 312);
+            this.lbl_newbal.Location = new System.Drawing.Point(310, 330);
             this.lbl_newbal.Name = "lbl_newbal";
-            this.lbl_newbal.Size = new System.Drawing.Size(59, 17);
+            this.lbl_newbal.Size = new System.Drawing.Size(45, 17);
             this.lbl_newbal.TabIndex = 44;
-            this.lbl_newbal.Text = "New Bal";
+            this.lbl_newbal.Text = "₱0.00";
             // 
-            // btn_deposit
+            // btn_withdraw
             // 
-            this.btn_deposit.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btn_deposit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_deposit.FlatAppearance.BorderSize = 0;
-            this.btn_deposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_deposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_deposit.ForeColor = System.Drawing.Color.White;
-            this.btn_deposit.Location = new System.Drawing.Point(263, 373);
-            this.btn_deposit.Name = "btn_deposit";
-            this.btn_deposit.Size = new System.Drawing.Size(97, 32);
-            this.btn_deposit.TabIndex = 46;
-            this.btn_deposit.Text = "Withdraw";
-            this.btn_deposit.UseVisualStyleBackColor = false;
+            this.btn_withdraw.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_withdraw.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_withdraw.FlatAppearance.BorderSize = 0;
+            this.btn_withdraw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_withdraw.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_withdraw.ForeColor = System.Drawing.Color.White;
+            this.btn_withdraw.Location = new System.Drawing.Point(263, 373);
+            this.btn_withdraw.Name = "btn_withdraw";
+            this.btn_withdraw.Size = new System.Drawing.Size(97, 32);
+            this.btn_withdraw.TabIndex = 46;
+            this.btn_withdraw.Text = "Withdraw";
+            this.btn_withdraw.UseVisualStyleBackColor = false;
+            this.btn_withdraw.Click += new System.EventHandler(this.btn_withdraw_Click);
             // 
             // btn_cancel
             // 
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(382, 373);
+            this.btn_cancel.Location = new System.Drawing.Point(506, 372);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(97, 32);
             this.btn_cancel.TabIndex = 45;
             this.btn_cancel.Text = "Cancel";
             this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -204,26 +212,67 @@
             this.label10.TabIndex = 27;
             this.label10.Text = "Withdraw";
             // 
+            // btn_clear
+            // 
+            this.btn_clear.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_clear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_clear.FlatAppearance.BorderSize = 0;
+            this.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clear.ForeColor = System.Drawing.Color.White;
+            this.btn_clear.Location = new System.Drawing.Point(384, 372);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(97, 32);
+            this.btn_clear.TabIndex = 48;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseVisualStyleBackColor = false;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(196, 264);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 17);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "Account Name:";
+            // 
+            // lblAccountName
+            // 
+            this.lblAccountName.AutoSize = true;
+            this.lblAccountName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAccountName.Location = new System.Drawing.Point(310, 266);
+            this.lblAccountName.Name = "lblAccountName";
+            this.lblAccountName.Size = new System.Drawing.Size(13, 17);
+            this.lblAccountName.TabIndex = 50;
+            this.lblAccountName.Text = "-";
+            this.lblAccountName.Click += new System.EventHandler(this.lblAccountName_Click);
+            // 
             // UC_Withdraw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblAccountName);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.btn_deposit);
+            this.Controls.Add(this.btn_withdraw);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.lbl_newbal);
-            this.Controls.Add(this.lbl_amount);
+            this.Controls.Add(this.lblAmount);
             this.Controls.Add(this.lbl_currbal);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtbx_cusaccnum);
+            this.Controls.Add(this.txtbx_accnum);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtbx_amount);
             this.Controls.Add(this.label2);
             this.Name = "UC_Withdraw";
             this.Size = new System.Drawing.Size(747, 476);
+            this.Load += new System.EventHandler(this.UC_Withdraw_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -232,7 +281,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtbx_cusaccnum;
+        private System.Windows.Forms.TextBox txtbx_accnum;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtbx_amount;
         private System.Windows.Forms.Label label2;
@@ -240,13 +289,16 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbl_currbal;
-        private System.Windows.Forms.Label lbl_amount;
+        private System.Windows.Forms.Label lblAmount;
         private System.Windows.Forms.Label lbl_newbal;
-        private System.Windows.Forms.Button btn_deposit;
+        private System.Windows.Forms.Button btn_withdraw;
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btn_clear;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAccountName;
     }
 }

@@ -68,6 +68,7 @@
             this.btn_close.TabIndex = 59;
             this.btn_close.Text = "Close";
             this.btn_close.UseVisualStyleBackColor = true;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // lbl_civilstatus
             // 
@@ -128,6 +129,7 @@
             this.lbl_name.Size = new System.Drawing.Size(35, 20);
             this.lbl_name.TabIndex = 53;
             this.lbl_name.Text = "text";
+            this.lbl_name.Click += new System.EventHandler(this.lbl_name_Click);
             // 
             // lbl_accnum
             // 
@@ -238,6 +240,7 @@
             this.lbl_eaddress.Size = new System.Drawing.Size(35, 20);
             this.lbl_eaddress.TabIndex = 61;
             this.lbl_eaddress.Text = "text";
+            this.lbl_eaddress.Click += new System.EventHandler(this.lbl_eaddress_Click);
             // 
             // label11
             // 
@@ -266,6 +269,7 @@
             this.dgv_cuslist.Name = "dgv_cuslist";
             this.dgv_cuslist.Size = new System.Drawing.Size(378, 129);
             this.dgv_cuslist.TabIndex = 62;
+            this.dgv_cuslist.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_cuslist_CellClick);
             // 
             // pictureBox1
             // 
@@ -341,6 +345,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "UC_CustomerProfile";
             this.Size = new System.Drawing.Size(747, 476);
+            this.Load += new System.EventHandler(this.UC_CustomerProfile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_cuslist)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);

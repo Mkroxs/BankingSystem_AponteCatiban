@@ -234,6 +234,7 @@
             this.Controls.Add(this.label2);
             this.Name = "UC_TransactionHistory";
             this.Size = new System.Drawing.Size(747, 476);
+            this.Load += new System.EventHandler(this.UC_TransactionHistory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_cuslist)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -12,6 +12,7 @@ namespace BankingSystem_AponteCatiban
 {
     public partial class MainForm : Form
     {
+        public UC_Login login = new UC_Login();
         public UC_Dashboard_Admin dashboard_Admin = new UC_Dashboard_Admin();
         public UC_Dashboard_Cus dashboard_Cus = new UC_Dashboard_Cus();
         public UC_Deposit_Admin deposit_Admin = new UC_Deposit_Admin();
@@ -23,15 +24,12 @@ namespace BankingSystem_AponteCatiban
         public UC_Profile profile = new UC_Profile();
         public UC_TransactionHistory transactionHistory = new UC_TransactionHistory();
         public UC_Withdraw withdraw = new UC_Withdraw();
-
-        private Font originalFont;
-        private Color originalForeColor;
-        private Color originalBackColor;
-
+        public UC_InitialDeposit initialDeposit = new UC_InitialDeposit();
         public MainForm()
         {
             InitializeComponent();
 
+            this.Controls.Add(login);
             this.Controls.Add(dashboard_Admin);
             this.Controls.Add(dashboard_Cus);
             this.Controls.Add(deposit_Admin);
@@ -43,8 +41,9 @@ namespace BankingSystem_AponteCatiban
             this.Controls.Add(profile);
             this.Controls.Add(transactionHistory);
             this.Controls.Add(withdraw);
+            this.Controls.Add(initialDeposit);
 
-
+            login.Dock = DockStyle.Fill;
             dashboard_Admin.Dock = DockStyle.Fill;
             dashboard_Cus.Dock = DockStyle.Fill;
             deposit_Admin.Dock = DockStyle.Fill;
@@ -56,59 +55,11 @@ namespace BankingSystem_AponteCatiban
             profile.Dock = DockStyle.Fill;
             transactionHistory.Dock = DockStyle.Fill;
             withdraw.Dock = DockStyle.Fill;
-
-
-            lbl_Register.MouseEnter += lbl_Register_MouseEnter;
-            lbl_Register.MouseLeave += lbl_Register_MouseLeave;
-
-            this.Load += MainForm_Load;
-
+            initialDeposit.Dock = DockStyle.Fill;
         }
-
         private void MainForm_Load(object sender, EventArgs e)
         {
-            originalFont = lbl_Register.Font;
-            originalForeColor = lbl_Register.ForeColor;
-            originalBackColor = lbl_Register.BackColor;
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (txtbxuser.Text == "admin" && txtbxpass.Text == "admin")
-            {
-                dashboard_Admin.BringToFront();
-            }
-        }
-
-        private void btnclose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void lbl_Register_Click (object sender, EventArgs e)
-        {
-            registration.BringToFront();
-            lbl_Register.ForeColor = originalForeColor;
-        }
-        private void lbl_Register_MouseEnter (object sender, EventArgs e)
-        {
-            
-            lbl_Register.ForeColor = Color.SkyBlue;
-        }
-        private void lbl_Register_MouseLeave(object sender, EventArgs e)
-        {
-            lbl_Register.ForeColor = originalForeColor;
-
+            login.BringToFront();
         }
     }
 }

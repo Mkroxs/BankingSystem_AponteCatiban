@@ -42,11 +42,12 @@
             this.btn_cancel = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_totalamount = new System.Windows.Forms.Label();
-            this.btn_deposit = new System.Windows.Forms.Button();
+            this.btn_confirm = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btn_clear = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +78,7 @@
             this.btn_1000.TabIndex = 3;
             this.btn_1000.Text = "1000";
             this.btn_1000.UseVisualStyleBackColor = true;
+            this.btn_1000.Click += new System.EventHandler(this.btn_1000_Click);
             // 
             // btn_500
             // 
@@ -161,7 +163,7 @@
             // btn_cancel
             // 
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(440, 416);
+            this.btn_cancel.Location = new System.Drawing.Point(348, 416);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(75, 36);
             this.btn_cancel.TabIndex = 13;
@@ -172,7 +174,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(282, 378);
+            this.label3.Location = new System.Drawing.Point(282, 364);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 20);
             this.label3.TabIndex = 14;
@@ -182,26 +184,28 @@
             // 
             this.lbl_totalamount.AutoSize = true;
             this.lbl_totalamount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_totalamount.Location = new System.Drawing.Point(396, 378);
+            this.lbl_totalamount.Location = new System.Drawing.Point(396, 364);
             this.lbl_totalamount.Name = "lbl_totalamount";
-            this.lbl_totalamount.Size = new System.Drawing.Size(65, 20);
+            this.lbl_totalamount.Size = new System.Drawing.Size(29, 20);
             this.lbl_totalamount.TabIndex = 15;
-            this.lbl_totalamount.Text = "Amount";
+            this.lbl_totalamount.Text = "₱0";
+            this.lbl_totalamount.Click += new System.EventHandler(this.lbl_totalamount_Click);
             // 
-            // btn_deposit
+            // btn_confirm
             // 
-            this.btn_deposit.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btn_deposit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_deposit.FlatAppearance.BorderSize = 0;
-            this.btn_deposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_deposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_deposit.ForeColor = System.Drawing.Color.White;
-            this.btn_deposit.Location = new System.Drawing.Point(345, 418);
-            this.btn_deposit.Name = "btn_deposit";
-            this.btn_deposit.Size = new System.Drawing.Size(75, 32);
-            this.btn_deposit.TabIndex = 16;
-            this.btn_deposit.Text = "Deposit";
-            this.btn_deposit.UseVisualStyleBackColor = false;
+            this.btn_confirm.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_confirm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_confirm.FlatAppearance.BorderSize = 0;
+            this.btn_confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_confirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_confirm.ForeColor = System.Drawing.Color.White;
+            this.btn_confirm.Location = new System.Drawing.Point(520, 418);
+            this.btn_confirm.Name = "btn_confirm";
+            this.btn_confirm.Size = new System.Drawing.Size(75, 32);
+            this.btn_confirm.TabIndex = 16;
+            this.btn_confirm.Text = "Confirm";
+            this.btn_confirm.UseVisualStyleBackColor = false;
+            this.btn_confirm.Click += new System.EventHandler(this.btn_deposit_Click);
             // 
             // panel1
             // 
@@ -239,13 +243,28 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(749, 10);
             this.flowLayoutPanel1.TabIndex = 37;
             // 
+            // btn_clear
+            // 
+            this.btn_clear.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clear.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_clear.Location = new System.Drawing.Point(434, 418);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(75, 34);
+            this.btn_clear.TabIndex = 38;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseVisualStyleBackColor = false;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
+            // 
             // UC_Deposit_Cus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btn_deposit);
+            this.Controls.Add(this.btn_confirm);
             this.Controls.Add(this.lbl_totalamount);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_cancel);
@@ -262,6 +281,7 @@
             this.Controls.Add(this.label2);
             this.Name = "UC_Deposit_Cus";
             this.Size = new System.Drawing.Size(747, 476);
+            this.Load += new System.EventHandler(this.UC_Deposit_Cus_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -284,10 +304,11 @@
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbl_totalamount;
-        private System.Windows.Forms.Button btn_deposit;
+        private System.Windows.Forms.Button btn_confirm;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button btn_clear;
     }
 }

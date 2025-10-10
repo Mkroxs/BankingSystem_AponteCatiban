@@ -16,5 +16,10 @@ namespace BankingSystem_AponteCatiban
         {
             InitializeComponent();
         }
+
+        private void UC_TransactionHistory_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

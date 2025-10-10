@@ -47,10 +47,12 @@
             this.btn_deposit = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_upload = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btn_InitialDeposit = new System.Windows.Forms.Button();
+            this.pbx_profile = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_profile)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -156,6 +158,8 @@
             this.txtbx_cnum.Name = "txtbx_cnum";
             this.txtbx_cnum.Size = new System.Drawing.Size(336, 26);
             this.txtbx_cnum.TabIndex = 10;
+            this.txtbx_cnum.TextChanged += new System.EventHandler(this.txtbx_cnum_TextChanged);
+            this.txtbx_cnum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbx_cnum_KeyPress);
             // 
             // txtbx_eaddress
             // 
@@ -169,6 +173,12 @@
             // 
             this.cbx_civilstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbx_civilstatus.FormattingEnabled = true;
+            this.cbx_civilstatus.Items.AddRange(new object[] {
+            "Single",
+            "Married",
+            "Widow",
+            "Widower",
+            "Prefer Not To Say"});
             this.cbx_civilstatus.Location = new System.Drawing.Point(170, 195);
             this.cbx_civilstatus.Name = "cbx_civilstatus";
             this.cbx_civilstatus.Size = new System.Drawing.Size(336, 28);
@@ -214,22 +224,24 @@
             this.btn_deposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_deposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_deposit.ForeColor = System.Drawing.Color.White;
-            this.btn_deposit.Location = new System.Drawing.Point(248, 306);
+            this.btn_deposit.Location = new System.Drawing.Point(248, 326);
             this.btn_deposit.Name = "btn_deposit";
             this.btn_deposit.Size = new System.Drawing.Size(89, 32);
             this.btn_deposit.TabIndex = 34;
             this.btn_deposit.Text = "Register";
             this.btn_deposit.UseVisualStyleBackColor = false;
+            this.btn_deposit.Click += new System.EventHandler(this.btn_deposit_Click);
             // 
             // btn_cancel
             // 
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(351, 304);
+            this.btn_cancel.Location = new System.Drawing.Point(350, 324);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(89, 36);
             this.btn_cancel.TabIndex = 33;
             this.btn_cancel.Text = "Cancel";
             this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // btn_upload
             // 
@@ -243,23 +255,17 @@
             this.btn_upload.TabIndex = 35;
             this.btn_upload.Text = "Upload";
             this.btn_upload.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(538, 41);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(161, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
+            this.btn_upload.Click += new System.EventHandler(this.btn_upload_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btn_InitialDeposit);
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.btn_upload);
             this.panel1.Controls.Add(this.btn_deposit);
             this.panel1.Controls.Add(this.btn_cancel);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pbx_profile);
             this.panel1.Controls.Add(this.rbtn_female);
             this.panel1.Controls.Add(this.rbtn_male);
             this.panel1.Controls.Add(this.dateTimePicker1);
@@ -279,6 +285,42 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(718, 383);
             this.panel1.TabIndex = 36;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(36, 270);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(109, 20);
+            this.label9.TabIndex = 36;
+            this.label9.Text = "Initial Deposit:";
+            // 
+            // btn_InitialDeposit
+            // 
+            this.btn_InitialDeposit.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btn_InitialDeposit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_InitialDeposit.FlatAppearance.BorderSize = 0;
+            this.btn_InitialDeposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_InitialDeposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_InitialDeposit.ForeColor = System.Drawing.Color.White;
+            this.btn_InitialDeposit.Location = new System.Drawing.Point(170, 264);
+            this.btn_InitialDeposit.Name = "btn_InitialDeposit";
+            this.btn_InitialDeposit.Size = new System.Drawing.Size(194, 26);
+            this.btn_InitialDeposit.TabIndex = 38;
+            this.btn_InitialDeposit.Text = "Enter Value";
+            this.btn_InitialDeposit.UseVisualStyleBackColor = false;
+            this.btn_InitialDeposit.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pbx_profile
+            // 
+            this.pbx_profile.Location = new System.Drawing.Point(538, 41);
+            this.pbx_profile.Name = "pbx_profile";
+            this.pbx_profile.Size = new System.Drawing.Size(161, 100);
+            this.pbx_profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx_profile.TabIndex = 16;
+            this.pbx_profile.TabStop = false;
             // 
             // UC_Registration
             // 
@@ -289,9 +331,9 @@
             this.Controls.Add(this.label1);
             this.Name = "UC_Registration";
             this.Size = new System.Drawing.Size(747, 476);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_profile)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,10 +357,12 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.RadioButton rbtn_male;
         private System.Windows.Forms.RadioButton rbtn_female;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbx_profile;
         private System.Windows.Forms.Button btn_deposit;
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Button btn_upload;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Button btn_InitialDeposit;
     }
 }

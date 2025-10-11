@@ -23,7 +23,7 @@ namespace BankingSystem_AponteCatiban
         {
             InitializeComponent();
             dateTimePicker1.MaxDate = DateTime.Today;
-            dateTimePicker1.MinDate = DateTime.Today.AddYears(-120);
+            dateTimePicker1.MinDate = DateTime.Today.AddYears(-200);
         }
         private void ClearFields()
         {

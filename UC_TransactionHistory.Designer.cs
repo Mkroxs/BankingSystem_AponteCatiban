@@ -152,7 +152,7 @@
             // btn_close
             // 
             this.btn_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_close.Location = new System.Drawing.Point(637, 421);
+            this.btn_close.Location = new System.Drawing.Point(793, 477);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(75, 36);
             this.btn_close.TabIndex = 39;
@@ -164,7 +164,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(348, 90);
+            this.label5.Location = new System.Drawing.Point(485, 90);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(137, 17);
             this.label5.TabIndex = 41;
@@ -173,7 +173,7 @@
             // dgv_cuslist
             // 
             this.dgv_cuslist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_cuslist.Location = new System.Drawing.Point(351, 110);
+            this.dgv_cuslist.Location = new System.Drawing.Point(488, 110);
             this.dgv_cuslist.Name = "dgv_cuslist";
             this.dgv_cuslist.Size = new System.Drawing.Size(378, 129);
             this.dgv_cuslist.TabIndex = 40;
@@ -186,7 +186,7 @@
             this.panel1.Controls.Add(this.label10);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(747, 64);
+            this.panel1.Size = new System.Drawing.Size(900, 64);
             this.panel1.TabIndex = 42;
             // 
             // panel2
@@ -210,9 +210,9 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 466);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 529);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(749, 10);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(900, 21);
             this.flowLayoutPanel1.TabIndex = 39;
             // 
             // UC_TransactionHistory
@@ -235,7 +235,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "UC_TransactionHistory";
-            this.Size = new System.Drawing.Size(747, 476);
+            this.Size = new System.Drawing.Size(900, 550);
             this.Load += new System.EventHandler(this.UC_TransactionHistory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_cuslist)).EndInit();
             this.panel1.ResumeLayout(false);

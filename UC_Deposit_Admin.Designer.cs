@@ -52,6 +52,7 @@
             this.lbl_currbal = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lbl_NoAccount = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -204,9 +205,9 @@
             // txt_accnum
             // 
             this.txt_accnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_accnum.Location = new System.Drawing.Point(182, 96);
+            this.txt_accnum.Location = new System.Drawing.Point(186, 98);
             this.txt_accnum.Name = "txt_accnum";
-            this.txt_accnum.Size = new System.Drawing.Size(333, 26);
+            this.txt_accnum.Size = new System.Drawing.Size(166, 26);
             this.txt_accnum.TabIndex = 34;
             this.txt_accnum.TextChanged += new System.EventHandler(this.txt_accnum_TextChanged);
             // 
@@ -312,10 +313,24 @@
             this.label2.TabIndex = 41;
             this.label2.Text = "Current Balance:";
             // 
+            // lbl_NoAccount
+            // 
+            this.lbl_NoAccount.AutoSize = true;
+            this.lbl_NoAccount.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lbl_NoAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lbl_NoAccount.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_NoAccount.Location = new System.Drawing.Point(364, 102);
+            this.lbl_NoAccount.Name = "lbl_NoAccount";
+            this.lbl_NoAccount.Size = new System.Drawing.Size(161, 18);
+            this.lbl_NoAccount.TabIndex = 42;
+            this.lbl_NoAccount.Text = "No Account Found!";
+            this.lbl_NoAccount.Visible = false;
+            // 
             // UC_Deposit_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbl_NoAccount);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_currbal);
@@ -374,5 +389,6 @@
         private System.Windows.Forms.Label lbl_currbal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_NoAccount;
     }
 }

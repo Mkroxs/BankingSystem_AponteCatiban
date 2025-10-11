@@ -159,10 +159,14 @@ namespace BankingSystem_AponteCatiban
             DataStore.AppendTransaction(transaction);
 
             MessageBox.Show($"Withdrawal successful!\n\nNew Balance: ₱{selectedCustomer.Balance:N2}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
+
             var mainform = this.Parent as MainForm;
+
+            
             mainform.withdraw.RefreshCustomerList();
             mainform.deposit_Admin.RefreshCustomerList();
+            mainform.checkBalance_Admin.LoadCustomers();
+            mainform.checkBalance_Admin.SetupAccountNumberAutocomplete();
 
             lbl_currbal.Text = $"₱{selectedCustomer.Balance:N2}";
             lbl_newbal.Text = $"₱{selectedCustomer.Balance:N2}";

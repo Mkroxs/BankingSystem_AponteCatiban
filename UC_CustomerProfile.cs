@@ -24,6 +24,7 @@ namespace BankingSystem_AponteCatiban
         private void UC_CustomerProfile_Load(object sender, EventArgs e)
         {
             LoadCustomerData();
+            clearField();
         }
 
         public bool LoadCustomerData(bool showMessageIfEmpty = false)
@@ -58,6 +59,26 @@ namespace BankingSystem_AponteCatiban
         {
             var mainform = this.Parent as MainForm;
             mainform.dashboard_Admin.BringToFront();
+
+            if (dgv_cuslist.SelectedRows.Count > 0)
+            {
+                dgv_cuslist.ClearSelection();
+            }
+            clearField();
+        }
+
+        private void clearField()
+        {
+            lbl_cusid.Text = null;
+            lbl_accnum.Text = null;
+            lbl_name.Text = null;
+            lbl_gender.Text = null;
+            lbl_bdate.Text = null;
+            lbl_address.Text = null;
+            lbl_cnum.Text = null;
+            lbl_eaddress.Text = null;
+            lbl_civilstatus.Text = null;
+            pictureBox1.Image = null;
         }
 
         private void dgv_cuslist_CellClick(object sender, DataGridViewCellEventArgs e)

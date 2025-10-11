@@ -36,15 +36,13 @@
             this.btnclose = new System.Windows.Forms.Button();
             this.lbl_Register = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtbxuser
             // 
             this.txtbxuser.BackColor = System.Drawing.Color.LightGray;
             this.txtbxuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxuser.Location = new System.Drawing.Point(82, 156);
+            this.txtbxuser.Location = new System.Drawing.Point(87, 133);
             this.txtbxuser.Name = "txtbxuser";
             this.txtbxuser.Size = new System.Drawing.Size(194, 26);
             this.txtbxuser.TabIndex = 0;
@@ -54,7 +52,7 @@
             // 
             this.txtbxpass.BackColor = System.Drawing.Color.LightGray;
             this.txtbxpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxpass.Location = new System.Drawing.Point(82, 220);
+            this.txtbxpass.Location = new System.Drawing.Point(87, 197);
             this.txtbxpass.Name = "txtbxpass";
             this.txtbxpass.PasswordChar = '*';
             this.txtbxpass.Size = new System.Drawing.Size(194, 26);
@@ -66,7 +64,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(79, 136);
+            this.label1.Location = new System.Drawing.Point(84, 113);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 17);
             this.label1.TabIndex = 2;
@@ -78,7 +76,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(79, 200);
+            this.label2.Location = new System.Drawing.Point(84, 177);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 17);
             this.label2.TabIndex = 3;
@@ -92,7 +90,7 @@
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlogin.ForeColor = System.Drawing.Color.White;
-            this.btnlogin.Location = new System.Drawing.Point(84, 261);
+            this.btnlogin.Location = new System.Drawing.Point(89, 238);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(93, 32);
             this.btnlogin.TabIndex = 4;
@@ -105,7 +103,7 @@
             this.btnclose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnclose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclose.Location = new System.Drawing.Point(183, 261);
+            this.btnclose.Location = new System.Drawing.Point(188, 238);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(93, 32);
             this.btnclose.TabIndex = 5;
@@ -119,7 +117,7 @@
             this.lbl_Register.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Register.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Register.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lbl_Register.Location = new System.Drawing.Point(83, 301);
+            this.lbl_Register.Location = new System.Drawing.Point(88, 278);
             this.lbl_Register.Name = "lbl_Register";
             this.lbl_Register.Size = new System.Drawing.Size(52, 13);
             this.lbl_Register.TabIndex = 6;
@@ -134,41 +132,30 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Himalaya", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(17, 69);
+            this.label4.Location = new System.Drawing.Point(22, 46);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(371, 67);
             this.label4.TabIndex = 7;
             this.label4.Text = "KNAB CENTRAL";
             // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.login_file;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.lbl_Register);
-            this.panel1.Controls.Add(this.btnclose);
-            this.panel1.Controls.Add(this.btnlogin);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtbxpass);
-            this.panel1.Controls.Add(this.txtbxuser);
-            this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel1.Location = new System.Drawing.Point(-2, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(902, 550);
-            this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
             // UC_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
+            this.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.login_file;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbl_Register);
+            this.Controls.Add(this.txtbxuser);
+            this.Controls.Add(this.btnclose);
+            this.Controls.Add(this.txtbxpass);
+            this.Controls.Add(this.btnlogin);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
             this.Name = "UC_Login";
-            this.Size = new System.Drawing.Size(900, 550);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Size = new System.Drawing.Size(769, 526);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -182,6 +169,5 @@
         private System.Windows.Forms.Button btnclose;
         private System.Windows.Forms.Label lbl_Register;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel1;
     }
 }

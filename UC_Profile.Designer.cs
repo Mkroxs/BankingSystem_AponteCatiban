@@ -217,7 +217,7 @@
             // btn_close
             // 
             this.btn_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_close.Location = new System.Drawing.Point(637, 421);
+            this.btn_close.Location = new System.Drawing.Point(793, 477);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(75, 36);
             this.btn_close.TabIndex = 40;
@@ -240,7 +240,7 @@
             this.panel1.Controls.Add(this.label10);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(747, 64);
+            this.panel1.Size = new System.Drawing.Size(900, 64);
             this.panel1.TabIndex = 41;
             // 
             // panel2
@@ -264,9 +264,9 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 466);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 529);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(749, 10);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(900, 21);
             this.flowLayoutPanel1.TabIndex = 38;
             // 
             // UC_Profile
@@ -294,7 +294,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox1);
             this.Name = "UC_Profile";
-            this.Size = new System.Drawing.Size(747, 476);
+            this.Size = new System.Drawing.Size(900, 550);
             this.Load += new System.EventHandler(this.UC_Profile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);

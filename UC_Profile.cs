@@ -66,30 +66,32 @@ namespace BankingSystem_AponteCatiban
             catch { }
         }
 
-        private void LoadCustomerData()
+        public void LoadCustomerData()
         {
             try
             {
-                string filePath = Path.Combine(Application.StartupPath, "Data", "customers.txt");
-                string jsonContent = File.ReadAllText(filePath);
-                Customer[] customers = JsonConvert.DeserializeObject<Customer[]>(jsonContent);
-
-                if (customers != null && customers.Length > 0)
+                var mainform = this.FindForm() as MainForm;
+                if (mainform == null || mainform.LoggedInCustomer == null)
                 {
-                    Customer customer = customers[0];
-                    lbl_cusid.Text = $"{customer.CustomerId}";
-                    lbl_accnum.Text = $"{customer.AccountNumber}";
-                    lbl_name.Text = $"{customer.FullName}";
-                    lbl_gender.Text = $"{customer.Gender}";
-                    lbl_bdate.Text = $"{customer.Birthdate}";
-                    lbl_address.Text = $"{customer.Address}";
-                    lbl_cnum.Text = $"{customer.Contact}";
-                    lbl_civilstatus.Text = $"{customer.CivilStatus}";
-                    LoadCustomerImage(customer.ImagePath);
-
+                    return;
                 }
+                Customer customer = mainform.LoggedInCustomer;
+
+                lbl_cusid.Text = $"{customer.CustomerId}";
+                lbl_accnum.Text = $"{customer.AccountNumber}";
+                lbl_name.Text = $"{customer.FullName}";
+                lbl_gender.Text = $"{customer.Gender}";
+                lbl_bdate.Text = $"{customer.Birthdate}";
+                lbl_address.Text = $"{customer.Address}";
+                lbl_cnum.Text = $"{customer.Contact}";
+                lbl_civilstatus.Text = $"{customer.CivilStatus}";
+                LoadCustomerImage(customer.ImagePath);
+
             }
-            catch { }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void UC_Profile_Load(object sender, EventArgs e)

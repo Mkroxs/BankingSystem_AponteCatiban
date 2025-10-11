@@ -31,8 +31,12 @@ namespace BankingSystem_AponteCatiban
 
         private void lblcheck_bal_Click(object sender, EventArgs e)
         {
-            var mainform = this.Parent as MainForm;
-            mainform.checkBalance_Cus.BringToFront();
+            var mainform = this.FindForm() as MainForm;
+            if (mainform != null)
+            {
+                mainform.checkBalance_Cus.LoadCustomerData(); // ✅ Load user info dynamically
+                mainform.checkBalance_Cus.BringToFront();        // ✅ Then show the screen
+            }
         }
 
         private void lbltransac_history_Click(object sender, EventArgs e)
@@ -44,7 +48,11 @@ namespace BankingSystem_AponteCatiban
         private void lblprof_Click(object sender, EventArgs e)
         {
             var mainform = this.Parent as MainForm;
-            mainform.profile.BringToFront();
+            if(mainform != null)
+            {
+                mainform.profile.BringToFront();
+                mainform.profile.LoadCustomerData();
+            }
         }
     }
 }

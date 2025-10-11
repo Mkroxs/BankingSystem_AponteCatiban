@@ -71,20 +71,22 @@ namespace BankingSystem_AponteCatiban
             var mainform = this.Parent as MainForm;
             mainform.dashboard_Admin.BringToFront();
             ClearCustomerDisplay();
-            txt_accnum.Clear();
+            txt_accnum.Text = null;
+            selectedCustomer = null;
         }
 
         private void UC_Deposit_Admin_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void txt_accnum_TextChanged(object sender, EventArgs e)
         {
 
             string accNum = txt_accnum.Text.Trim();
-            if (string.IsNullOrEmpty(accNum))
+            if (string.IsNullOrWhiteSpace(accNum))
             {
+                
                 ClearCustomerDisplay();
                 return;
             }
@@ -97,6 +99,7 @@ namespace BankingSystem_AponteCatiban
             }
             else
             {
+                
                 ClearCustomerDisplay();
             }
         }
@@ -138,11 +141,13 @@ namespace BankingSystem_AponteCatiban
             mainform.withdraw.RefreshCustomerList();
             mainform.deposit_Admin.RefreshCustomerList();
 
-            lbl_currbal.Text = $"₱{selectedCustomer.Balance:N2}";
-            depositTotal = 0;
-            lbl_totalamount.Text = "₱0.00";
+            ClearCustomerDisplay();
+            txt_accnum.Text = null;
+            selectedCustomer = null;
+
         }
-        
+
+
         private void btn_clear_Click(object sender, EventArgs e)
         {
             depositTotal = 0;

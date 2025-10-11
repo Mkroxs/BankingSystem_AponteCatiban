@@ -7,17 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace BankingSystem_AponteCatiban
 {
-    public partial class UC_Dashboard_Admin: UserControl
+    public partial class UC_Dashboard_Admin : UserControl
     {
-
         public UC_Dashboard_Admin()
         {
             InitializeComponent();
-
         }
 
         private void UC_Dashboard_Admin_Load(object sender, EventArgs e)
@@ -27,7 +24,7 @@ namespace BankingSystem_AponteCatiban
 
         private void lblregister_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void lblregister_Click_1(object sender, EventArgs e)
@@ -39,7 +36,6 @@ namespace BankingSystem_AponteCatiban
         {
             var mainform = this.Parent as MainForm;
             mainform.login.BringToFront();
-
         }
 
         private void lblregister_Click_2(object sender, EventArgs e)
@@ -47,19 +43,12 @@ namespace BankingSystem_AponteCatiban
             var mainform = this.Parent as MainForm;
             mainform.registration.BringToFront();
             mainform.registration.Show();
-
         }
 
         private void lblcheck_bal_Click(object sender, EventArgs e)
         {
             var mainform = this.Parent as MainForm;
-
-            if (mainform.checkBalance_Admin.LoadCustomerData(true))
-            {
-                mainform.checkBalance_Admin.BringToFront();
-            }
-
-
+            mainform.checkBalance_Admin.BringToFront();
         }
 
         private void lblcus_prof_Click(object sender, EventArgs e)

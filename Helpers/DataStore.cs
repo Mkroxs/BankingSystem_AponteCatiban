@@ -27,7 +27,7 @@ namespace BankingSystem_AponteCatiban.Helpers
             if (customer != null)
             {
                 customer.Balance = newBalance;
-                SaveCustomers(customers); // overwrite the file with updated balances
+                SaveCustomers(customers);
             }
         }
         public static List<Customer> LoadCustomers()

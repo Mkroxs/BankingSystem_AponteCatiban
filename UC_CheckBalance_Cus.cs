@@ -32,24 +32,37 @@ namespace BankingSystem_AponteCatiban
             mainform.dashboard_Cus.BringToFront();
         }
 
-        private void LoadCustomerData()
+        public void LoadCustomerData()
         {
             try
             {
-                string filePath = Path.Combine(Application.StartupPath, "Data", "customers.txt");
-                string jsonContent = File.ReadAllText(filePath);
-                Customer[] customers = JsonConvert.DeserializeObject<Customer[]>(jsonContent);
-
-                if (customers != null && customers.Length > 0)
+                var mainform = this.FindForm() as MainForm; 
+                if (mainform == null || mainform.LoggedInCustomer == null)
                 {
-                    Customer customer = customers[0];
-                    lbl_accnum.Text = $"{customer.AccountNumber}";
-                    lbl_accname.Text = $"{customer.FullName}";
-                    lbl_rembal.Text = $"${customer.Balance:F2}";  
+                    return;
                 }
+                Customer customer = mainform.LoggedInCustomer;
+
+                lbl_accnum.Text = customer.AccountNumber;
+                lbl_accname.Text = customer.FullName;
+                lbl_rembal.Text = $"${customer.Balance:F2}";
+
             }
-            catch { }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
         }
+        protected override void OnVisibleChanged(EventArgs e)
+        {
+            base.OnVisibleChanged(e);
+            if (this.Visible)
+            {
+                LoadCustomerData();
+            }
+        }
+
 
         private void UC_CheckBalance_Cus_Load(object sender, EventArgs e)
         {

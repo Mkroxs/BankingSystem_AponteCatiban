@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BankingSystem_AponteCatiban.Models;
 
 namespace BankingSystem_AponteCatiban
 {
@@ -25,6 +26,8 @@ namespace BankingSystem_AponteCatiban
         public UC_TransactionHistory transactionHistory = new UC_TransactionHistory();
         public UC_Withdraw withdraw = new UC_Withdraw();
         public UC_InitialDeposit initialDeposit = new UC_InitialDeposit();
+
+        public Customer LoggedInCustomer { get; set; }
         public MainForm()
         {
             InitializeComponent();

@@ -33,54 +33,56 @@ namespace BankingSystem_AponteCatiban
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            string filePath = Path.Combine(Application.StartupPath, "Data", "customers.txt");
+                
+                string filePath = Path.Combine(Application.StartupPath, "Data", "customers.txt");
 
-            string username = txtbxuser.Text.Trim();
-            string password = txtbxpass.Text.Trim();
-            try
-            {
-                string jsonContent = File.ReadAllText(filePath);
-                List<Customer> customers = JsonConvert.DeserializeObject<List<Customer>>(jsonContent);
-
-                Customer matchingCustomer = customers.FirstOrDefault(c =>
-                    c.Email == username &&
-                    c.AccountNumber.Replace("-", "") == password);
-
-                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+                string username = txtbxuser.Text.Trim();
+                string password = txtbxpass.Text.Trim();
+                try
                 {
-                    MessageBox.Show("Please enter both username and password.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+                    string jsonContent = File.ReadAllText(filePath);
+                    List<Customer> customers = JsonConvert.DeserializeObject<List<Customer>>(jsonContent);
 
+                    Customer matchingCustomer = customers.FirstOrDefault(c =>
+                        c.Email == username &&
+                        c.AccountNumber.Replace("-", "") == password);
 
-                if (username == "admin" && password == "admin")
-                {
-                    var mainform = this.Parent as MainForm;
-                    if (mainform != null)
+                    if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                     {
-                        mainform.dashboard_Admin.BringToFront();
-                    }
-                }
-                else if (matchingCustomer != null)
-                {
-                    var mainform = this.Parent as MainForm;
-                    if (mainform != null)
-                    {
-                        mainform.dashboard_Cus.BringToFront();
+                        MessageBox.Show("Please enter both username and password.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
                     }
 
+
+                    if (username == "admin" && password == "admin")
+                    {
+                    var mainform = this.FindForm() as MainForm;
+                    if (mainform != null)
+                        {
+                            mainform.dashboard_Admin.BringToFront();
+                        }
+                    }
+                    else if (matchingCustomer != null)
+                    {
+                        var mainform = this.Parent as MainForm;
+                        if (mainform != null)
+                        {
+                            mainform.LoggedInCustomer = matchingCustomer; // ✅ store the logged-in customer
+                            mainform.dashboard_Cus.BringToFront();
+
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Invalid username or password.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Invalid username or password.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
                 }
-            
+                catch { }
+
+
+                    clearField();
             }
-            catch { }
-
-
-                clearField();
-        }
 
         private void btnclose_Click(object sender, EventArgs e)
         {

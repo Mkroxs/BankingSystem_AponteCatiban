@@ -90,24 +90,38 @@ namespace BankingSystem_AponteCatiban
                 customer.Balance += totalAmount;
                 DataStore.UpdateCustomerBalance(customer.AccountNumber, customer.Balance);
 
-            Transaction transaction = new Transaction
-            {
-                customerAccountNumber = customer.AccountNumber,
-                type = "Deposit",
-                amount = totalAmount,
-                previousBalance = previousBalance,
-                newBalance = customer.Balance,
-                date = DateTime.Now.ToString("MMMM dd, yyyy")
-            };
-            DataStore.AppendTransaction(transaction);
+                Transaction transaction = new Transaction
+                {
+                    customerAccountNumber = customer.AccountNumber,
+                    type = "Deposit",
+                    amount = totalAmount,
+                    previousBalance = previousBalance,
+                    newBalance = customer.Balance,
+                    date = DateTime.Now.ToString("MMMM dd, yyyy")
+                };
+                DataStore.AppendTransaction(transaction);
 
                 mainform.LoggedInCustomer = customer;
 
-                MessageBox.Show($"Successfully deposited ₱{totalAmount:N2}.\nYour new balance is ₱{customer.Balance:N2}.",
+                
+                if (mainform.deposit_Admin != null)
+                    mainform.deposit_Admin.RefreshCustomerList();
+
+                if (mainform.withdraw != null)
+                    mainform.withdraw.RefreshCustomerList();
+
+                if (mainform.checkBalance_Admin != null)
+                {
+                    mainform.checkBalance_Admin.LoadCustomers();
+                    mainform.checkBalance_Admin.SetupAccountNumberAutocomplete();
+                }
+
+                MessageBox.Show(
+                    $"Successfully deposited ₱{totalAmount:N2}.\nYour new balance is ₱{customer.Balance:N2}.",
                     "Deposit Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 ResetDepositForm();
-                mainform.dashboard_Cus.BringToFront();
+                
             }
             catch (Exception ex)
             {

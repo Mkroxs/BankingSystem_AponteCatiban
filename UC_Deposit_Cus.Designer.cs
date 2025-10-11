@@ -162,7 +162,7 @@
             // btn_cancel
             // 
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(350, 386);
+            this.btn_cancel.Location = new System.Drawing.Point(520, 388);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(75, 36);
             this.btn_cancel.TabIndex = 13;
@@ -200,7 +200,7 @@
             this.btn_confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_confirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_confirm.ForeColor = System.Drawing.Color.White;
-            this.btn_confirm.Location = new System.Drawing.Point(522, 388);
+            this.btn_confirm.Location = new System.Drawing.Point(350, 388);
             this.btn_confirm.Name = "btn_confirm";
             this.btn_confirm.Size = new System.Drawing.Size(75, 32);
             this.btn_confirm.TabIndex = 16;

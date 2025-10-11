@@ -86,7 +86,7 @@ namespace BankingSystem_AponteCatiban
             string accNum = txt_accnum.Text.Trim();
             if (string.IsNullOrWhiteSpace(accNum))
             {
-                
+                lbl_NoAccount.Visible = false;
                 ClearCustomerDisplay();
                 return;
             }
@@ -94,14 +94,17 @@ namespace BankingSystem_AponteCatiban
             selectedCustomer = customers.FirstOrDefault(c => c.AccountNumber == accNum);
             if (selectedCustomer != null)
             {
+                lbl_NoAccount.Visible = false;
                 lbl_accname.Text = selectedCustomer.FullName;
                 lbl_currbal.Text = $"₱{selectedCustomer.Balance:N2}";
             }
+
             else
             {
-                
+                lbl_NoAccount.Visible = true;
                 ClearCustomerDisplay();
             }
+            
         }
 
         private void btn_confirm_Click(object sender, EventArgs e)
@@ -138,9 +141,14 @@ namespace BankingSystem_AponteCatiban
                 "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             var mainform = this.Parent as MainForm;
-            mainform.withdraw.RefreshCustomerList();
-            mainform.deposit_Admin.RefreshCustomerList();
 
+            
+            mainform.deposit_Admin.RefreshCustomerList();
+            mainform.withdraw.RefreshCustomerList();
+            mainform.checkBalance_Admin.LoadCustomers();
+            mainform.checkBalance_Admin.SetupAccountNumberAutocomplete();
+
+            
             ClearCustomerDisplay();
             txt_accnum.Text = null;
             selectedCustomer = null;

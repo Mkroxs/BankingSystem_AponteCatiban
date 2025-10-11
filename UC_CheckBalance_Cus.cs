@@ -45,7 +45,7 @@ namespace BankingSystem_AponteCatiban
 
                 lbl_accnum.Text = customer.AccountNumber;
                 lbl_accname.Text = customer.FullName;
-                lbl_rembal.Text = $"${customer.Balance:F2}";
+                lbl_rembal.Text = $"₱{customer.Balance:F2}";
 
             }
             catch (Exception ex)

@@ -142,6 +142,7 @@
             this.txtbx_name.Name = "txtbx_name";
             this.txtbx_name.Size = new System.Drawing.Size(261, 26);
             this.txtbx_name.TabIndex = 8;
+            this.txtbx_name.TextChanged += new System.EventHandler(this.txtbx_name_TextChanged);
             // 
             // txtbx_address
             // 
@@ -150,6 +151,7 @@
             this.txtbx_address.Name = "txtbx_address";
             this.txtbx_address.Size = new System.Drawing.Size(336, 26);
             this.txtbx_address.TabIndex = 9;
+            this.txtbx_address.TextChanged += new System.EventHandler(this.txtbx_address_TextChanged);
             // 
             // txtbx_cnum
             // 

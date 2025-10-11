@@ -67,7 +67,7 @@ namespace BankingSystem_AponteCatiban
                         var mainform = this.Parent as MainForm;
                         if (mainform != null)
                         {
-                            mainform.LoggedInCustomer = matchingCustomer; // ✅ store the logged-in customer
+                            mainform.LoggedInCustomer = matchingCustomer; 
                             mainform.dashboard_Cus.BringToFront();
 
                     }
@@ -114,6 +114,48 @@ namespace BankingSystem_AponteCatiban
         {
             lbl_Register.ForeColor = Color.DodgerBlue;
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(
+        "Are you sure you want to reset all customer and transaction data?\nThis action cannot be undone.",
+        "Confirm Reset",
+        MessageBoxButtons.YesNo,
+        MessageBoxIcon.Warning) == DialogResult.No)
+                return;
+
+            try
+            {
+                string dataFolder = Path.Combine(Application.StartupPath, "Data");
+                string customerFile = Path.Combine(dataFolder, "customers.txt");
+                string transactionFile = Path.Combine(dataFolder, "transactions.txt");
+
+                
+                File.WriteAllText(customerFile, "[]", Encoding.UTF8);
+                File.WriteAllText(transactionFile, "[]", Encoding.UTF8);
+
+                
+                var mainform = this.FindForm() as MainForm;
+                if (mainform != null)
+                {
+                    mainform.deposit_Admin?.RefreshCustomerList();
+                    mainform.withdraw?.RefreshCustomerList();
+                    mainform.checkBalance_Admin?.LoadCustomers();
+                }
+
+                MessageBox.Show("All data in customers.txt and transactions.txt have been reset successfully.",
+                                "Reset Successful",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error resetting data:\n" + ex.Message,
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
         }
     }
 }

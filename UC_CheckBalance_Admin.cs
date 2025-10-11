@@ -28,7 +28,7 @@ namespace BankingSystem_AponteCatiban
             SetupAccountNumberAutocomplete();
         }
 
-        private void LoadCustomers()
+        public void LoadCustomers()
         {
             try
             {
@@ -40,7 +40,7 @@ namespace BankingSystem_AponteCatiban
             }
         }
 
-        private void SetupAccountNumberAutocomplete()
+        public void SetupAccountNumberAutocomplete()
         {
             if (customers == null || customers.Count == 0)
                 return;
@@ -57,7 +57,7 @@ namespace BankingSystem_AponteCatiban
         {
             string input = tbxAccountNumber.Text.Trim();
 
-            // 🔄 Always reload latest customer data from file so it reflects live updates
+            
             LoadCustomers();
 
             if (string.IsNullOrWhiteSpace(input))

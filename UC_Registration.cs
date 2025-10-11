@@ -199,7 +199,7 @@ namespace BankingSystem_AponteCatiban
                     amount = initialDeposit,
                     previousBalance = 0,
                     newBalance = initialDeposit,
-                    date = DateTime.Now
+                    date = DateTime.Now.ToString("MMMM dd, yyyy")
                 };
                 DataStore.AppendTransaction(transaction);
 
@@ -241,7 +241,7 @@ namespace BankingSystem_AponteCatiban
                         if (File.Exists(destPath))
                         {
                             string uniqueName = Path.GetFileNameWithoutExtension(fileName)
-                                + "_" + DateTime.Now.ToString("yyyyMMddHHmmss")
+                                + "_" + DateTime.Now.ToString("yyyyMMdd")
                                 + Path.GetExtension(fileName);
                             destPath = Path.Combine(imageFolder, uniqueName);
                         }
@@ -319,6 +319,11 @@ namespace BankingSystem_AponteCatiban
                 MessageBox.Show("Contact number must start with 0.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtbx_cnum.Text = "";
             }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -154,7 +154,7 @@ namespace BankingSystem_AponteCatiban
                 amount = withdrawAmount,
                 previousBalance = oldBalance,
                 newBalance = selectedCustomer.Balance,
-                date = DateTime.Now
+                date = DateTime.Now.ToString("MMMM dd, yyyy")
             };
             DataStore.AppendTransaction(transaction);
 

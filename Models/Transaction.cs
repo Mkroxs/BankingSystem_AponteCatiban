@@ -9,7 +9,7 @@ namespace BankingSystem_AponteCatiban.Models
     public class Transaction
     {
         public string customerAccountNumber { get; set; }
-        public DateTime date {  get; set; }
+        public string date {  get; set; }
         public string type { get; set; }
         public decimal amount { get; set; }
         public decimal previousBalance { get; set; }

@@ -126,7 +126,7 @@ namespace BankingSystem_AponteCatiban
                 amount = depositTotal,
                 previousBalance = previousBalance,
                 newBalance = selectedCustomer.Balance,
-                date = DateTime.Now
+                date = DateTime.Now.ToString("MMMM dd, yyyy")
             };
             DataStore.AppendTransaction(transaction);
 

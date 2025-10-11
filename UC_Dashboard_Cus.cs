@@ -34,15 +34,19 @@ namespace BankingSystem_AponteCatiban
             var mainform = this.FindForm() as MainForm;
             if (mainform != null)
             {
-                mainform.checkBalance_Cus.LoadCustomerData(); // ✅ Load user info dynamically
-                mainform.checkBalance_Cus.BringToFront();        // ✅ Then show the screen
+                mainform.checkBalance_Cus.LoadCustomerData(); 
+                mainform.checkBalance_Cus.BringToFront();
             }
         }
 
         private void lbltransac_history_Click(object sender, EventArgs e)
         {
-            var mainform = this.Parent as MainForm;
-            mainform.transactionHistory.BringToFront();
+            var mainform = this.FindForm() as MainForm;
+            if (mainform != null)
+            {
+                mainform.transactionHistory.LoadTransactionHistory();
+                mainform.transactionHistory.BringToFront();
+            }
         }
 
         private void lblprof_Click(object sender, EventArgs e)

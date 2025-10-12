@@ -49,6 +49,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_email = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -259,10 +261,32 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(382, 467);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 24);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "Email:";
+            // 
+            // lbl_email
+            // 
+            this.lbl_email.AutoSize = true;
+            this.lbl_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_email.Location = new System.Drawing.Point(445, 467);
+            this.lbl_email.Name = "lbl_email";
+            this.lbl_email.Size = new System.Drawing.Size(39, 24);
+            this.lbl_email.TabIndex = 43;
+            this.lbl_email.Text = "text";
+            // 
             // UC_Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbl_email);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbl_civilstatus);
@@ -317,5 +341,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_email;
     }
 }

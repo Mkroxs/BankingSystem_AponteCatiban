@@ -85,6 +85,7 @@ namespace BankingSystem_AponteCatiban
                 lbl_address.Text = $"{customer.Address}";
                 lbl_cnum.Text = $"{customer.Contact}";
                 lbl_civilstatus.Text = $"{customer.CivilStatus}";
+                lbl_email.Text = $"{customer.Email}";
                 LoadCustomerImage(customer.ImagePath);
 
             }

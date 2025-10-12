@@ -44,14 +44,13 @@
             this.lbl_cnum = new System.Windows.Forms.Label();
             this.lbl_civilstatus = new System.Windows.Forms.Label();
             this.lbl_address = new System.Windows.Forms.Label();
-            this.btn_close = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -214,25 +213,6 @@
             this.lbl_address.TabIndex = 32;
             this.lbl_address.Text = "text";
             // 
-            // btn_close
-            // 
-            this.btn_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_close.Location = new System.Drawing.Point(793, 477);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(75, 36);
-            this.btn_close.TabIndex = 40;
-            this.btn_close.Text = "Close";
-            this.btn_close.UseVisualStyleBackColor = true;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(300, 78);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
@@ -240,7 +220,7 @@
             this.panel1.Controls.Add(this.label10);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(900, 64);
+            this.panel1.Size = new System.Drawing.Size(1206, 64);
             this.panel1.TabIndex = 41;
             // 
             // panel2
@@ -264,10 +244,18 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 529);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 682);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(900, 21);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1246, 21);
             this.flowLayoutPanel1.TabIndex = 38;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(300, 78);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // UC_Profile
             // 
@@ -275,7 +263,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btn_close);
             this.Controls.Add(this.lbl_civilstatus);
             this.Controls.Add(this.lbl_cnum);
             this.Controls.Add(this.lbl_address);
@@ -293,12 +280,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox1);
+            this.DoubleBuffered = true;
             this.Name = "UC_Profile";
-            this.Size = new System.Drawing.Size(900, 550);
+            this.Size = new System.Drawing.Size(1200, 700);
             this.Load += new System.EventHandler(this.UC_Profile_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,7 +311,6 @@
         private System.Windows.Forms.Label lbl_cnum;
         private System.Windows.Forms.Label lbl_civilstatus;
         private System.Windows.Forms.Label lbl_address;
-        private System.Windows.Forms.Button btn_close;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label10;

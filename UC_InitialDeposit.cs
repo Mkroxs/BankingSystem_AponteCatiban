@@ -31,16 +31,64 @@ namespace BankingSystem_AponteCatiban
         public UC_InitialDeposit()
         {
             InitializeComponent();
+            InitializeDenominationEvents();
 
-            btn_1000.Click += setValue;
-            btn_500.Click += setValue;
-            btn_200.Click += setValue;
-            btn_100.Click += setValue;
-            btn_50.Click += setValue;
-            btn_20.Click += setValue;
-            btn_10.Click += setValue;
-            btn_5.Click += setValue;
-            btn_1.Click += setValue;
+
+        }
+        private void CalculateDepositTotal()
+        {
+            decimal total = 0;
+            total += ParseDecimal(txt1000.Text) * 1000;
+            total += ParseDecimal(txt500.Text) * 500;
+            total += ParseDecimal(txt200.Text) * 200;
+            total += ParseDecimal(txt100.Text) * 100;
+            total += ParseDecimal(txt50.Text) * 50;
+            total += ParseDecimal(txt20.Text) * 20;
+            total += ParseDecimal(txt10.Text) * 10;
+            total += ParseDecimal(txt5.Text) * 5;
+            total += ParseDecimal(txt1.Text) * 1;
+
+            totalAmount = total;
+            lbl_totalamount.Text = $"₱{totalAmount:N2}";
+        }
+
+        private int ParseDecimal(string text)
+        {
+            if (int.TryParse(text, out int value) && value >= 0)
+                return value;
+            return 0;
+        }
+
+        private void ClearDenominations()
+        {
+            txt1000.Text = "";
+            txt500.Text = "";
+            txt200.Text = "";
+            txt100.Text = "";
+            txt50.Text = "";
+            txt20.Text = "";
+            txt10.Text = "";
+            txt5.Text = "";
+            txt1.Text = "";
+            lbl_totalamount.Text = "₱0.00";
+        }
+
+        private void InitializeDenominationEvents()
+        {
+            TextBox[] denominationTextBoxes = new TextBox[]
+            {
+        txt1000, txt500, txt200, txt100, txt50, txt20, txt10, txt5, txt1
+            };
+
+            foreach (var txt in denominationTextBoxes)
+            {
+                txt.TextChanged += (s, e) => CalculateDepositTotal();
+                txt.KeyPress += (s, e) =>
+                {
+                    e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
+                };
+                txt.Enter += (s, e) => (s as TextBox)?.Clear();
+            }
         }
 
         private void UC_InitialDeposit_Load(object sender, EventArgs e)
@@ -53,6 +101,7 @@ namespace BankingSystem_AponteCatiban
             OnConfirm?.Invoke(totalAmount); 
             totalAmount = 0;
             lbl_totalamount.Text = "₱0.00";
+            ClearDenominations();
             this.Hide();
         }
 
@@ -70,6 +119,11 @@ namespace BankingSystem_AponteCatiban
         }
 
         private void lbl_totalamount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_1_Click(object sender, EventArgs e)
         {
 
         }

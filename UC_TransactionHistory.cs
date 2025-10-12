@@ -91,7 +91,7 @@ namespace BankingSystem_AponteCatiban
         {
             base.OnVisibleChanged(e);
             if (this.Visible)
-                LoadTransactionHistory(); // Auto-refresh when visible
+                LoadTransactionHistory(); 
         }
         private void ResetLabels()
         {

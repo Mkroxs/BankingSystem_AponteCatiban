@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,29 +46,22 @@
             this.btn_deposit = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_upload = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btn_InitialDeposit = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.pbx_profile = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_profile)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(362, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Registration";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(44, 52);
+            this.label8.Location = new System.Drawing.Point(127, 94);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 20);
             this.label8.TabIndex = 1;
@@ -79,7 +71,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(44, 84);
+            this.label2.Location = new System.Drawing.Point(127, 133);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 20);
             this.label2.TabIndex = 2;
@@ -89,7 +81,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(44, 117);
+            this.label3.Location = new System.Drawing.Point(127, 172);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 20);
             this.label3.TabIndex = 3;
@@ -99,7 +91,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(44, 148);
+            this.label4.Location = new System.Drawing.Point(127, 213);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 20);
             this.label4.TabIndex = 4;
@@ -109,7 +101,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(44, 181);
+            this.label5.Location = new System.Drawing.Point(127, 256);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(129, 20);
             this.label5.TabIndex = 5;
@@ -119,7 +111,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(44, 215);
+            this.label6.Location = new System.Drawing.Point(127, 304);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 20);
             this.label6.TabIndex = 6;
@@ -129,7 +121,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(44, 247);
+            this.label7.Location = new System.Drawing.Point(127, 350);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 20);
             this.label7.TabIndex = 7;
@@ -138,7 +130,7 @@
             // txtbx_name
             // 
             this.txtbx_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbx_name.Location = new System.Drawing.Point(179, 46);
+            this.txtbx_name.Location = new System.Drawing.Point(262, 88);
             this.txtbx_name.Name = "txtbx_name";
             this.txtbx_name.Size = new System.Drawing.Size(380, 26);
             this.txtbx_name.TabIndex = 8;
@@ -147,7 +139,7 @@
             // txtbx_address
             // 
             this.txtbx_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbx_address.Location = new System.Drawing.Point(179, 145);
+            this.txtbx_address.Location = new System.Drawing.Point(262, 210);
             this.txtbx_address.Name = "txtbx_address";
             this.txtbx_address.Size = new System.Drawing.Size(380, 26);
             this.txtbx_address.TabIndex = 9;
@@ -156,7 +148,7 @@
             // txtbx_cnum
             // 
             this.txtbx_cnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbx_cnum.Location = new System.Drawing.Point(179, 177);
+            this.txtbx_cnum.Location = new System.Drawing.Point(262, 252);
             this.txtbx_cnum.Name = "txtbx_cnum";
             this.txtbx_cnum.Size = new System.Drawing.Size(380, 26);
             this.txtbx_cnum.TabIndex = 10;
@@ -166,7 +158,7 @@
             // txtbx_eaddress
             // 
             this.txtbx_eaddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbx_eaddress.Location = new System.Drawing.Point(179, 241);
+            this.txtbx_eaddress.Location = new System.Drawing.Point(262, 344);
             this.txtbx_eaddress.Name = "txtbx_eaddress";
             this.txtbx_eaddress.Size = new System.Drawing.Size(380, 26);
             this.txtbx_eaddress.TabIndex = 11;
@@ -181,7 +173,7 @@
             "Widow",
             "Widower",
             "Prefer Not To Say"});
-            this.cbx_civilstatus.Location = new System.Drawing.Point(179, 207);
+            this.cbx_civilstatus.Location = new System.Drawing.Point(262, 296);
             this.cbx_civilstatus.Name = "cbx_civilstatus";
             this.cbx_civilstatus.Size = new System.Drawing.Size(380, 28);
             this.cbx_civilstatus.TabIndex = 12;
@@ -191,7 +183,7 @@
             this.dateTimePicker1.CustomFormat = "MMMM dd,  yyyy";
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(179, 111);
+            this.dateTimePicker1.Location = new System.Drawing.Point(262, 166);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(380, 26);
             this.dateTimePicker1.TabIndex = 13;
@@ -201,7 +193,7 @@
             // 
             this.rbtn_male.AutoSize = true;
             this.rbtn_male.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtn_male.Location = new System.Drawing.Point(184, 82);
+            this.rbtn_male.Location = new System.Drawing.Point(267, 131);
             this.rbtn_male.Name = "rbtn_male";
             this.rbtn_male.Size = new System.Drawing.Size(61, 24);
             this.rbtn_male.TabIndex = 14;
@@ -213,7 +205,7 @@
             // 
             this.rbtn_female.AutoSize = true;
             this.rbtn_female.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtn_female.Location = new System.Drawing.Point(270, 82);
+            this.rbtn_female.Location = new System.Drawing.Point(353, 131);
             this.rbtn_female.Name = "rbtn_female";
             this.rbtn_female.Size = new System.Drawing.Size(80, 24);
             this.rbtn_female.TabIndex = 15;
@@ -229,7 +221,7 @@
             this.btn_deposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_deposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_deposit.ForeColor = System.Drawing.Color.White;
-            this.btn_deposit.Location = new System.Drawing.Point(345, 349);
+            this.btn_deposit.Location = new System.Drawing.Point(560, 458);
             this.btn_deposit.Name = "btn_deposit";
             this.btn_deposit.Size = new System.Drawing.Size(89, 32);
             this.btn_deposit.TabIndex = 34;
@@ -240,7 +232,7 @@
             // btn_cancel
             // 
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(447, 347);
+            this.btn_cancel.Location = new System.Drawing.Point(464, 456);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(89, 36);
             this.btn_cancel.TabIndex = 33;
@@ -254,43 +246,13 @@
             this.btn_upload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_upload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_upload.ForeColor = System.Drawing.Color.White;
-            this.btn_upload.Location = new System.Drawing.Point(727, 215);
+            this.btn_upload.Location = new System.Drawing.Point(756, 238);
             this.btn_upload.Name = "btn_upload";
             this.btn_upload.Size = new System.Drawing.Size(89, 32);
             this.btn_upload.TabIndex = 35;
             this.btn_upload.Text = "Upload";
             this.btn_upload.UseVisualStyleBackColor = false;
             this.btn_upload.Click += new System.EventHandler(this.btn_upload_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.btn_InitialDeposit);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.btn_upload);
-            this.panel1.Controls.Add(this.btn_deposit);
-            this.panel1.Controls.Add(this.btn_cancel);
-            this.panel1.Controls.Add(this.pbx_profile);
-            this.panel1.Controls.Add(this.rbtn_female);
-            this.panel1.Controls.Add(this.rbtn_male);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.cbx_civilstatus);
-            this.panel1.Controls.Add(this.txtbx_eaddress);
-            this.panel1.Controls.Add(this.txtbx_cnum);
-            this.panel1.Controls.Add(this.txtbx_address);
-            this.panel1.Controls.Add(this.txtbx_name);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Location = new System.Drawing.Point(34, 92);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(836, 458);
-            this.panel1.TabIndex = 36;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btn_InitialDeposit
             // 
@@ -300,7 +262,7 @@
             this.btn_InitialDeposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_InitialDeposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_InitialDeposit.ForeColor = System.Drawing.Color.White;
-            this.btn_InitialDeposit.Location = new System.Drawing.Point(179, 276);
+            this.btn_InitialDeposit.Location = new System.Drawing.Point(262, 392);
             this.btn_InitialDeposit.Name = "btn_InitialDeposit";
             this.btn_InitialDeposit.Size = new System.Drawing.Size(194, 26);
             this.btn_InitialDeposit.TabIndex = 38;
@@ -312,7 +274,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(45, 282);
+            this.label9.Location = new System.Drawing.Point(128, 398);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(109, 20);
             this.label9.TabIndex = 36;
@@ -320,33 +282,90 @@
             // 
             // pbx_profile
             // 
-            this.pbx_profile.Location = new System.Drawing.Point(631, 52);
+            this.pbx_profile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbx_profile.Location = new System.Drawing.Point(710, 86);
             this.pbx_profile.Name = "pbx_profile";
             this.pbx_profile.Size = new System.Drawing.Size(185, 139);
             this.pbx_profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx_profile.TabIndex = 16;
             this.pbx_profile.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1202, 64);
+            this.panel1.TabIndex = 39;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(282, 63);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(288, 412);
+            this.panel2.TabIndex = 0;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Himalaya", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(19, 7);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(199, 54);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "Registration";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(-4, 682);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1254, 21);
+            this.flowLayoutPanel1.TabIndex = 40;
+            // 
             // UC_Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btn_InitialDeposit);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.btn_upload);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.btn_deposit);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btn_cancel);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.pbx_profile);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.rbtn_female);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.rbtn_male);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cbx_civilstatus);
+            this.Controls.Add(this.txtbx_name);
+            this.Controls.Add(this.txtbx_eaddress);
+            this.Controls.Add(this.txtbx_address);
+            this.Controls.Add(this.txtbx_cnum);
+            this.DoubleBuffered = true;
             this.Name = "UC_Registration";
-            this.Size = new System.Drawing.Size(900, 550);
+            this.Size = new System.Drawing.Size(1200, 700);
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_profile)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbx_profile)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -364,10 +383,13 @@
         private System.Windows.Forms.RadioButton rbtn_female;
         private System.Windows.Forms.PictureBox pbx_profile;
         private System.Windows.Forms.Button btn_deposit;
-        private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Button btn_upload;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.Button btn_InitialDeposit;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        public System.Windows.Forms.Button btn_cancel;
     }
 }

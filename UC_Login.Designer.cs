@@ -42,7 +42,7 @@
             // 
             this.txtbxuser.BackColor = System.Drawing.Color.LightGray;
             this.txtbxuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxuser.Location = new System.Drawing.Point(87, 133);
+            this.txtbxuser.Location = new System.Drawing.Point(140, 168);
             this.txtbxuser.Name = "txtbxuser";
             this.txtbxuser.Size = new System.Drawing.Size(194, 26);
             this.txtbxuser.TabIndex = 0;
@@ -52,7 +52,7 @@
             // 
             this.txtbxpass.BackColor = System.Drawing.Color.LightGray;
             this.txtbxpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxpass.Location = new System.Drawing.Point(87, 197);
+            this.txtbxpass.Location = new System.Drawing.Point(140, 232);
             this.txtbxpass.Name = "txtbxpass";
             this.txtbxpass.PasswordChar = '*';
             this.txtbxpass.Size = new System.Drawing.Size(194, 26);
@@ -64,7 +64,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(84, 113);
+            this.label1.Location = new System.Drawing.Point(137, 148);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 17);
             this.label1.TabIndex = 2;
@@ -76,7 +76,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(84, 177);
+            this.label2.Location = new System.Drawing.Point(137, 212);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 17);
             this.label2.TabIndex = 3;
@@ -90,7 +90,7 @@
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlogin.ForeColor = System.Drawing.Color.White;
-            this.btnlogin.Location = new System.Drawing.Point(89, 238);
+            this.btnlogin.Location = new System.Drawing.Point(142, 273);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(93, 32);
             this.btnlogin.TabIndex = 4;
@@ -103,7 +103,7 @@
             this.btnclose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnclose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclose.Location = new System.Drawing.Point(188, 238);
+            this.btnclose.Location = new System.Drawing.Point(241, 273);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(93, 32);
             this.btnclose.TabIndex = 5;
@@ -117,7 +117,7 @@
             this.lbl_Register.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Register.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Register.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lbl_Register.Location = new System.Drawing.Point(88, 278);
+            this.lbl_Register.Location = new System.Drawing.Point(141, 313);
             this.lbl_Register.Name = "lbl_Register";
             this.lbl_Register.Size = new System.Drawing.Size(52, 13);
             this.lbl_Register.TabIndex = 6;
@@ -132,7 +132,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Himalaya", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(22, 46);
+            this.label4.Location = new System.Drawing.Point(80, 68);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(371, 67);
             this.label4.TabIndex = 7;
@@ -142,6 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.login_file;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.label4);
@@ -152,8 +153,9 @@
             this.Controls.Add(this.btnlogin);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
+            this.DoubleBuffered = true;
             this.Name = "UC_Login";
-            this.Size = new System.Drawing.Size(769, 526);
+            this.Size = new System.Drawing.Size(1200, 700);
             this.ResumeLayout(false);
             this.PerformLayout();
 

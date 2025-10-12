@@ -34,7 +34,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_close = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -46,7 +45,7 @@
             // 
             this.lbl_rembal.AutoSize = true;
             this.lbl_rembal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_rembal.Location = new System.Drawing.Point(207, 248);
+            this.lbl_rembal.Location = new System.Drawing.Point(231, 252);
             this.lbl_rembal.Name = "lbl_rembal";
             this.lbl_rembal.Size = new System.Drawing.Size(81, 24);
             this.lbl_rembal.TabIndex = 31;
@@ -56,7 +55,7 @@
             // 
             this.lbl_accname.AutoSize = true;
             this.lbl_accname.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_accname.Location = new System.Drawing.Point(207, 180);
+            this.lbl_accname.Location = new System.Drawing.Point(231, 184);
             this.lbl_accname.Name = "lbl_accname";
             this.lbl_accname.Size = new System.Drawing.Size(99, 24);
             this.lbl_accname.TabIndex = 30;
@@ -66,7 +65,7 @@
             // 
             this.lbl_accnum.AutoSize = true;
             this.lbl_accnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_accnum.Location = new System.Drawing.Point(207, 108);
+            this.lbl_accnum.Location = new System.Drawing.Point(231, 112);
             this.lbl_accnum.Name = "lbl_accnum";
             this.lbl_accnum.Size = new System.Drawing.Size(89, 24);
             this.lbl_accnum.TabIndex = 29;
@@ -77,7 +76,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(22, 248);
+            this.label4.Location = new System.Drawing.Point(46, 252);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(179, 24);
             this.label4.TabIndex = 28;
@@ -87,7 +86,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(22, 180);
+            this.label3.Location = new System.Drawing.Point(46, 184);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(141, 24);
             this.label3.TabIndex = 27;
@@ -97,29 +96,18 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 108);
+            this.label2.Location = new System.Drawing.Point(46, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(159, 24);
             this.label2.TabIndex = 26;
             this.label2.Text = "Account Number:";
             // 
-            // btn_close
-            // 
-            this.btn_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_close.Location = new System.Drawing.Point(793, 477);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(75, 36);
-            this.btn_close.TabIndex = 32;
-            this.btn_close.Text = "Close";
-            this.btn_close.UseVisualStyleBackColor = true;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 529);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 680);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(900, 21);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1202, 25);
             this.flowLayoutPanel1.TabIndex = 48;
             // 
             // panel1
@@ -129,7 +117,7 @@
             this.panel1.Controls.Add(this.label12);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(900, 64);
+            this.panel1.Size = new System.Drawing.Size(1204, 64);
             this.panel1.TabIndex = 65;
             // 
             // panel2
@@ -156,15 +144,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.btn_close);
             this.Controls.Add(this.lbl_rembal);
             this.Controls.Add(this.lbl_accname);
             this.Controls.Add(this.lbl_accnum);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.DoubleBuffered = true;
             this.Name = "UC_CheckBalance_Cus";
-            this.Size = new System.Drawing.Size(900, 550);
+            this.Size = new System.Drawing.Size(1200, 700);
             this.Load += new System.EventHandler(this.UC_CheckBalance_Cus_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -181,7 +169,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btn_close;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;

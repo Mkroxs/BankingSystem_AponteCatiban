@@ -17,6 +17,7 @@ namespace BankingSystem_AponteCatiban
         private List<Customer> customers;
         private Customer selectedCustomer;
         private decimal depositTotal = 0;
+        
         public UC_Deposit_Admin()
         {
             InitializeComponent();
@@ -77,17 +78,30 @@ namespace BankingSystem_AponteCatiban
 
         private void UC_Deposit_Admin_Load(object sender, EventArgs e)
         {
-            
+                EnableDenominations(false);
         }
 
+        private void EnableDenominations(bool enable)
+        {
+            txt1000.Enabled = enable;
+            txt500.Enabled = enable;
+            txt200.Enabled = enable;
+            txt100.Enabled = enable;
+            txt50.Enabled = enable;
+            txt20.Enabled = enable;
+            txt10.Enabled = enable;
+            txt5.Enabled = enable;
+            txt1.Enabled = enable;
+        }
         private void txt_accnum_TextChanged(object sender, EventArgs e)
         {
 
             string accNum = txt_accnum.Text.Trim();
-            if (string.IsNullOrWhiteSpace(accNum))
+            if (string.IsNullOrWhiteSpace(accNum) || string.IsNullOrEmpty(accNum))
             {
                 lbl_NoAccount.Visible = false;
                 ClearCustomerDisplay();
+                EnableDenominations(false);
                 return;
             }
 
@@ -97,12 +111,14 @@ namespace BankingSystem_AponteCatiban
                 lbl_NoAccount.Visible = false;
                 lbl_accname.Text = selectedCustomer.FullName;
                 lbl_currbal.Text = $"₱{selectedCustomer.Balance:N2}";
+                EnableDenominations(true);
             }
 
             else
             {
                 lbl_NoAccount.Visible = true;
                 ClearCustomerDisplay();
+                EnableDenominations(false);
             }
             
         }
@@ -155,11 +171,49 @@ namespace BankingSystem_AponteCatiban
 
         }
 
+        private void CalculateDepositTotal()
+        {
+            decimal total = 0;
+
+            total += ParseDecimal(txt1000.Text) * 1000;
+            total += ParseDecimal(txt500.Text) * 500;
+            total += ParseDecimal(txt200.Text) * 200;
+            total += ParseDecimal(txt100.Text) * 100;
+            total += ParseDecimal(txt50.Text) * 50;
+            total += ParseDecimal(txt20.Text) * 20;
+            total += ParseDecimal(txt10.Text) * 10;
+            total += ParseDecimal(txt5.Text) * 5;
+            total += ParseDecimal(txt1.Text) * 1;
+
+            depositTotal = total;
+            lbl_totalamount.Text = $"₱{depositTotal:N2}";
+        }
+
+        private int ParseDecimal(string text)
+        {
+            if (int.TryParse(text, out int value) && value >= 0)
+                return value;
+            return 0;
+        }
+
+        private void ClearDenominations()
+        {
+            txt1000.Text = "";
+            txt500.Text = "";
+            txt200.Text = "";
+            txt100.Text = "";
+            txt50.Text = "";
+            txt20.Text = "";
+            txt10.Text = "";
+            txt5.Text = "";
+            txt1.Text = "";
+            depositTotal = 0;
+            lbl_totalamount.Text = "₱0.00";
+        }
 
         private void btn_clear_Click(object sender, EventArgs e)
         {
-            depositTotal = 0;
-            lbl_totalamount.Text = "₱0.00";
+            ClearDenominations();
         }
         private void AddDeposit(decimal amount)
         {
@@ -218,6 +272,196 @@ namespace BankingSystem_AponteCatiban
         {
             AddDeposit(1);
 
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt1000_TextChanged(object sender, EventArgs e)
+        {
+            CalculateDepositTotal();
+        }
+
+        private void txt100_TextChanged(object sender, EventArgs e)
+        {
+            CalculateDepositTotal();
+        }
+
+        private void txt10_TextChanged(object sender, EventArgs e)
+        {
+            CalculateDepositTotal();
+        }
+
+        private void txt500_TextChanged(object sender, EventArgs e)
+        {
+            CalculateDepositTotal();
+        }
+
+        private void txt50_TextChanged(object sender, EventArgs e)
+        {
+            CalculateDepositTotal();
+        }
+
+        private void txt5_TextChanged(object sender, EventArgs e)
+        {
+            CalculateDepositTotal();
+        }
+
+        private void txt200_TextChanged(object sender, EventArgs e)
+        {
+            CalculateDepositTotal();
+        }
+
+        private void txt20_TextChanged(object sender, EventArgs e)
+        {
+            CalculateDepositTotal();
+        }
+
+        private void txt1_TextChanged(object sender, EventArgs e)
+        {
+            CalculateDepositTotal();
+        }
+
+        private void txt1000_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt500_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt200_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt100_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt50_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt20_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt10_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt1000_Enter(object sender, EventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+            if (tb != null)
+                tb.Clear();
+        }
+
+        private void txt500_Enter(object sender, EventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+            if (tb != null)
+                tb.Clear();
+        }
+
+        private void txt200_Enter(object sender, EventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+            if (tb != null)
+                tb.Clear();
+        }
+
+        private void txt100_Enter(object sender, EventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+            if (tb != null)
+                tb.Clear();
+        }
+
+        private void txt50_Enter(object sender, EventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+            if (tb != null)
+                tb.Clear();
+        }
+
+        private void txt20_Enter(object sender, EventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+            if (tb != null)
+                tb.Clear();
+        }
+
+        private void UC_Deposit_Admin_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt10_Enter(object sender, EventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+            if (tb != null)
+                tb.Clear();
+        }
+
+        private void txt5_Enter(object sender, EventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+            if (tb != null)
+                tb.Clear();
+        }
+
+        private void txt1_Enter(object sender, EventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+            if (tb != null)
+                tb.Clear();
         }
     }
 }

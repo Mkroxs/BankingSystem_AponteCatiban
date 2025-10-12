@@ -99,6 +99,7 @@ namespace BankingSystem_AponteCatiban
         private void lbldeposit_Click(object sender, EventArgs e)
         {
             deposit_Admin.BringToFront();
+            
         }
 
         private void lblwithdraw_Click(object sender, EventArgs e)
@@ -109,11 +110,15 @@ namespace BankingSystem_AponteCatiban
         private void lblcheck_bal_Click(object sender, EventArgs e)
         {
             checkBalance_Admin.BringToFront();
+            checkBalance_Admin.LoadCustomers();
+            checkBalance_Admin.SetupAccountNumberAutocomplete();
+
         }
 
         private void lblcus_prof_Click(object sender, EventArgs e)
         {
             customerProfile.BringToFront();
+            customerProfile.LoadCustomerData();
         }
 
         private void label2_Click(object sender, EventArgs e)

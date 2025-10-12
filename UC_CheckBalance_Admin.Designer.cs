@@ -47,7 +47,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(106, 206);
+            this.label2.Location = new System.Drawing.Point(148, 202);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(159, 24);
             this.label2.TabIndex = 19;
@@ -58,7 +58,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(108, 256);
+            this.label3.Location = new System.Drawing.Point(150, 252);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(141, 24);
             this.label3.TabIndex = 20;
@@ -69,7 +69,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(108, 304);
+            this.label4.Location = new System.Drawing.Point(150, 300);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(179, 24);
             this.label4.TabIndex = 21;
@@ -80,7 +80,7 @@
             // 
             this.lbl_accnum.AutoSize = true;
             this.lbl_accnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_accnum.Location = new System.Drawing.Point(324, 206);
+            this.lbl_accnum.Location = new System.Drawing.Point(366, 202);
             this.lbl_accnum.Name = "lbl_accnum";
             this.lbl_accnum.Size = new System.Drawing.Size(89, 24);
             this.lbl_accnum.TabIndex = 22;
@@ -91,7 +91,7 @@
             // 
             this.lbl_accname.AutoSize = true;
             this.lbl_accname.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_accname.Location = new System.Drawing.Point(324, 256);
+            this.lbl_accname.Location = new System.Drawing.Point(366, 252);
             this.lbl_accname.Name = "lbl_accname";
             this.lbl_accname.Size = new System.Drawing.Size(99, 24);
             this.lbl_accname.TabIndex = 23;
@@ -102,7 +102,7 @@
             // 
             this.lbl_rembal.AutoSize = true;
             this.lbl_rembal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_rembal.Location = new System.Drawing.Point(326, 308);
+            this.lbl_rembal.Location = new System.Drawing.Point(368, 304);
             this.lbl_rembal.Name = "lbl_rembal";
             this.lbl_rembal.Size = new System.Drawing.Size(81, 24);
             this.lbl_rembal.TabIndex = 24;
@@ -148,7 +148,7 @@
             // tbxAccountNumber
             // 
             this.tbxAccountNumber.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxAccountNumber.Location = new System.Drawing.Point(112, 112);
+            this.tbxAccountNumber.Location = new System.Drawing.Point(154, 108);
             this.tbxAccountNumber.Name = "tbxAccountNumber";
             this.tbxAccountNumber.Size = new System.Drawing.Size(298, 25);
             this.tbxAccountNumber.TabIndex = 68;
@@ -158,7 +158,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(112, 86);
+            this.label1.Location = new System.Drawing.Point(154, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(193, 18);
             this.label1.TabIndex = 69;

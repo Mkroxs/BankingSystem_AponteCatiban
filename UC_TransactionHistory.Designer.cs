@@ -152,7 +152,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(445, 92);
+            this.label5.Location = new System.Drawing.Point(19, 344);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(137, 17);
             this.label5.TabIndex = 41;
@@ -161,9 +161,9 @@
             // dgv_cuslist
             // 
             this.dgv_cuslist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_cuslist.Location = new System.Drawing.Point(448, 112);
+            this.dgv_cuslist.Location = new System.Drawing.Point(22, 364);
             this.dgv_cuslist.Name = "dgv_cuslist";
-            this.dgv_cuslist.Size = new System.Drawing.Size(406, 129);
+            this.dgv_cuslist.Size = new System.Drawing.Size(700, 224);
             this.dgv_cuslist.TabIndex = 40;
             this.dgv_cuslist.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_cuslist_CellClick);
             // 

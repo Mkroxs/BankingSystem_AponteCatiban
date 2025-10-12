@@ -29,7 +29,7 @@ namespace BankingSystem_AponteCatiban
 
         public Customer LoggedInCustomer { get; set; }
         private Timer sidebarTimer = new Timer();
-        
+
 
 
         public MainForm()
@@ -75,9 +75,9 @@ namespace BankingSystem_AponteCatiban
 
         }
 
-       
 
-        
+
+
 
         private void lblregister_Click(object sender, EventArgs e)
         {
@@ -99,7 +99,7 @@ namespace BankingSystem_AponteCatiban
         private void lbldeposit_Click(object sender, EventArgs e)
         {
             deposit_Admin.BringToFront();
-            
+
         }
 
         private void lblwithdraw_Click(object sender, EventArgs e)
@@ -140,7 +140,7 @@ namespace BankingSystem_AponteCatiban
                 transactionHistory.LoadTransactionHistory();
                 transactionHistory.BringToFront();
             }
-            
+
         }
 
         private void lblprof_Click(object sender, EventArgs e)
@@ -150,7 +150,7 @@ namespace BankingSystem_AponteCatiban
                 profile.BringToFront();
                 profile.LoadCustomerData();
             }
-            
+
         }
 
         private void lblllogout_Click(object sender, EventArgs e)
@@ -728,47 +728,6 @@ namespace BankingSystem_AponteCatiban
         {
             login.BringToFront();
             mainPanelCustomer.Visible = false;
-        }
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel8_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel4_MouseEnter_1(object sender, EventArgs e)
-        {
-            
-            
-
-
-        }
-
-        private void panel4_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel4_MouseLeave_1(object sender, EventArgs e)
-        {
-            
         }
     }
 }

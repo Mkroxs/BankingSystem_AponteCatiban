@@ -57,9 +57,13 @@ namespace BankingSystem_AponteCatiban
                     if (username == "admin" && password == "admin")
                     {
                     var mainform = this.FindForm() as MainForm;
+
                     if (mainform != null)
                         {
+                            mainform.registration.btn_cancel.Visible = false;
                             mainform.dashboard_Admin.BringToFront();
+                            mainform.mainPanelSide.Visible = true;
+                            mainform.mainPanelCustomer.Visible = false;
                         }
                     }
                     else if (matchingCustomer != null)
@@ -70,15 +74,19 @@ namespace BankingSystem_AponteCatiban
                             mainform.LoggedInCustomer = matchingCustomer; 
                             mainform.dashboard_Cus.BringToFront();
 
+                            mainform.mainPanelCustomer.Visible = true;
+                            mainform.mainPanelSide.Visible = false;
+                        
+
+                        }
                     }
-                }
-                else
-                {
+                    else
+                    {
                         MessageBox.Show("Invalid username or password.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
-                }
-                catch { }
+                    }
+                    catch { }
 
 
                     clearField();
@@ -93,6 +101,7 @@ namespace BankingSystem_AponteCatiban
         private void lbl_Register_Click(object sender, EventArgs e)
         {
             var mainform = this.Parent as MainForm;
+            mainform.registration.btn_cancel.Visible = true;
             mainform.registration.Show();
             mainform.registration.BringToFront();
             lbl_Register.ForeColor = Color.White;
@@ -116,46 +125,7 @@ namespace BankingSystem_AponteCatiban
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show(
-        "Are you sure you want to reset all customer and transaction data?\nThis action cannot be undone.",
-        "Confirm Reset",
-        MessageBoxButtons.YesNo,
-        MessageBoxIcon.Warning) == DialogResult.No)
-                return;
-
-            try
-            {
-                string dataFolder = Path.Combine(Application.StartupPath, "Data");
-                string customerFile = Path.Combine(dataFolder, "customers.txt");
-                string transactionFile = Path.Combine(dataFolder, "transactions.txt");
-
-                
-                File.WriteAllText(customerFile, "[]", Encoding.UTF8);
-                File.WriteAllText(transactionFile, "[]", Encoding.UTF8);
-
-                
-                var mainform = this.FindForm() as MainForm;
-                if (mainform != null)
-                {
-                    mainform.deposit_Admin?.RefreshCustomerList();
-                    mainform.withdraw?.RefreshCustomerList();
-                    mainform.checkBalance_Admin?.LoadCustomers();
-                }
-
-                MessageBox.Show("All data in customers.txt and transactions.txt have been reset successfully.",
-                                "Reset Successful",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error resetting data:\n" + ex.Message,
-                                "Error",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-            }
-        }
+       
+        
     }
 }

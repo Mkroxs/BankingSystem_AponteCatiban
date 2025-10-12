@@ -12,7 +12,7 @@ namespace BankingSystem_AponteCatiban
 {
     public partial class UC_Dashboard_Cus: UserControl
     {
-        bool sidebarExpand;
+       
         public UC_Dashboard_Cus()
         {
             InitializeComponent();
@@ -60,81 +60,11 @@ namespace BankingSystem_AponteCatiban
             }
         }
 
-        private void sidebarTimer_Tick(object sender, EventArgs e)
+       
+        
+        private void UC_Dashboard_Cus_Load(object sender, EventArgs e)
         {
-            if (sidebarExpand)
-            {
-                sidebar.Width -= 10;
-                if (sidebar.Width == sidebar.MinimumSize.Width)
-                {
-                    sidebarExpand = false;
-                    sidebarTimer.Stop();
-                }
-            }
-            else
-            {
-                sidebar.Width += 10;
-                if (sidebar.Width == sidebar.MaximumSize.Width)
-                {
-                    sidebarExpand = true;
-                    sidebarTimer.Stop();
-                }
-            }
-        }
 
-        private void menuButton_Click(object sender, EventArgs e)
-        {
-            sidebarTimer.Start();
-        }
-
-        private void lbldeposit_MouseEnter(object sender, EventArgs e)
-        {
-            lbldeposit.ForeColor = Color.Black;
-        }
-
-        private void lbldeposit_MouseLeave(object sender, EventArgs e)
-        {
-            lbldeposit.ForeColor = Color.White;
-        }
-
-        private void lblcheck_bal_MouseEnter(object sender, EventArgs e)
-        {
-            lblcheck_bal.ForeColor = Color.Black;
-        }
-
-        private void lblcheck_bal_MouseLeave(object sender, EventArgs e)
-        {
-            lblcheck_bal.ForeColor= Color.White;
-        }
-
-        private void lbltransac_history_MouseEnter(object sender, EventArgs e)
-        {
-            lbltransac_history.ForeColor = Color.Black;
-        }
-
-        private void lbltransac_history_MouseLeave(object sender, EventArgs e)
-        {
-            lbltransac_history.ForeColor= Color.White;
-        }
-
-        private void lblprof_MouseEnter(object sender, EventArgs e)
-        {
-            lblprof.ForeColor = Color.Black;
-        }
-
-        private void lblprof_MouseLeave(object sender, EventArgs e)
-        {
-            lblprof.ForeColor= Color.White;
-        }
-
-        private void label1_MouseEnter(object sender, EventArgs e)
-        {
-            lblllogout.ForeColor = Color.Black;
-        }
-
-        private void label1_MouseLeave(object sender, EventArgs e)
-        {
-            lblllogout.ForeColor = Color.White;
         }
     }
 }

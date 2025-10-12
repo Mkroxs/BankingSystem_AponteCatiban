@@ -38,7 +38,6 @@
             this.lbl_amount = new System.Windows.Forms.Label();
             this.lbl_prevbal = new System.Windows.Forms.Label();
             this.lbl_newbal = new System.Windows.Forms.Label();
-            this.btn_close = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.dgv_cuslist = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -149,22 +148,11 @@
             this.lbl_newbal.TabIndex = 38;
             this.lbl_newbal.Text = "New Bal";
             // 
-            // btn_close
-            // 
-            this.btn_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_close.Location = new System.Drawing.Point(793, 477);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(75, 36);
-            this.btn_close.TabIndex = 39;
-            this.btn_close.Text = "Close";
-            this.btn_close.UseVisualStyleBackColor = true;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(485, 90);
+            this.label5.Location = new System.Drawing.Point(19, 344);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(137, 17);
             this.label5.TabIndex = 41;
@@ -173,9 +161,9 @@
             // dgv_cuslist
             // 
             this.dgv_cuslist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_cuslist.Location = new System.Drawing.Point(488, 110);
+            this.dgv_cuslist.Location = new System.Drawing.Point(22, 364);
             this.dgv_cuslist.Name = "dgv_cuslist";
-            this.dgv_cuslist.Size = new System.Drawing.Size(378, 129);
+            this.dgv_cuslist.Size = new System.Drawing.Size(700, 224);
             this.dgv_cuslist.TabIndex = 40;
             this.dgv_cuslist.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_cuslist_CellClick);
             // 
@@ -186,7 +174,7 @@
             this.panel1.Controls.Add(this.label10);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(900, 64);
+            this.panel1.Size = new System.Drawing.Size(1212, 64);
             this.panel1.TabIndex = 42;
             // 
             // panel2
@@ -210,9 +198,9 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 529);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 680);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(900, 21);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1202, 24);
             this.flowLayoutPanel1.TabIndex = 39;
             // 
             // UC_TransactionHistory
@@ -223,7 +211,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dgv_cuslist);
-            this.Controls.Add(this.btn_close);
             this.Controls.Add(this.lbl_newbal);
             this.Controls.Add(this.lbl_prevbal);
             this.Controls.Add(this.lbl_amount);
@@ -234,8 +221,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.DoubleBuffered = true;
             this.Name = "UC_TransactionHistory";
-            this.Size = new System.Drawing.Size(900, 550);
+            this.Size = new System.Drawing.Size(1200, 700);
             this.Load += new System.EventHandler(this.UC_TransactionHistory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_cuslist)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -256,7 +244,6 @@
         private System.Windows.Forms.Label lbl_amount;
         private System.Windows.Forms.Label lbl_prevbal;
         private System.Windows.Forms.Label lbl_newbal;
-        private System.Windows.Forms.Button btn_close;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgv_cuslist;
         private System.Windows.Forms.Panel panel1;

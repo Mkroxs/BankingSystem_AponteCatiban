@@ -28,9 +28,15 @@ namespace BankingSystem_AponteCatiban
         public UC_InitialDeposit initialDeposit = new UC_InitialDeposit();
 
         public Customer LoggedInCustomer { get; set; }
+        private Timer sidebarTimer = new Timer();
+        
+
+
         public MainForm()
         {
+
             InitializeComponent();
+
 
             this.Controls.Add(login);
             this.Controls.Add(dashboard_Admin);
@@ -63,6 +69,176 @@ namespace BankingSystem_AponteCatiban
         private void MainForm_Load(object sender, EventArgs e)
         {
             login.BringToFront();
+            mainPanelSide.Visible = false;
+            mainPanelCustomer.Visible = false;
+
+
+        }
+
+       
+
+        
+
+        private void lblregister_Click(object sender, EventArgs e)
+        {
+            registration.BringToFront();
+            registration.Show();
+        }
+
+        private void lbllogout_Click(object sender, EventArgs e)
+        {
+            login.BringToFront();
+            mainPanelSide.Visible = false;
+        }
+
+        private void mainPanelSide_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lbldeposit_Click(object sender, EventArgs e)
+        {
+            deposit_Admin.BringToFront();
+            
+        }
+
+        private void lblwithdraw_Click(object sender, EventArgs e)
+        {
+            withdraw.BringToFront();
+        }
+
+        private void lblcheck_bal_Click(object sender, EventArgs e)
+        {
+            checkBalance_Admin.BringToFront();
+            checkBalance_Admin.LoadCustomers();
+            checkBalance_Admin.SetupAccountNumberAutocomplete();
+
+        }
+
+        private void lblcus_prof_Click(object sender, EventArgs e)
+        {
+            customerProfile.BringToFront();
+            customerProfile.LoadCustomerData();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            deposit_customer.BringToFront();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            checkBalance_Cus.LoadCustomerData();
+
+            checkBalance_Cus.BringToFront();
+        }
+
+        private void lbltransac_history_Click(object sender, EventArgs e)
+        {
+            if (this != null)
+            {
+                transactionHistory.LoadTransactionHistory();
+                transactionHistory.BringToFront();
+            }
+            
+        }
+
+        private void lblprof_Click(object sender, EventArgs e)
+        {
+            if (this != null)
+            {
+                profile.BringToFront();
+                profile.LoadCustomerData();
+            }
+            
+        }
+
+        private void lblllogout_Click(object sender, EventArgs e)
+        {
+            login.BringToFront();
+            mainPanelCustomer.Visible = false;
+        }
+
+        private void menuButton_Click(object sender, EventArgs e)
+        {
+            sidebarTimer.Start();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            sidebarTimer.Start();
+        }
+
+        private void menuButton_MouseClick(object sender, MouseEventArgs e)
+        {
+            sidebarTimer.Start();
+        }
+
+        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            sidebarTimer.Start();
+        }
+
+        private void mainPanelCustomer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblregister_MouseEnter(object sender, EventArgs e)
+        {
+            panel2.BackColor = Color.FromArgb(0, 60, 85);
+        }
+
+        private void panel2_MouseEnter(object sender, EventArgs e)
+        {
+            panel2.BackColor = Color.FromArgb(0, 60, 85);
+
+        }
+
+        private void pictureBox2_MouseEnter(object sender, EventArgs e)
+        {
+            panel2.BackColor = Color.FromArgb(0, 60, 85);
+
+        }
+
+        private void lblregister_MouseLeave(object sender, EventArgs e)
+        {
+            panel2.BackColor = Color.FromArgb(66, 125, 213);
+        }
+
+        private void panel2_MouseLeave(object sender, EventArgs e)
+        {
+            panel2.BackColor = Color.FromArgb(66, 125, 213);
+
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            panel2.BackColor = Color.FromArgb(66, 125, 213);
+
+        }
+
+        private void lblregister_MouseClick(object sender, MouseEventArgs e)
+        {
+            registration.BringToFront();
+            registration.Show();
+        }
+
+        private void panel2_MouseClick(object sender, MouseEventArgs e)
+        {
+            registration.BringToFront();
+            registration.Show();
+        }
+
+        private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            registration.BringToFront();
+            registration.Show();
         }
     }
 }

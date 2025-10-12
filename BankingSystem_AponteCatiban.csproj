@@ -211,6 +211,16 @@
   <ItemGroup>
     <Content Include="Data\customers.txt" />
     <Content Include="Data\transactions.txt" />
+    <None Include="Resources\time-management.png" />
+    <None Include="Resources\account.png" />
+    <None Include="Resources\burger-bar1.png" />
+    <None Include="Resources\logout1.png" />
+    <None Include="Resources\multiple-users-silhouette1.png" />
+    <None Include="Resources\group.png" />
+    <None Include="Resources\receipt1.png" />
+    <None Include="Resources\cash-withdrawal1.png" />
+    <None Include="Resources\wallet1.png" />
+    <None Include="Resources\add1.png" />
     <None Include="Properties\login_file.jpg" />
     <None Include="Image\login_file.jpg" />
   </ItemGroup>

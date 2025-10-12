@@ -463,5 +463,17 @@ namespace BankingSystem_AponteCatiban
             if (tb != null)
                 tb.Clear();
         }
+
+        private void txt_accnum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar))
+                return;
+
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
     }
 }

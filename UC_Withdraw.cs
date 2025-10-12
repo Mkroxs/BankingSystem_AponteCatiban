@@ -214,5 +214,17 @@ namespace BankingSystem_AponteCatiban
             if (e.KeyChar == '.' && (sender as TextBox).Text.Contains("."))
                 e.Handled = true;
         }
+
+        private void txtbx_accnum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar))
+                return;
+
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
     }
 }

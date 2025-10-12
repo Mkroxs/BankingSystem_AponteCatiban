@@ -60,6 +60,8 @@ namespace BankingSystem_AponteCatiban
             
             LoadCustomers();
 
+           
+
             if (string.IsNullOrWhiteSpace(input))
             {
                 lbl_accnum.Text = "-";
@@ -98,5 +100,18 @@ namespace BankingSystem_AponteCatiban
         private void lbl_rembal_Click(object sender, EventArgs e) { }
 
         private void label4_Click(object sender, EventArgs e) { }
+
+        private void tbxAccountNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar))
+                return;
+
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                return;
+            }
+
+        }
     }
 }

@@ -214,6 +214,9 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(255, 51);
             this.panel4.TabIndex = 34;
+            this.panel4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseClick);
+            this.panel4.MouseEnter += new System.EventHandler(this.panel4_MouseEnter);
+            this.panel4.MouseLeave += new System.EventHandler(this.panel4_MouseLeave);
             // 
             // pictureBox3
             // 
@@ -224,6 +227,9 @@
             this.pictureBox3.Size = new System.Drawing.Size(30, 30);
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseClick);
+            this.pictureBox3.MouseEnter += new System.EventHandler(this.pictureBox3_MouseEnter);
+            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
             // 
             // lbldeposit
             // 
@@ -236,6 +242,9 @@
             this.lbldeposit.TabIndex = 1;
             this.lbldeposit.Text = "Deposit";
             this.lbldeposit.Click += new System.EventHandler(this.lbldeposit_Click);
+            this.lbldeposit.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lbldeposit_MouseClick);
+            this.lbldeposit.MouseEnter += new System.EventHandler(this.lbldeposit_MouseEnter);
+            this.lbldeposit.MouseLeave += new System.EventHandler(this.lbldeposit_MouseLeave);
             // 
             // panel5
             // 
@@ -245,6 +254,9 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(255, 51);
             this.panel5.TabIndex = 35;
+            this.panel5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseClick);
+            this.panel5.MouseEnter += new System.EventHandler(this.panel5_MouseEnter);
+            this.panel5.MouseLeave += new System.EventHandler(this.panel5_MouseLeave);
             // 
             // pictureBox4
             // 
@@ -255,6 +267,9 @@
             this.pictureBox4.Size = new System.Drawing.Size(30, 30);
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseClick);
+            this.pictureBox4.MouseEnter += new System.EventHandler(this.pictureBox4_MouseEnter);
+            this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
             // 
             // lblwithdraw
             // 
@@ -267,6 +282,9 @@
             this.lblwithdraw.TabIndex = 2;
             this.lblwithdraw.Text = "Withdraw";
             this.lblwithdraw.Click += new System.EventHandler(this.lblwithdraw_Click);
+            this.lblwithdraw.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblwithdraw_MouseClick);
+            this.lblwithdraw.MouseEnter += new System.EventHandler(this.lblwithdraw_MouseEnter);
+            this.lblwithdraw.MouseLeave += new System.EventHandler(this.lblwithdraw_MouseLeave);
             // 
             // panel6
             // 
@@ -276,6 +294,9 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(255, 51);
             this.panel6.TabIndex = 36;
+            this.panel6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel6_MouseClick);
+            this.panel6.MouseEnter += new System.EventHandler(this.panel6_MouseEnter);
+            this.panel6.MouseLeave += new System.EventHandler(this.panel6_MouseLeave);
             // 
             // pictureBox5
             // 
@@ -286,6 +307,9 @@
             this.pictureBox5.Size = new System.Drawing.Size(30, 30);
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseClick);
+            this.pictureBox5.MouseEnter += new System.EventHandler(this.pictureBox5_MouseEnter);
+            this.pictureBox5.MouseLeave += new System.EventHandler(this.pictureBox5_MouseLeave);
             // 
             // lblcheck_bal
             // 
@@ -298,6 +322,9 @@
             this.lblcheck_bal.TabIndex = 3;
             this.lblcheck_bal.Text = "Check Balance";
             this.lblcheck_bal.Click += new System.EventHandler(this.lblcheck_bal_Click);
+            this.lblcheck_bal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblcheck_bal_MouseClick);
+            this.lblcheck_bal.MouseEnter += new System.EventHandler(this.lblcheck_bal_MouseEnter);
+            this.lblcheck_bal.MouseLeave += new System.EventHandler(this.lblcheck_bal_MouseLeave);
             // 
             // panel7
             // 
@@ -307,6 +334,9 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(255, 51);
             this.panel7.TabIndex = 37;
+            this.panel7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseClick);
+            this.panel7.MouseEnter += new System.EventHandler(this.panel7_MouseEnter);
+            this.panel7.MouseLeave += new System.EventHandler(this.panel7_MouseLeave);
             // 
             // pictureBox6
             // 
@@ -317,6 +347,9 @@
             this.pictureBox6.Size = new System.Drawing.Size(30, 30);
             this.pictureBox6.TabIndex = 5;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox6_MouseClick);
+            this.pictureBox6.MouseEnter += new System.EventHandler(this.pictureBox6_MouseEnter);
+            this.pictureBox6.MouseLeave += new System.EventHandler(this.pictureBox6_MouseLeave);
             // 
             // lblcus_prof
             // 
@@ -329,6 +362,9 @@
             this.lblcus_prof.TabIndex = 4;
             this.lblcus_prof.Text = "Customer Profile";
             this.lblcus_prof.Click += new System.EventHandler(this.lblcus_prof_Click);
+            this.lblcus_prof.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblcus_prof_MouseClick);
+            this.lblcus_prof.MouseEnter += new System.EventHandler(this.lblcus_prof_MouseEnter);
+            this.lblcus_prof.MouseLeave += new System.EventHandler(this.lblcus_prof_MouseLeave);
             // 
             // panel8
             // 
@@ -338,6 +374,9 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(255, 51);
             this.panel8.TabIndex = 38;
+            this.panel8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseClick);
+            this.panel8.MouseEnter += new System.EventHandler(this.panel8_MouseEnter);
+            this.panel8.MouseLeave += new System.EventHandler(this.panel8_MouseLeave);
             // 
             // pictureBox7
             // 
@@ -348,6 +387,9 @@
             this.pictureBox7.Size = new System.Drawing.Size(30, 30);
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox7_MouseClick);
+            this.pictureBox7.MouseEnter += new System.EventHandler(this.pictureBox7_MouseEnter);
+            this.pictureBox7.MouseLeave += new System.EventHandler(this.pictureBox7_MouseLeave);
             // 
             // lbllogout
             // 
@@ -360,6 +402,9 @@
             this.lbllogout.TabIndex = 5;
             this.lbllogout.Text = "Log out";
             this.lbllogout.Click += new System.EventHandler(this.lbllogout_Click);
+            this.lbllogout.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lbllogout_MouseClick);
+            this.lbllogout.MouseEnter += new System.EventHandler(this.lbllogout_MouseEnter);
+            this.lbllogout.MouseLeave += new System.EventHandler(this.lbllogout_MouseLeave);
             // 
             // mainPanelCustomer
             // 
@@ -420,6 +465,9 @@
             this.panel9.Size = new System.Drawing.Size(255, 51);
             this.panel9.TabIndex = 32;
             this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
+            this.panel9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel9_MouseClick);
+            this.panel9.MouseEnter += new System.EventHandler(this.panel9_MouseEnter);
+            this.panel9.MouseLeave += new System.EventHandler(this.panel9_MouseLeave);
             // 
             // pictureBox8
             // 
@@ -430,6 +478,9 @@
             this.pictureBox8.Size = new System.Drawing.Size(30, 30);
             this.pictureBox8.TabIndex = 3;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseClick);
+            this.pictureBox8.MouseEnter += new System.EventHandler(this.pictureBox8_MouseEnter);
+            this.pictureBox8.MouseLeave += new System.EventHandler(this.pictureBox8_MouseLeave);
             // 
             // label2
             // 
@@ -442,6 +493,9 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Deposit";
             this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label2_MouseClick);
+            this.label2.MouseEnter += new System.EventHandler(this.label2_MouseEnter);
+            this.label2.MouseLeave += new System.EventHandler(this.label2_MouseLeave);
             // 
             // panel10
             // 
@@ -451,6 +505,9 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(254, 51);
             this.panel10.TabIndex = 33;
+            this.panel10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel10_MouseClick);
+            this.panel10.MouseEnter += new System.EventHandler(this.panel10_MouseEnter);
+            this.panel10.MouseLeave += new System.EventHandler(this.panel10_MouseLeave);
             // 
             // pictureBox10
             // 
@@ -461,6 +518,9 @@
             this.pictureBox10.Size = new System.Drawing.Size(30, 30);
             this.pictureBox10.TabIndex = 5;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox10_MouseClick);
+            this.pictureBox10.MouseEnter += new System.EventHandler(this.pictureBox10_MouseEnter);
+            this.pictureBox10.MouseLeave += new System.EventHandler(this.pictureBox10_MouseLeave);
             // 
             // label5
             // 
@@ -473,6 +533,9 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Check Balance";
             this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.label5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label5_MouseClick);
+            this.label5.MouseEnter += new System.EventHandler(this.label5_MouseEnter);
+            this.label5.MouseLeave += new System.EventHandler(this.label5_MouseLeave);
             // 
             // panel11
             // 
@@ -482,6 +545,9 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(254, 51);
             this.panel11.TabIndex = 33;
+            this.panel11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel11_MouseClick);
+            this.panel11.MouseEnter += new System.EventHandler(this.panel11_MouseEnter);
+            this.panel11.MouseLeave += new System.EventHandler(this.panel11_MouseLeave);
             // 
             // pictureBox11
             // 
@@ -492,6 +558,9 @@
             this.pictureBox11.Size = new System.Drawing.Size(30, 30);
             this.pictureBox11.TabIndex = 9;
             this.pictureBox11.TabStop = false;
+            this.pictureBox11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox11_MouseClick);
+            this.pictureBox11.MouseEnter += new System.EventHandler(this.pictureBox11_MouseEnter);
+            this.pictureBox11.MouseLeave += new System.EventHandler(this.pictureBox11_MouseLeave);
             // 
             // lbltransac_history
             // 
@@ -504,6 +573,9 @@
             this.lbltransac_history.TabIndex = 9;
             this.lbltransac_history.Text = "Transaction history";
             this.lbltransac_history.Click += new System.EventHandler(this.lbltransac_history_Click);
+            this.lbltransac_history.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lbltransac_history_MouseClick);
+            this.lbltransac_history.MouseEnter += new System.EventHandler(this.lbltransac_history_MouseEnter);
+            this.lbltransac_history.MouseLeave += new System.EventHandler(this.lbltransac_history_MouseLeave);
             // 
             // panel12
             // 
@@ -513,6 +585,9 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(254, 51);
             this.panel12.TabIndex = 33;
+            this.panel12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel12_MouseClick);
+            this.panel12.MouseEnter += new System.EventHandler(this.panel12_MouseEnter);
+            this.panel12.MouseLeave += new System.EventHandler(this.panel12_MouseLeave);
             // 
             // pictureBox12
             // 
@@ -523,6 +598,9 @@
             this.pictureBox12.Size = new System.Drawing.Size(30, 30);
             this.pictureBox12.TabIndex = 10;
             this.pictureBox12.TabStop = false;
+            this.pictureBox12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox12_MouseClick);
+            this.pictureBox12.MouseEnter += new System.EventHandler(this.pictureBox12_MouseEnter);
+            this.pictureBox12.MouseLeave += new System.EventHandler(this.pictureBox12_MouseLeave);
             // 
             // lblprof
             // 
@@ -535,6 +613,9 @@
             this.lblprof.TabIndex = 10;
             this.lblprof.Text = "Profile";
             this.lblprof.Click += new System.EventHandler(this.lblprof_Click);
+            this.lblprof.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblprof_MouseClick);
+            this.lblprof.MouseEnter += new System.EventHandler(this.lblprof_MouseEnter);
+            this.lblprof.MouseLeave += new System.EventHandler(this.lblprof_MouseLeave);
             // 
             // panel13
             // 
@@ -544,6 +625,9 @@
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(254, 51);
             this.panel13.TabIndex = 34;
+            this.panel13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel13_MouseClick);
+            this.panel13.MouseEnter += new System.EventHandler(this.panel13_MouseEnter);
+            this.panel13.MouseLeave += new System.EventHandler(this.panel13_MouseLeave);
             // 
             // pictureBox9
             // 
@@ -554,6 +638,9 @@
             this.pictureBox9.Size = new System.Drawing.Size(30, 30);
             this.pictureBox9.TabIndex = 7;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox9_MouseClick);
+            this.pictureBox9.MouseEnter += new System.EventHandler(this.pictureBox9_MouseEnter);
+            this.pictureBox9.MouseLeave += new System.EventHandler(this.pictureBox9_MouseLeave);
             // 
             // lblllogout
             // 
@@ -566,6 +653,9 @@
             this.lblllogout.TabIndex = 11;
             this.lblllogout.Text = "Log out";
             this.lblllogout.Click += new System.EventHandler(this.lblllogout_Click);
+            this.lblllogout.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblllogout_MouseClick);
+            this.lblllogout.MouseEnter += new System.EventHandler(this.lblllogout_MouseEnter);
+            this.lblllogout.MouseLeave += new System.EventHandler(this.lblllogout_MouseLeave);
             // 
             // MainForm
             // 

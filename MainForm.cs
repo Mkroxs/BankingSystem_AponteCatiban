@@ -752,5 +752,23 @@ namespace BankingSystem_AponteCatiban
         {
 
         }
+
+        private void panel4_MouseEnter_1(object sender, EventArgs e)
+        {
+            
+            
+
+
+        }
+
+        private void panel4_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_MouseLeave_1(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

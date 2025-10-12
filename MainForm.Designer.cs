@@ -125,7 +125,7 @@
             this.mainPanelSide.Controls.Add(this.panel8);
             this.mainPanelSide.Dock = System.Windows.Forms.DockStyle.Left;
             this.mainPanelSide.Location = new System.Drawing.Point(0, 0);
-            this.mainPanelSide.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mainPanelSide.Margin = new System.Windows.Forms.Padding(4);
             this.mainPanelSide.MaximumSize = new System.Drawing.Size(343, 862);
             this.mainPanelSide.MinimumSize = new System.Drawing.Size(89, 677);
             this.mainPanelSide.Name = "mainPanelSide";
@@ -138,7 +138,7 @@
             this.panel1.Controls.Add(this.menuButton);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(339, 84);
             this.panel1.TabIndex = 34;
@@ -147,7 +147,7 @@
             // 
             this.menuButton.Image = ((System.Drawing.Image)(resources.GetObject("menuButton.Image")));
             this.menuButton.Location = new System.Drawing.Point(20, 21);
-            this.menuButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.menuButton.Margin = new System.Windows.Forms.Padding(4);
             this.menuButton.Name = "menuButton";
             this.menuButton.Size = new System.Drawing.Size(47, 37);
             this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -175,7 +175,7 @@
             this.panel2.Controls.Add(this.lblregister);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel2.Location = new System.Drawing.Point(4, 96);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(340, 63);
             this.panel2.TabIndex = 33;
@@ -188,7 +188,7 @@
             this.pictureBox2.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.add;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(24, 10);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(40, 37);
             this.pictureBox2.TabIndex = 1;
@@ -219,17 +219,20 @@
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.lbldeposit);
             this.panel4.Location = new System.Drawing.Point(4, 167);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(340, 63);
             this.panel4.TabIndex = 34;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint_1);
+            this.panel4.MouseEnter += new System.EventHandler(this.panel4_MouseEnter_1);
+            this.panel4.MouseLeave += new System.EventHandler(this.panel4_MouseLeave_1);
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.wallet;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(24, 10);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(40, 37);
             this.pictureBox3.TabIndex = 2;
@@ -259,7 +262,7 @@
             this.panel5.Controls.Add(this.pictureBox4);
             this.panel5.Controls.Add(this.lblwithdraw);
             this.panel5.Location = new System.Drawing.Point(4, 238);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(340, 63);
             this.panel5.TabIndex = 35;
@@ -269,7 +272,7 @@
             this.pictureBox4.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.cash_withdrawal;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Location = new System.Drawing.Point(24, 10);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(40, 37);
             this.pictureBox4.TabIndex = 3;
@@ -299,7 +302,7 @@
             this.panel6.Controls.Add(this.pictureBox5);
             this.panel6.Controls.Add(this.lblcheck_bal);
             this.panel6.Location = new System.Drawing.Point(4, 309);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(340, 63);
             this.panel6.TabIndex = 36;
@@ -312,7 +315,7 @@
             this.pictureBox5.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.receipt;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.Location = new System.Drawing.Point(24, 10);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(40, 37);
             this.pictureBox5.TabIndex = 4;
@@ -342,7 +345,7 @@
             this.panel7.Controls.Add(this.pictureBox6);
             this.panel7.Controls.Add(this.lblcus_prof);
             this.panel7.Location = new System.Drawing.Point(4, 380);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(340, 63);
             this.panel7.TabIndex = 37;
@@ -355,7 +358,7 @@
             this.pictureBox6.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.multiple_users_silhouette;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox6.Location = new System.Drawing.Point(24, 10);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(40, 37);
             this.pictureBox6.TabIndex = 5;
@@ -385,7 +388,7 @@
             this.panel8.Controls.Add(this.pictureBox7);
             this.panel8.Controls.Add(this.lbllogout);
             this.panel8.Location = new System.Drawing.Point(4, 451);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(340, 63);
             this.panel8.TabIndex = 38;
@@ -395,7 +398,7 @@
             this.pictureBox7.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.logout;
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox7.Location = new System.Drawing.Point(24, 10);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(40, 37);
             this.pictureBox7.TabIndex = 6;
@@ -431,7 +434,7 @@
             this.mainPanelCustomer.Controls.Add(this.panel13);
             this.mainPanelCustomer.Dock = System.Windows.Forms.DockStyle.Left;
             this.mainPanelCustomer.Location = new System.Drawing.Point(343, 0);
-            this.mainPanelCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mainPanelCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.mainPanelCustomer.MaximumSize = new System.Drawing.Size(343, 862);
             this.mainPanelCustomer.MinimumSize = new System.Drawing.Size(89, 677);
             this.mainPanelCustomer.Name = "mainPanelCustomer";
@@ -444,7 +447,7 @@
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(4, 4);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(339, 84);
             this.panel3.TabIndex = 33;
@@ -453,7 +456,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(20, 21);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(47, 37);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -479,7 +482,7 @@
             this.panel9.Controls.Add(this.pictureBox8);
             this.panel9.Controls.Add(this.label2);
             this.panel9.Location = new System.Drawing.Point(4, 96);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(340, 63);
             this.panel9.TabIndex = 32;
@@ -493,7 +496,7 @@
             this.pictureBox8.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.wallet;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox8.Location = new System.Drawing.Point(24, 10);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(40, 37);
             this.pictureBox8.TabIndex = 3;
@@ -523,7 +526,7 @@
             this.panel10.Controls.Add(this.pictureBox10);
             this.panel10.Controls.Add(this.label5);
             this.panel10.Location = new System.Drawing.Point(4, 167);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(339, 63);
             this.panel10.TabIndex = 33;
@@ -536,7 +539,7 @@
             this.pictureBox10.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.receipt;
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox10.Location = new System.Drawing.Point(24, 10);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(40, 37);
             this.pictureBox10.TabIndex = 5;
@@ -566,7 +569,7 @@
             this.panel11.Controls.Add(this.pictureBox11);
             this.panel11.Controls.Add(this.lbltransac_history);
             this.panel11.Location = new System.Drawing.Point(4, 238);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(339, 63);
             this.panel11.TabIndex = 33;
@@ -579,7 +582,7 @@
             this.pictureBox11.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.time_management;
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox11.Location = new System.Drawing.Point(24, 10);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(40, 37);
             this.pictureBox11.TabIndex = 9;
@@ -609,7 +612,7 @@
             this.panel12.Controls.Add(this.pictureBox12);
             this.panel12.Controls.Add(this.lblprof);
             this.panel12.Location = new System.Drawing.Point(4, 309);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(339, 63);
             this.panel12.TabIndex = 33;
@@ -622,7 +625,7 @@
             this.pictureBox12.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.account;
             this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox12.Location = new System.Drawing.Point(24, 10);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(40, 37);
             this.pictureBox12.TabIndex = 10;
@@ -652,7 +655,7 @@
             this.panel13.Controls.Add(this.pictureBox9);
             this.panel13.Controls.Add(this.lblllogout);
             this.panel13.Location = new System.Drawing.Point(4, 380);
-            this.panel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(339, 63);
             this.panel13.TabIndex = 34;
@@ -665,7 +668,7 @@
             this.pictureBox9.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.logout;
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox9.Location = new System.Drawing.Point(24, 10);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(40, 37);
             this.pictureBox9.TabIndex = 7;

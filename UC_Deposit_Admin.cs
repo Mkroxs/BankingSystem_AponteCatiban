@@ -330,6 +330,11 @@ namespace BankingSystem_AponteCatiban
             {
                 e.Handled = true;
             }
+            if (txt1000.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
+            }
         }
 
         private void txt500_KeyPress(object sender, KeyPressEventArgs e)
@@ -337,6 +342,11 @@ namespace BankingSystem_AponteCatiban
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
+            }
+            if (txt500.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
             }
         }
 
@@ -346,6 +356,11 @@ namespace BankingSystem_AponteCatiban
             {
                 e.Handled = true;
             }
+            if (txt200.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
+            }
         }
 
         private void txt100_KeyPress(object sender, KeyPressEventArgs e)
@@ -353,6 +368,11 @@ namespace BankingSystem_AponteCatiban
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
+            }
+            if (txt100.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
             }
         }
 
@@ -362,6 +382,11 @@ namespace BankingSystem_AponteCatiban
             {
                 e.Handled = true;
             }
+            if (txt50.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
+            }
         }
 
         private void txt20_KeyPress(object sender, KeyPressEventArgs e)
@@ -369,6 +394,11 @@ namespace BankingSystem_AponteCatiban
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
+            }
+            if (txt20.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
             }
         }
 
@@ -378,6 +408,11 @@ namespace BankingSystem_AponteCatiban
             {
                 e.Handled = true;
             }
+            if (txt10.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
+            }
         }
 
         private void txt5_KeyPress(object sender, KeyPressEventArgs e)
@@ -386,6 +421,11 @@ namespace BankingSystem_AponteCatiban
             {
                 e.Handled = true;
             }
+            if (txt5.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
+            }
         }
 
         private void txt1_KeyPress(object sender, KeyPressEventArgs e)
@@ -393,6 +433,11 @@ namespace BankingSystem_AponteCatiban
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
+            }
+            if (txt1.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
             }
         }
 

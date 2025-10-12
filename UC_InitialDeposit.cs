@@ -127,5 +127,91 @@ namespace BankingSystem_AponteCatiban
         {
 
         }
+
+        private void txt1000_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txt1000.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txt500_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txt500.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txt200_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txt200.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txt100_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txt100.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txt50_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txt50.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txt20_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txt20.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txt10_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txt5.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txt10_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txt10.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txt1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txt1.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
+            }
+        }
     }
 }

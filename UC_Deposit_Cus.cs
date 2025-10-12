@@ -170,7 +170,13 @@ namespace BankingSystem_AponteCatiban
 
         private void txt1000_KeyPress(object sender, KeyPressEventArgs e)
         {
+
             e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
+            if (txt1000.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
+            }
         }
 
         private void txt1000_Enter(object sender, EventArgs e)
@@ -186,6 +192,11 @@ namespace BankingSystem_AponteCatiban
         private void txt500_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
+            if (txt500.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
+            }
         }
 
         private void txt500_TextChanged(object sender, EventArgs e)
@@ -201,6 +212,11 @@ namespace BankingSystem_AponteCatiban
         private void txt200_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
+            if (txt200.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
+            }
         }
 
         private void txt200_Enter(object sender, EventArgs e)
@@ -216,6 +232,11 @@ namespace BankingSystem_AponteCatiban
         private void txt100_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
+            if (txt100.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
+            }
         }
 
         private void txt100_Enter(object sender, EventArgs e)
@@ -231,6 +252,11 @@ namespace BankingSystem_AponteCatiban
         private void txt50_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
+            if (txt50.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
+            }
         }
 
         private void txt50_Enter(object sender, EventArgs e)
@@ -246,6 +272,11 @@ namespace BankingSystem_AponteCatiban
         private void txt20_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
+            if (txt20.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
+            }
 
         }
 
@@ -264,6 +295,11 @@ namespace BankingSystem_AponteCatiban
         private void txt10_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
+            if (txt10.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
+            }
 
         }
 
@@ -281,6 +317,11 @@ namespace BankingSystem_AponteCatiban
         private void txt5_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
+            if (txt5.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
+            }
 
         }
 
@@ -298,6 +339,11 @@ namespace BankingSystem_AponteCatiban
         private void txt1_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
+            if (txt1.Text.Length >= 6)
+            {
+                e.Handled = true;
+                return;
+            }
 
         }
 

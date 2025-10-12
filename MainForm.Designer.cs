@@ -106,7 +106,8 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Himalaya", 70F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(514, 36);
+            this.label3.Location = new System.Drawing.Point(690, 4);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(521, 94);
             this.label3.TabIndex = 40;
@@ -124,10 +125,11 @@
             this.mainPanelSide.Controls.Add(this.panel8);
             this.mainPanelSide.Dock = System.Windows.Forms.DockStyle.Left;
             this.mainPanelSide.Location = new System.Drawing.Point(0, 0);
-            this.mainPanelSide.MaximumSize = new System.Drawing.Size(257, 700);
-            this.mainPanelSide.MinimumSize = new System.Drawing.Size(67, 550);
+            this.mainPanelSide.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mainPanelSide.MaximumSize = new System.Drawing.Size(343, 862);
+            this.mainPanelSide.MinimumSize = new System.Drawing.Size(89, 677);
             this.mainPanelSide.Name = "mainPanelSide";
-            this.mainPanelSide.Size = new System.Drawing.Size(257, 700);
+            this.mainPanelSide.Size = new System.Drawing.Size(343, 862);
             this.mainPanelSide.TabIndex = 41;
             this.mainPanelSide.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanelSide_Paint);
             // 
@@ -135,17 +137,19 @@
             // 
             this.panel1.Controls.Add(this.menuButton);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(254, 68);
+            this.panel1.Size = new System.Drawing.Size(339, 84);
             this.panel1.TabIndex = 34;
             // 
             // menuButton
             // 
             this.menuButton.Image = ((System.Drawing.Image)(resources.GetObject("menuButton.Image")));
-            this.menuButton.Location = new System.Drawing.Point(15, 17);
+            this.menuButton.Location = new System.Drawing.Point(20, 21);
+            this.menuButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(35, 30);
+            this.menuButton.Size = new System.Drawing.Size(47, 37);
             this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.menuButton.TabIndex = 13;
             this.menuButton.TabStop = false;
@@ -157,7 +161,8 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(66, 20);
+            this.label4.Location = new System.Drawing.Point(88, 25);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 34);
             this.label4.TabIndex = 12;
@@ -169,10 +174,12 @@
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.lblregister);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel2.Location = new System.Drawing.Point(3, 77);
+            this.panel2.Location = new System.Drawing.Point(4, 96);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(255, 51);
+            this.panel2.Size = new System.Drawing.Size(340, 63);
             this.panel2.TabIndex = 33;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.panel2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseClick);
             this.panel2.MouseEnter += new System.EventHandler(this.panel2_MouseEnter);
             this.panel2.MouseLeave += new System.EventHandler(this.panel2_MouseLeave);
@@ -181,11 +188,13 @@
             // 
             this.pictureBox2.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.add;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(18, 8);
+            this.pictureBox2.Location = new System.Drawing.Point(24, 10);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.Size = new System.Drawing.Size(40, 37);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseClick);
             this.pictureBox2.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
             this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
@@ -196,7 +205,8 @@
             this.lblregister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblregister.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblregister.ForeColor = System.Drawing.Color.White;
-            this.lblregister.Location = new System.Drawing.Point(55, 11);
+            this.lblregister.Location = new System.Drawing.Point(73, 14);
+            this.lblregister.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblregister.Name = "lblregister";
             this.lblregister.Size = new System.Drawing.Size(184, 34);
             this.lblregister.TabIndex = 0;
@@ -210,21 +220,20 @@
             // 
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.lbldeposit);
-            this.panel4.Location = new System.Drawing.Point(3, 134);
+            this.panel4.Location = new System.Drawing.Point(4, 167);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(255, 51);
+            this.panel4.Size = new System.Drawing.Size(340, 63);
             this.panel4.TabIndex = 34;
-            this.panel4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseClick);
-            this.panel4.MouseEnter += new System.EventHandler(this.panel4_MouseEnter);
-            this.panel4.MouseLeave += new System.EventHandler(this.panel4_MouseLeave);
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.wallet;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(18, 8);
+            this.pictureBox3.Location = new System.Drawing.Point(24, 10);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox3.Size = new System.Drawing.Size(40, 37);
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseClick);
@@ -236,7 +245,8 @@
             this.lbldeposit.AutoSize = true;
             this.lbldeposit.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbldeposit.ForeColor = System.Drawing.Color.White;
-            this.lbldeposit.Location = new System.Drawing.Point(55, 11);
+            this.lbldeposit.Location = new System.Drawing.Point(73, 14);
+            this.lbldeposit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbldeposit.Name = "lbldeposit";
             this.lbldeposit.Size = new System.Drawing.Size(84, 34);
             this.lbldeposit.TabIndex = 1;
@@ -250,21 +260,20 @@
             // 
             this.panel5.Controls.Add(this.pictureBox4);
             this.panel5.Controls.Add(this.lblwithdraw);
-            this.panel5.Location = new System.Drawing.Point(3, 191);
+            this.panel5.Location = new System.Drawing.Point(4, 238);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(255, 51);
+            this.panel5.Size = new System.Drawing.Size(340, 63);
             this.panel5.TabIndex = 35;
-            this.panel5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseClick);
-            this.panel5.MouseEnter += new System.EventHandler(this.panel5_MouseEnter);
-            this.panel5.MouseLeave += new System.EventHandler(this.panel5_MouseLeave);
             // 
             // pictureBox4
             // 
             this.pictureBox4.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.cash_withdrawal;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(18, 8);
+            this.pictureBox4.Location = new System.Drawing.Point(24, 10);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox4.Size = new System.Drawing.Size(40, 37);
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseClick);
@@ -276,7 +285,8 @@
             this.lblwithdraw.AutoSize = true;
             this.lblwithdraw.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblwithdraw.ForeColor = System.Drawing.Color.White;
-            this.lblwithdraw.Location = new System.Drawing.Point(55, 11);
+            this.lblwithdraw.Location = new System.Drawing.Point(73, 14);
+            this.lblwithdraw.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblwithdraw.Name = "lblwithdraw";
             this.lblwithdraw.Size = new System.Drawing.Size(105, 34);
             this.lblwithdraw.TabIndex = 2;
@@ -290,9 +300,10 @@
             // 
             this.panel6.Controls.Add(this.pictureBox5);
             this.panel6.Controls.Add(this.lblcheck_bal);
-            this.panel6.Location = new System.Drawing.Point(3, 248);
+            this.panel6.Location = new System.Drawing.Point(4, 309);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(255, 51);
+            this.panel6.Size = new System.Drawing.Size(340, 63);
             this.panel6.TabIndex = 36;
             this.panel6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel6_MouseClick);
             this.panel6.MouseEnter += new System.EventHandler(this.panel6_MouseEnter);
@@ -302,9 +313,10 @@
             // 
             this.pictureBox5.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.receipt;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(18, 8);
+            this.pictureBox5.Location = new System.Drawing.Point(24, 10);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox5.Size = new System.Drawing.Size(40, 37);
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseClick);
@@ -316,7 +328,8 @@
             this.lblcheck_bal.AutoSize = true;
             this.lblcheck_bal.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcheck_bal.ForeColor = System.Drawing.Color.White;
-            this.lblcheck_bal.Location = new System.Drawing.Point(55, 11);
+            this.lblcheck_bal.Location = new System.Drawing.Point(73, 14);
+            this.lblcheck_bal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblcheck_bal.Name = "lblcheck_bal";
             this.lblcheck_bal.Size = new System.Drawing.Size(150, 34);
             this.lblcheck_bal.TabIndex = 3;
@@ -330,9 +343,10 @@
             // 
             this.panel7.Controls.Add(this.pictureBox6);
             this.panel7.Controls.Add(this.lblcus_prof);
-            this.panel7.Location = new System.Drawing.Point(3, 305);
+            this.panel7.Location = new System.Drawing.Point(4, 380);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(255, 51);
+            this.panel7.Size = new System.Drawing.Size(340, 63);
             this.panel7.TabIndex = 37;
             this.panel7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseClick);
             this.panel7.MouseEnter += new System.EventHandler(this.panel7_MouseEnter);
@@ -342,9 +356,10 @@
             // 
             this.pictureBox6.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.multiple_users_silhouette;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(18, 8);
+            this.pictureBox6.Location = new System.Drawing.Point(24, 10);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox6.Size = new System.Drawing.Size(40, 37);
             this.pictureBox6.TabIndex = 5;
             this.pictureBox6.TabStop = false;
             this.pictureBox6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox6_MouseClick);
@@ -356,7 +371,8 @@
             this.lblcus_prof.AutoSize = true;
             this.lblcus_prof.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcus_prof.ForeColor = System.Drawing.Color.White;
-            this.lblcus_prof.Location = new System.Drawing.Point(55, 11);
+            this.lblcus_prof.Location = new System.Drawing.Point(73, 14);
+            this.lblcus_prof.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblcus_prof.Name = "lblcus_prof";
             this.lblcus_prof.Size = new System.Drawing.Size(171, 34);
             this.lblcus_prof.TabIndex = 4;
@@ -370,21 +386,20 @@
             // 
             this.panel8.Controls.Add(this.pictureBox7);
             this.panel8.Controls.Add(this.lbllogout);
-            this.panel8.Location = new System.Drawing.Point(3, 362);
+            this.panel8.Location = new System.Drawing.Point(4, 451);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(255, 51);
+            this.panel8.Size = new System.Drawing.Size(340, 63);
             this.panel8.TabIndex = 38;
-            this.panel8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseClick);
-            this.panel8.MouseEnter += new System.EventHandler(this.panel8_MouseEnter);
-            this.panel8.MouseLeave += new System.EventHandler(this.panel8_MouseLeave);
             // 
             // pictureBox7
             // 
             this.pictureBox7.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.logout;
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(18, 8);
+            this.pictureBox7.Location = new System.Drawing.Point(24, 10);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox7.Size = new System.Drawing.Size(40, 37);
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
             this.pictureBox7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox7_MouseClick);
@@ -396,7 +411,8 @@
             this.lbllogout.AutoSize = true;
             this.lbllogout.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbllogout.ForeColor = System.Drawing.Color.White;
-            this.lbllogout.Location = new System.Drawing.Point(55, 11);
+            this.lbllogout.Location = new System.Drawing.Point(73, 14);
+            this.lbllogout.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbllogout.Name = "lbllogout";
             this.lbllogout.Size = new System.Drawing.Size(85, 34);
             this.lbllogout.TabIndex = 5;
@@ -416,11 +432,12 @@
             this.mainPanelCustomer.Controls.Add(this.panel12);
             this.mainPanelCustomer.Controls.Add(this.panel13);
             this.mainPanelCustomer.Dock = System.Windows.Forms.DockStyle.Left;
-            this.mainPanelCustomer.Location = new System.Drawing.Point(257, 0);
-            this.mainPanelCustomer.MaximumSize = new System.Drawing.Size(257, 700);
-            this.mainPanelCustomer.MinimumSize = new System.Drawing.Size(67, 550);
+            this.mainPanelCustomer.Location = new System.Drawing.Point(343, 0);
+            this.mainPanelCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mainPanelCustomer.MaximumSize = new System.Drawing.Size(343, 862);
+            this.mainPanelCustomer.MinimumSize = new System.Drawing.Size(89, 677);
             this.mainPanelCustomer.Name = "mainPanelCustomer";
-            this.mainPanelCustomer.Size = new System.Drawing.Size(257, 700);
+            this.mainPanelCustomer.Size = new System.Drawing.Size(343, 862);
             this.mainPanelCustomer.TabIndex = 42;
             this.mainPanelCustomer.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanelCustomer_Paint);
             // 
@@ -428,17 +445,19 @@
             // 
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Location = new System.Drawing.Point(4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(254, 68);
+            this.panel3.Size = new System.Drawing.Size(339, 84);
             this.panel3.TabIndex = 33;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(15, 17);
+            this.pictureBox1.Location = new System.Drawing.Point(20, 21);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 30);
+            this.pictureBox1.Size = new System.Drawing.Size(47, 37);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
@@ -450,7 +469,8 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(66, 20);
+            this.label1.Location = new System.Drawing.Point(88, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 34);
             this.label1.TabIndex = 12;
@@ -460,9 +480,10 @@
             // 
             this.panel9.Controls.Add(this.pictureBox8);
             this.panel9.Controls.Add(this.label2);
-            this.panel9.Location = new System.Drawing.Point(3, 77);
+            this.panel9.Location = new System.Drawing.Point(4, 96);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(255, 51);
+            this.panel9.Size = new System.Drawing.Size(340, 63);
             this.panel9.TabIndex = 32;
             this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
             this.panel9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel9_MouseClick);
@@ -473,9 +494,10 @@
             // 
             this.pictureBox8.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.wallet;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(18, 8);
+            this.pictureBox8.Location = new System.Drawing.Point(24, 10);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox8.Size = new System.Drawing.Size(40, 37);
             this.pictureBox8.TabIndex = 3;
             this.pictureBox8.TabStop = false;
             this.pictureBox8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseClick);
@@ -487,7 +509,8 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(55, 11);
+            this.label2.Location = new System.Drawing.Point(73, 14);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 34);
             this.label2.TabIndex = 7;
@@ -501,9 +524,10 @@
             // 
             this.panel10.Controls.Add(this.pictureBox10);
             this.panel10.Controls.Add(this.label5);
-            this.panel10.Location = new System.Drawing.Point(3, 134);
+            this.panel10.Location = new System.Drawing.Point(4, 167);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(254, 51);
+            this.panel10.Size = new System.Drawing.Size(339, 63);
             this.panel10.TabIndex = 33;
             this.panel10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel10_MouseClick);
             this.panel10.MouseEnter += new System.EventHandler(this.panel10_MouseEnter);
@@ -513,9 +537,10 @@
             // 
             this.pictureBox10.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.receipt;
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox10.Location = new System.Drawing.Point(18, 8);
+            this.pictureBox10.Location = new System.Drawing.Point(24, 10);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox10.Size = new System.Drawing.Size(40, 37);
             this.pictureBox10.TabIndex = 5;
             this.pictureBox10.TabStop = false;
             this.pictureBox10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox10_MouseClick);
@@ -527,7 +552,8 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(55, 11);
+            this.label5.Location = new System.Drawing.Point(73, 14);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(150, 34);
             this.label5.TabIndex = 8;
@@ -541,9 +567,10 @@
             // 
             this.panel11.Controls.Add(this.pictureBox11);
             this.panel11.Controls.Add(this.lbltransac_history);
-            this.panel11.Location = new System.Drawing.Point(3, 191);
+            this.panel11.Location = new System.Drawing.Point(4, 238);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(254, 51);
+            this.panel11.Size = new System.Drawing.Size(339, 63);
             this.panel11.TabIndex = 33;
             this.panel11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel11_MouseClick);
             this.panel11.MouseEnter += new System.EventHandler(this.panel11_MouseEnter);
@@ -553,9 +580,10 @@
             // 
             this.pictureBox11.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.time_management;
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox11.Location = new System.Drawing.Point(18, 8);
+            this.pictureBox11.Location = new System.Drawing.Point(24, 10);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox11.Size = new System.Drawing.Size(40, 37);
             this.pictureBox11.TabIndex = 9;
             this.pictureBox11.TabStop = false;
             this.pictureBox11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox11_MouseClick);
@@ -567,7 +595,8 @@
             this.lbltransac_history.AutoSize = true;
             this.lbltransac_history.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltransac_history.ForeColor = System.Drawing.Color.White;
-            this.lbltransac_history.Location = new System.Drawing.Point(55, 11);
+            this.lbltransac_history.Location = new System.Drawing.Point(73, 14);
+            this.lbltransac_history.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbltransac_history.Name = "lbltransac_history";
             this.lbltransac_history.Size = new System.Drawing.Size(189, 34);
             this.lbltransac_history.TabIndex = 9;
@@ -581,9 +610,10 @@
             // 
             this.panel12.Controls.Add(this.pictureBox12);
             this.panel12.Controls.Add(this.lblprof);
-            this.panel12.Location = new System.Drawing.Point(3, 248);
+            this.panel12.Location = new System.Drawing.Point(4, 309);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(254, 51);
+            this.panel12.Size = new System.Drawing.Size(339, 63);
             this.panel12.TabIndex = 33;
             this.panel12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel12_MouseClick);
             this.panel12.MouseEnter += new System.EventHandler(this.panel12_MouseEnter);
@@ -593,9 +623,10 @@
             // 
             this.pictureBox12.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.account;
             this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox12.Location = new System.Drawing.Point(18, 8);
+            this.pictureBox12.Location = new System.Drawing.Point(24, 10);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox12.Size = new System.Drawing.Size(40, 37);
             this.pictureBox12.TabIndex = 10;
             this.pictureBox12.TabStop = false;
             this.pictureBox12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox12_MouseClick);
@@ -607,7 +638,8 @@
             this.lblprof.AutoSize = true;
             this.lblprof.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblprof.ForeColor = System.Drawing.Color.White;
-            this.lblprof.Location = new System.Drawing.Point(55, 11);
+            this.lblprof.Location = new System.Drawing.Point(73, 14);
+            this.lblprof.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblprof.Name = "lblprof";
             this.lblprof.Size = new System.Drawing.Size(77, 34);
             this.lblprof.TabIndex = 10;
@@ -621,9 +653,10 @@
             // 
             this.panel13.Controls.Add(this.pictureBox9);
             this.panel13.Controls.Add(this.lblllogout);
-            this.panel13.Location = new System.Drawing.Point(3, 305);
+            this.panel13.Location = new System.Drawing.Point(4, 380);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(254, 51);
+            this.panel13.Size = new System.Drawing.Size(339, 63);
             this.panel13.TabIndex = 34;
             this.panel13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel13_MouseClick);
             this.panel13.MouseEnter += new System.EventHandler(this.panel13_MouseEnter);
@@ -633,9 +666,10 @@
             // 
             this.pictureBox9.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.logout;
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox9.Location = new System.Drawing.Point(18, 8);
+            this.pictureBox9.Location = new System.Drawing.Point(24, 10);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox9.Size = new System.Drawing.Size(40, 37);
             this.pictureBox9.TabIndex = 7;
             this.pictureBox9.TabStop = false;
             this.pictureBox9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox9_MouseClick);
@@ -647,7 +681,8 @@
             this.lblllogout.AutoSize = true;
             this.lblllogout.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblllogout.ForeColor = System.Drawing.Color.White;
-            this.lblllogout.Location = new System.Drawing.Point(55, 11);
+            this.lblllogout.Location = new System.Drawing.Point(73, 14);
+            this.lblllogout.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblllogout.Name = "lblllogout";
             this.lblllogout.Size = new System.Drawing.Size(85, 34);
             this.lblllogout.TabIndex = 11;
@@ -659,17 +694,17 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1200, 700);
+            this.ClientSize = new System.Drawing.Size(1600, 862);
             this.ControlBox = false;
             this.Controls.Add(this.mainPanelCustomer);
             this.Controls.Add(this.mainPanelSide);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";

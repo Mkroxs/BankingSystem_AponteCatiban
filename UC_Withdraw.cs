@@ -19,6 +19,7 @@ namespace BankingSystem_AponteCatiban
             this.VisibleChanged += UC_Withdraw_VisibleChanged;
         }
 
+        // -------------------------- LOAD EVENTS --------------------------
         private void UC_Withdraw_Load(object sender, EventArgs e)
         {
             LoadCustomerData();
@@ -59,6 +60,7 @@ namespace BankingSystem_AponteCatiban
             }
         }
 
+        // -------------------------- ACCOUNT INPUT --------------------------
         private void txtbx_accnum_TextChanged(object sender, EventArgs e)
         {
             string input = txtbx_accnum.Text.Trim();
@@ -91,10 +93,12 @@ namespace BankingSystem_AponteCatiban
 
         private void txtbx_accnum_KeyPress(object sender, KeyPressEventArgs e)
         {
+            // Only allow digits
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
                 e.Handled = true;
         }
 
+        // -------------------------- AMOUNT INPUT --------------------------
         private void txtbx_amount_TextChanged(object sender, EventArgs e)
         {
             if (selectedCustomer == null)
@@ -125,6 +129,7 @@ namespace BankingSystem_AponteCatiban
 
         private void txtbx_amount_KeyPress(object sender, KeyPressEventArgs e)
         {
+            // Allow only numbers and one dot
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
                 e.Handled = true;
 
@@ -132,6 +137,7 @@ namespace BankingSystem_AponteCatiban
                 e.Handled = true;
         }
 
+        // -------------------------- BUTTONS --------------------------
         private void btn_withdraw_Click(object sender, EventArgs e)
         {
             if (selectedCustomer == null)
@@ -173,6 +179,7 @@ namespace BankingSystem_AponteCatiban
             var mainform = this.FindForm() as MainForm;
             if (mainform != null)
             {
+                // ✅ Safe refresh (no null reference error)
                 mainform.withdraw?.RefreshCustomerList();
                 mainform.deposit_Admin?.RefreshCustomerList();
                 mainform.checkBalance_Admin?.LoadCustomers();
@@ -194,6 +201,7 @@ namespace BankingSystem_AponteCatiban
             ClearField();
         }
 
+        // -------------------------- HELPER METHODS --------------------------
         private void ClearField()
         {
             txtbx_accnum.Clear();
@@ -206,8 +214,10 @@ namespace BankingSystem_AponteCatiban
             selectedCustomer = null;
         }
 
+        // Dummy event to prevent missing handler errors
         private void lblAccountName_Click(object sender, EventArgs e)
         {
+            // No action needed — handler is kept for Designer reference
         }
     }
 }

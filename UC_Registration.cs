@@ -1,6 +1,5 @@
 ﻿using BankingSystem_AponteCatiban.Helpers;
 using BankingSystem_AponteCatiban.Models;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -22,9 +21,11 @@ namespace BankingSystem_AponteCatiban
         {
             InitializeComponent();
 
+            // setup date range
             dateTimePicker1.MaxDate = DateTime.Today;
             dateTimePicker1.MinDate = DateTime.Today.AddYears(-200);
 
+            // register textbox rules
             SetupTextbox(txt1000);
             SetupTextbox(txt500);
             SetupTextbox(txt200);
@@ -38,8 +39,6 @@ namespace BankingSystem_AponteCatiban
 
         private void SetupTextbox(TextBox txt)
         {
-            if (txt == null) return;
-
             txt.KeyPress += (s, e) =>
             {
                 if (char.IsControl(e.KeyChar)) return;
@@ -52,13 +51,11 @@ namespace BankingSystem_AponteCatiban
 
                 if (txt.Text.Length >= 6)
                 {
-                    e.Handled = true;
+                    e.Handled = true; // limit 6 digits
                 }
             };
 
             txt.Click += (s, e) => txt.Clear();
-            txt.Enter += (s, e) => txt.Clear();
-
             txt.TextChanged += (s, e) => CalculateDepositTotal();
         }
 
@@ -81,7 +78,7 @@ namespace BankingSystem_AponteCatiban
 
         private int ParseInt(string text)
         {
-            if (int.TryParse(text, out int value) && value >= 0) return value;
+            if (int.TryParse(text, out int value)) return value;
             return 0;
         }
 
@@ -108,7 +105,6 @@ namespace BankingSystem_AponteCatiban
             txt1.Clear();
 
             lbl_totalamount.Text = "₱0.00";
-            initialValue = 0;
         }
 
         private void btn_deposit_Click(object sender, EventArgs e)
@@ -165,7 +161,7 @@ namespace BankingSystem_AponteCatiban
                     return;
                 }
 
-                var customers = DataStore.LoadCustomers() ?? new List<Customer>();
+                var customers = DataStore.LoadCustomers();
                 if (customers.Any(c => c.Email.Equals(email, StringComparison.OrdinalIgnoreCase)))
                 {
                     MessageBox.Show("This email is already registered.", "Duplicate Email", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -207,11 +203,8 @@ namespace BankingSystem_AponteCatiban
                 DataStore.SaveCustomers(customers);
 
                 var mainform = this.FindForm() as MainForm;
-                if (mainform != null)
-                {
-                    mainform.deposit_Admin.RefreshCustomerList();
-                    mainform.withdraw.RefreshCustomerList();
-                }
+                mainform.deposit_Admin.RefreshCustomerList();
+                mainform.withdraw.RefreshCustomerList();
 
                 Transaction transaction = new Transaction
                 {
@@ -243,11 +236,7 @@ namespace BankingSystem_AponteCatiban
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     selectedImagePath = ofd.FileName;
-                    try
-                    {
-                        pbx_profile.Image = Image.FromFile(selectedImagePath);
-                    }
-                    catch { pbx_profile.Image = null; }
+                    pbx_profile.Image = Image.FromFile(selectedImagePath);
                 }
             }
         }
@@ -271,15 +260,13 @@ namespace BankingSystem_AponteCatiban
             var mainform = this.FindForm() as MainForm;
             if (mainform != null)
             {
-                this.Hide();
                 mainform.login.BringToFront();
                 mainform.login.Show();
-
-               
-
+                this.Hide();
             }
         }
 
+        
         private void UC_Registration_Load(object sender, EventArgs e) { }
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e) { }
         private void txtbx_name_TextChanged(object sender, EventArgs e) { }
@@ -305,9 +292,19 @@ namespace BankingSystem_AponteCatiban
         private void txt5_TextChanged(object sender, EventArgs e) { }
         private void txt1_TextChanged(object sender, EventArgs e) { }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e) { }
-        private void label1_Click(object sender, EventArgs e) { }
-        private void panel1_Paint(object sender, PaintEventArgs e) { }
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

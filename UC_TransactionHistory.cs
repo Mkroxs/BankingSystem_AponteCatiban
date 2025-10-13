@@ -100,10 +100,5 @@ namespace BankingSystem_AponteCatiban
             lbl_prevbal.Text = "₱0.00";
             lbl_newbal.Text = "₱0.00";
         }
-
-        private void dgv_cuslist_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

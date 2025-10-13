@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using BankingSystem_AponteCatiban.Models;
 using Newtonsoft.Json;
@@ -24,132 +28,127 @@ namespace BankingSystem_AponteCatiban
 
         private void txtbxuser_TextChanged(object sender, EventArgs e)
         {
+
         }
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            string filePath = Path.Combine(Application.StartupPath, "Data", "customers.txt");
+                
+                string filePath = Path.Combine(Application.StartupPath, "Data", "customers.txt");
 
-            string username = txtbxuser.Text.Trim();
-            string password = txtbxpass.Text.Trim();
-
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
-            {
-                MessageBox.Show("Please enter both username and password.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            var mainform = this.FindForm() as MainForm;
-
-            if (username == "admin" && password == "admin")
-            {
-                if (mainform != null)
+                string username = txtbxuser.Text.Trim();
+                string password = txtbxpass.Text.Trim();
+                try
                 {
-                    
-                    mainform.lblTitleChildForm.Text = "Welcome!";
+                    string jsonContent = File.ReadAllText(filePath);
+                    List<Customer> customers = JsonConvert.DeserializeObject<List<Customer>>(jsonContent);
 
-                    mainform.ClearCurrentUC();
-                    mainform.panelDesktop.Controls.Clear();
+                    Customer matchingCustomer = customers.FirstOrDefault(c =>
+                        c.Email == username &&
+                        c.AccountNumber.Replace("-", "") == password);
 
-                    if (!mainform.panelDesktop.Controls.Contains(mainform.login))
-                        mainform.panelDesktop.Controls.Add(mainform.login);
-                    if (!mainform.panelDesktop.Controls.Contains(mainform.registration))
-                        mainform.panelDesktop.Controls.Add(mainform.registration);
+                    if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+                    {
+                        MessageBox.Show("Please enter both username and password.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
 
-                    this.Hide();
-                    mainform.ShowAdminPanel();
-                    mainform.registration.panelTitle.Visible = false;
-                }
+                    var mainform = this.FindForm() as MainForm;
 
-                clearField();
-                return;
-            }
-
-            try
-            {
-                if (!File.Exists(filePath))
-                {
-                    MessageBox.Show("Customers data file not found.", "Data Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearField();
-                    return;
-                }
-
-                string jsonContent = File.ReadAllText(filePath);
-                List<Customer> customers = JsonConvert.DeserializeObject<List<Customer>>(jsonContent) ?? new List<Customer>();
-
-                Customer matchingCustomer = customers.FirstOrDefault(c =>
-                    string.Equals(c.Email?.Trim(), username, StringComparison.OrdinalIgnoreCase) &&
-                    (c.AccountNumber?.Replace("-", "") == password));
-
-                if (matchingCustomer != null)
-                {
+                if (username == "admin" && password == "admin")
+                    {
                     if (mainform != null)
                     {
-                        mainform.LoggedInCustomer = matchingCustomer;
-                        this.Hide();
-                        mainform.ShowCustomerPanel();
+                        mainform.registration.btn_cancel.Visible = false;
                         mainform.lblTitleChildForm.Text = "Welcome!";
+
+                        
+                        mainform.ClearCurrentUC();
+                        mainform.panelDesktop.Controls.Clear();
+
+                        
+                        mainform.panelDesktop.Controls.Add(mainform.login);
+                        mainform.panelDesktop.Controls.Add(mainform.registration);
+
+                        this.Hide();
+                        mainform.ShowAdminPanel();
+                        mainform.registration.panelTitle.Visible = false;
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Invalid username or password.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error reading customers data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                    else if (matchingCustomer != null)
+                    {
+                        
+                        if (mainform != null)
+                        {
+                            mainform.LoggedInCustomer = matchingCustomer;
+                            this.Hide();
+                            mainform.ShowCustomerPanel();
+                            mainform.lblTitleChildForm.Text = "Welcome!";
+                    }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username or password.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
 
-            clearField();
-        }
+                    }
+                    catch { }
+
+
+                    clearField();
+            }
 
         private void btnclose_Click(object sender, EventArgs e)
         {
+            MainForm mainForm = new MainForm();
             Application.Exit();
         }
 
         private void lbl_Register_Click(object sender, EventArgs e)
         {
-            var mainform = this.FindForm() as MainForm;
-            if (mainform != null)
-            {
-                this.Hide();
+            var mainform = this.FindForm() as MainForm; 
+            if (mainform == null) return;
 
-                mainform.panelDesktop.Show();
-                mainform.registration.btn_cancel.Show();
-                mainform.registration.Dock = DockStyle.Fill;
+            mainform.HidePanels(); 
+            mainform.registration.btn_cancel.Visible = true;
+            mainform.registration.Visible = true;
+            mainform.registration.Dock = DockStyle.Fill;
+            mainform.registration.BringToFront();
 
-                if (!mainform.panelDesktop.Controls.Contains(mainform.registration))
-                {
-                    mainform.panelDesktop.Controls.Add(mainform.registration);
-                }
+            lbl_Register.ForeColor = Color.White;
+            clearField();
+        }
 
-                mainform.panelMenu.Hide();
-                mainform.panelCustomer.Hide();
-                mainform.panelTitleBar.Hide();
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
-                mainform.registration.panelTitle.Visible = true;
-                mainform.registration.BringToFront();
-                mainform.registration.Show();
-
-                mainform.lblTitleChildForm.Text = "Register Account";
-            }
         }
 
         private void lbl_Register_MouseEnter(object sender, EventArgs e)
         {
             lbl_Register.ForeColor = Color.LightCyan;
+
         }
 
         private void lbl_Register_MouseLeave(object sender, EventArgs e)
         {
             lbl_Register.ForeColor = Color.DodgerBlue;
+
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e) { }
-        private void UC_Login_Load(object sender, EventArgs e) { }
-        private void panel1_Paint_1(object sender, PaintEventArgs e) { }
-        private void panel2_Paint(object sender, PaintEventArgs e) { }
+        private void UC_Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

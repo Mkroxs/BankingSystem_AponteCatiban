@@ -19,6 +19,7 @@ namespace BankingSystem_AponteCatiban
             this.VisibleChanged += UC_Deposit_Admin_VisibleChanged;
         }
 
+        // ✅ REFRESH CUSTOMER LIST (called by MainForm)
         public void RefreshCustomerList()
         {
             LoadCustomers();
@@ -41,6 +42,7 @@ namespace BankingSystem_AponteCatiban
             }
         }
 
+        // ✅ LOAD CUSTOMERS
         private void LoadCustomers()
         {
             try
@@ -66,6 +68,7 @@ namespace BankingSystem_AponteCatiban
             txt_accnum.AutoCompleteCustomSource = autoComplete;
         }
 
+        // ✅ CLEAR FIELDS
         private void ClearCustomerDisplay()
         {
             lbl_accname.Text = "-";
@@ -90,6 +93,7 @@ namespace BankingSystem_AponteCatiban
             lbl_totalamount.Text = "₱0.00";
         }
 
+        // ✅ ACCOUNT NUMBER CHANGE
         private void txt_accnum_TextChanged(object sender, EventArgs e)
         {
             if (customers == null || customers.Count == 0)
@@ -125,6 +129,7 @@ namespace BankingSystem_AponteCatiban
             }
         }
 
+        // ✅ ENABLE/DISABLE DENOMINATIONS
         private void EnableDenominations(bool enable)
         {
             txt1000.Enabled = enable;
@@ -138,6 +143,7 @@ namespace BankingSystem_AponteCatiban
             txt1.Enabled = enable;
         }
 
+        // ✅ BUTTON: CONFIRM DEPOSIT
         private void btn_confirm_Click(object sender, EventArgs e)
         {
             if (selectedCustomer == null)
@@ -171,6 +177,7 @@ namespace BankingSystem_AponteCatiban
                 $"Deposit Successful!\n\nAccount: {selectedCustomer.AccountNumber}\nAmount: ₱{depositTotal:N2}\nNew Balance: ₱{selectedCustomer.Balance:N2}",
                 "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            // ✅ Refresh other UserControls (safe access)
             var mainform = this.FindForm() as MainForm;
             if (mainform != null)
             {
@@ -185,6 +192,7 @@ namespace BankingSystem_AponteCatiban
             selectedCustomer = null;
         }
 
+        // ✅ BUTTON: CANCEL
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             ClearCustomerDisplay();
@@ -192,17 +200,20 @@ namespace BankingSystem_AponteCatiban
             selectedCustomer = null;
         }
 
+        // ✅ BUTTON: CLEAR DENOMINATIONS
         private void btn_clear_Click(object sender, EventArgs e)
         {
             ClearDenominations();
         }
 
+        // ✅ ADD DEPOSIT HELPERS
         private void AddDeposit(decimal amount)
         {
             depositTotal += amount;
             lbl_totalamount.Text = $"₱{depositTotal:N2}";
         }
 
+        // -------------------- Quick Add Buttons --------------------
         private void btn_1000_Click(object sender, EventArgs e) => AddDeposit(1000);
         private void btn_500_Click(object sender, EventArgs e) => AddDeposit(500);
         private void btn_200_Click(object sender, EventArgs e) => AddDeposit(200);
@@ -213,6 +224,7 @@ namespace BankingSystem_AponteCatiban
         private void btn_5_Click(object sender, EventArgs e) => AddDeposit(5);
         private void btn_1_Click(object sender, EventArgs e) => AddDeposit(1);
 
+        // -------------------- Denomination Text Change --------------------
         private void txt1000_TextChanged(object sender, EventArgs e) => CalculateDepositTotal();
         private void txt500_TextChanged(object sender, EventArgs e) => CalculateDepositTotal();
         private void txt200_TextChanged(object sender, EventArgs e) => CalculateDepositTotal();
@@ -248,12 +260,14 @@ namespace BankingSystem_AponteCatiban
             return 0;
         }
 
+        // -------------------- TextBox KeyPress (Numeric Only) --------------------
         private void TextBox_KeyPress_Numeric(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
                 e.Handled = true;
         }
 
+        // ✅ Attach numeric restriction for all denomination boxes
         private void txt1000_KeyPress(object sender, KeyPressEventArgs e) => TextBox_KeyPress_Numeric(sender, e);
         private void txt500_KeyPress(object sender, KeyPressEventArgs e) => TextBox_KeyPress_Numeric(sender, e);
         private void txt200_KeyPress(object sender, KeyPressEventArgs e) => TextBox_KeyPress_Numeric(sender, e);
@@ -265,6 +279,7 @@ namespace BankingSystem_AponteCatiban
         private void txt1_KeyPress(object sender, KeyPressEventArgs e) => TextBox_KeyPress_Numeric(sender, e);
         private void txt_accnum_KeyPress(object sender, KeyPressEventArgs e) => TextBox_KeyPress_Numeric(sender, e);
 
+        // -------------------- Focus Clear --------------------
         private void TextBox_Enter_Clear(object sender, EventArgs e)
         {
             if (sender is TextBox tb)
@@ -281,6 +296,7 @@ namespace BankingSystem_AponteCatiban
         private void txt5_Enter(object sender, EventArgs e) => TextBox_Enter_Clear(sender, e);
         private void txt1_Enter(object sender, EventArgs e) => TextBox_Enter_Clear(sender, e);
 
+        // ✅ Dummy handlers for Designer references (prevents errors)
         private void label6_Click(object sender, EventArgs e) { }
         private void UC_Deposit_Admin_Enter(object sender, EventArgs e) { }
     }

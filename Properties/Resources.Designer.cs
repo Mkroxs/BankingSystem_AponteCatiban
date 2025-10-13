@@ -63,6 +63,16 @@ namespace BankingSystem_AponteCatiban.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap a2082dac_b7fc_4652_9f9f_c6a4b81a1a7a_removalai_preview {
+            get {
+                object obj = ResourceManager.GetObject("a2082dac-b7fc-4652-9f9f-c6a4b81a1a7a_removalai_preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap account {
             get {
                 object obj = ResourceManager.GetObject("account", resourceCulture);
@@ -96,6 +106,26 @@ namespace BankingSystem_AponteCatiban.Properties {
         internal static System.Drawing.Bitmap cash_withdrawal {
             get {
                 object obj = ResourceManager.GetObject("cash-withdrawal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap generated_image {
+            get {
+                object obj = ResourceManager.GetObject("generated-image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap generated_image__1__removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("generated-image__1_-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

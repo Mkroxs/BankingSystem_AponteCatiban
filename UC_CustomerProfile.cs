@@ -58,7 +58,7 @@ namespace BankingSystem_AponteCatiban
         private void btn_close_Click(object sender, EventArgs e)
         {
             var mainform = this.Parent as MainForm;
-            mainform.dashboard_Admin.BringToFront();
+            
 
             if (dgv_cuslist.SelectedRows.Count > 0)
             {
@@ -124,6 +124,16 @@ namespace BankingSystem_AponteCatiban
         }
 
         private void lbl_eaddress_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_cusid_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

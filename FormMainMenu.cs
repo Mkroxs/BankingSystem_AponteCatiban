@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace BankingSystem_AponteCatiban
 {
-    public partial class UC_Dashboard_Admin : UserControl
+    public partial class FormMainMenu : Form
     {
-        
-        public UC_Dashboard_Admin()
+        public FormMainMenu()
         {
             InitializeComponent();
         }
-
-        private void UC_Dashboard_Admin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        
     }
 }

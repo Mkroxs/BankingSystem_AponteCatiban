@@ -46,7 +46,6 @@ namespace BankingSystem_AponteCatiban
         private void btn_close_Click(object sender, EventArgs e)
         {
             var mainform = this.Parent as MainForm;
-            mainform.dashboard_Cus.BringToFront();
             ResetLabels();
         }
 

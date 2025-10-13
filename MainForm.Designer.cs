@@ -28,744 +28,499 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.label3 = new System.Windows.Forms.Label();
-            this.mainPanelSide = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.lblTitleChildForm = new System.Windows.Forms.Label();
+            this.panelDesktop = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.menuButton = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.lblLogo = new System.Windows.Forms.Label();
+            this.logoAC = new System.Windows.Forms.PictureBox();
+            this.btnRegisterCustomer = new FontAwesome.Sharp.IconButton();
+            this.btnDeposit = new FontAwesome.Sharp.IconButton();
+            this.btnWithdraw = new FontAwesome.Sharp.IconButton();
+            this.btnCheckBalance = new FontAwesome.Sharp.IconButton();
+            this.btnCustomerProfile = new FontAwesome.Sharp.IconButton();
+            this.btnLogout = new FontAwesome.Sharp.IconButton();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.panelCustomer = new System.Windows.Forms.Panel();
+            this.btnLogout2 = new FontAwesome.Sharp.IconButton();
+            this.btnTransactionHistory = new FontAwesome.Sharp.IconButton();
+            this.btnCheckBalance2 = new FontAwesome.Sharp.IconButton();
+            this.btnDeposit2 = new FontAwesome.Sharp.IconButton();
+            this.btnProfile = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblregister = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lbldeposit = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.lblwithdraw = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.lblcheck_bal = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.lblcus_prof = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.lbllogout = new System.Windows.Forms.Label();
-            this.mainPanelCustomer = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.lbltransac_history = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.lblprof = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.lblllogout = new System.Windows.Forms.Label();
-            this.mainPanelSide.SuspendLayout();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelTitleBar.SuspendLayout();
+            this.panelDesktop.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
+            this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoAC)).BeginInit();
+            this.panelMenu.SuspendLayout();
+            this.panelCustomer.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.mainPanelCustomer.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            this.panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
-            // label3
+            // panelTitleBar
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Himalaya", 70F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(514, 36);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(521, 94);
-            this.label3.TabIndex = 40;
-            this.label3.Text = "KNAB CENTRAL";
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
+            this.panelTitleBar.Controls.Add(this.lblTitleChildForm);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(472, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(728, 122);
+            this.panelTitleBar.TabIndex = 2;
+            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
-            // mainPanelSide
+            // lblTitleChildForm
             // 
-            this.mainPanelSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(125)))), ((int)(((byte)(213)))));
-            this.mainPanelSide.Controls.Add(this.panel1);
-            this.mainPanelSide.Controls.Add(this.panel2);
-            this.mainPanelSide.Controls.Add(this.panel4);
-            this.mainPanelSide.Controls.Add(this.panel5);
-            this.mainPanelSide.Controls.Add(this.panel6);
-            this.mainPanelSide.Controls.Add(this.panel7);
-            this.mainPanelSide.Controls.Add(this.panel8);
-            this.mainPanelSide.Dock = System.Windows.Forms.DockStyle.Left;
-            this.mainPanelSide.Location = new System.Drawing.Point(0, 0);
-            this.mainPanelSide.MaximumSize = new System.Drawing.Size(257, 700);
-            this.mainPanelSide.MinimumSize = new System.Drawing.Size(67, 550);
-            this.mainPanelSide.Name = "mainPanelSide";
-            this.mainPanelSide.Size = new System.Drawing.Size(257, 700);
-            this.mainPanelSide.TabIndex = 41;
-            this.mainPanelSide.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanelSide_Paint);
+            this.lblTitleChildForm.AutoSize = true;
+            this.lblTitleChildForm.Font = new System.Drawing.Font("MS UI Gothic", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleChildForm.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTitleChildForm.Location = new System.Drawing.Point(22, 28);
+            this.lblTitleChildForm.Name = "lblTitleChildForm";
+            this.lblTitleChildForm.Size = new System.Drawing.Size(0, 64);
+            this.lblTitleChildForm.TabIndex = 2;
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.BackColor = System.Drawing.Color.Silver;
+            this.panelDesktop.Controls.Add(this.panel1);
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(472, 122);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(728, 678);
+            this.panelDesktop.TabIndex = 3;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.menuButton);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(254, 68);
-            this.panel1.TabIndex = 34;
+            this.panel1.Size = new System.Drawing.Size(728, 678);
+            this.panel1.TabIndex = 8;
             // 
-            // menuButton
+            // panelLogo
             // 
-            this.menuButton.Image = ((System.Drawing.Image)(resources.GetObject("menuButton.Image")));
-            this.menuButton.Location = new System.Drawing.Point(15, 17);
-            this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(35, 30);
-            this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.menuButton.TabIndex = 13;
-            this.menuButton.TabStop = false;
-            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
-            this.menuButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.menuButton_MouseClick);
+            this.panelLogo.Controls.Add(this.lblLogo);
+            this.panelLogo.Controls.Add(this.logoAC);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.panelLogo.Size = new System.Drawing.Size(236, 122);
+            this.panelLogo.TabIndex = 0;
             // 
-            // label4
+            // lblLogo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(66, 20);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 34);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Menu";
+            this.lblLogo.AutoSize = true;
+            this.lblLogo.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblLogo.Location = new System.Drawing.Point(70, 44);
+            this.lblLogo.Name = "lblLogo";
+            this.lblLogo.Size = new System.Drawing.Size(94, 34);
+            this.lblLogo.TabIndex = 1;
+            this.lblLogo.Text = "Bank\r\nCorporation";
+            // 
+            // logoAC
+            // 
+            this.logoAC.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.a2082dac_b7fc_4652_9f9f_c6a4b81a1a7a_removalai_preview;
+            this.logoAC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.logoAC.Dock = System.Windows.Forms.DockStyle.Left;
+            this.logoAC.Location = new System.Drawing.Point(10, 0);
+            this.logoAC.Name = "logoAC";
+            this.logoAC.Size = new System.Drawing.Size(70, 122);
+            this.logoAC.TabIndex = 0;
+            this.logoAC.TabStop = false;
+            // 
+            // btnRegisterCustomer
+            // 
+            this.btnRegisterCustomer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRegisterCustomer.FlatAppearance.BorderSize = 0;
+            this.btnRegisterCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegisterCustomer.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterCustomer.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnRegisterCustomer.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
+            this.btnRegisterCustomer.IconColor = System.Drawing.Color.White;
+            this.btnRegisterCustomer.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRegisterCustomer.IconSize = 32;
+            this.btnRegisterCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegisterCustomer.Location = new System.Drawing.Point(0, 362);
+            this.btnRegisterCustomer.Name = "btnRegisterCustomer";
+            this.btnRegisterCustomer.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnRegisterCustomer.Size = new System.Drawing.Size(236, 60);
+            this.btnRegisterCustomer.TabIndex = 1;
+            this.btnRegisterCustomer.Text = "Register Customer";
+            this.btnRegisterCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegisterCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRegisterCustomer.UseVisualStyleBackColor = true;
+            this.btnRegisterCustomer.Click += new System.EventHandler(this.btnRegisterCustomer_Click);
+            // 
+            // btnDeposit
+            // 
+            this.btnDeposit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDeposit.FlatAppearance.BorderSize = 0;
+            this.btnDeposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeposit.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeposit.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnDeposit.IconChar = FontAwesome.Sharp.IconChar.MoneyBillTransfer;
+            this.btnDeposit.IconColor = System.Drawing.Color.White;
+            this.btnDeposit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDeposit.IconSize = 32;
+            this.btnDeposit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeposit.Location = new System.Drawing.Point(0, 242);
+            this.btnDeposit.Name = "btnDeposit";
+            this.btnDeposit.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnDeposit.Size = new System.Drawing.Size(236, 60);
+            this.btnDeposit.TabIndex = 2;
+            this.btnDeposit.Text = "Deposit";
+            this.btnDeposit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeposit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDeposit.UseVisualStyleBackColor = true;
+            this.btnDeposit.Click += new System.EventHandler(this.btnDeposit_Click);
+            // 
+            // btnWithdraw
+            // 
+            this.btnWithdraw.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnWithdraw.FlatAppearance.BorderSize = 0;
+            this.btnWithdraw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWithdraw.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWithdraw.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnWithdraw.IconChar = FontAwesome.Sharp.IconChar.MoneyBillAlt;
+            this.btnWithdraw.IconColor = System.Drawing.Color.White;
+            this.btnWithdraw.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnWithdraw.IconSize = 32;
+            this.btnWithdraw.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnWithdraw.Location = new System.Drawing.Point(0, 182);
+            this.btnWithdraw.Name = "btnWithdraw";
+            this.btnWithdraw.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnWithdraw.Size = new System.Drawing.Size(236, 60);
+            this.btnWithdraw.TabIndex = 3;
+            this.btnWithdraw.Text = "Withdraw";
+            this.btnWithdraw.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnWithdraw.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnWithdraw.UseVisualStyleBackColor = true;
+            this.btnWithdraw.Click += new System.EventHandler(this.btnWithdraw_Click);
+            // 
+            // btnCheckBalance
+            // 
+            this.btnCheckBalance.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCheckBalance.FlatAppearance.BorderSize = 0;
+            this.btnCheckBalance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckBalance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckBalance.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCheckBalance.IconChar = FontAwesome.Sharp.IconChar.Coins;
+            this.btnCheckBalance.IconColor = System.Drawing.Color.White;
+            this.btnCheckBalance.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCheckBalance.IconSize = 32;
+            this.btnCheckBalance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCheckBalance.Location = new System.Drawing.Point(0, 302);
+            this.btnCheckBalance.Name = "btnCheckBalance";
+            this.btnCheckBalance.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnCheckBalance.Size = new System.Drawing.Size(236, 60);
+            this.btnCheckBalance.TabIndex = 4;
+            this.btnCheckBalance.Text = "Check Balance";
+            this.btnCheckBalance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCheckBalance.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCheckBalance.UseVisualStyleBackColor = true;
+            this.btnCheckBalance.Click += new System.EventHandler(this.btnCheckBalance_Click);
+            // 
+            // btnCustomerProfile
+            // 
+            this.btnCustomerProfile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCustomerProfile.FlatAppearance.BorderSize = 0;
+            this.btnCustomerProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomerProfile.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomerProfile.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCustomerProfile.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.btnCustomerProfile.IconColor = System.Drawing.Color.White;
+            this.btnCustomerProfile.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCustomerProfile.IconSize = 32;
+            this.btnCustomerProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomerProfile.Location = new System.Drawing.Point(0, 122);
+            this.btnCustomerProfile.Name = "btnCustomerProfile";
+            this.btnCustomerProfile.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnCustomerProfile.Size = new System.Drawing.Size(236, 60);
+            this.btnCustomerProfile.TabIndex = 5;
+            this.btnCustomerProfile.Text = "Customer Profile";
+            this.btnCustomerProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomerProfile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCustomerProfile.UseVisualStyleBackColor = true;
+            this.btnCustomerProfile.Click += new System.EventHandler(this.btnCustomerProfile_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnLogout.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
+            this.btnLogout.IconColor = System.Drawing.Color.White;
+            this.btnLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLogout.IconSize = 32;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(0, 740);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnLogout.Size = new System.Drawing.Size(236, 60);
+            this.btnLogout.TabIndex = 6;
+            this.btnLogout.Text = "Log out";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // panelMenu
+            // 
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            this.panelMenu.Controls.Add(this.btnRegisterCustomer);
+            this.panelMenu.Controls.Add(this.btnCheckBalance);
+            this.panelMenu.Controls.Add(this.btnDeposit);
+            this.panelMenu.Controls.Add(this.btnWithdraw);
+            this.panelMenu.Controls.Add(this.btnCustomerProfile);
+            this.panelMenu.Controls.Add(this.btnLogout);
+            this.panelMenu.Controls.Add(this.panelLogo);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(236, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(236, 800);
+            this.panelMenu.TabIndex = 1;
+            // 
+            // panelCustomer
+            // 
+            this.panelCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
+            this.panelCustomer.Controls.Add(this.btnLogout2);
+            this.panelCustomer.Controls.Add(this.btnTransactionHistory);
+            this.panelCustomer.Controls.Add(this.btnCheckBalance2);
+            this.panelCustomer.Controls.Add(this.btnDeposit2);
+            this.panelCustomer.Controls.Add(this.btnProfile);
+            this.panelCustomer.Controls.Add(this.panel2);
+            this.panelCustomer.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelCustomer.Location = new System.Drawing.Point(0, 0);
+            this.panelCustomer.Name = "panelCustomer";
+            this.panelCustomer.Size = new System.Drawing.Size(236, 800);
+            this.panelCustomer.TabIndex = 4;
+            // 
+            // btnLogout2
+            // 
+            this.btnLogout2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLogout2.FlatAppearance.BorderSize = 0;
+            this.btnLogout2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout2.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnLogout2.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
+            this.btnLogout2.IconColor = System.Drawing.Color.White;
+            this.btnLogout2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLogout2.IconSize = 32;
+            this.btnLogout2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout2.Location = new System.Drawing.Point(0, 740);
+            this.btnLogout2.Name = "btnLogout2";
+            this.btnLogout2.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnLogout2.Size = new System.Drawing.Size(236, 60);
+            this.btnLogout2.TabIndex = 6;
+            this.btnLogout2.Text = "Log out";
+            this.btnLogout2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogout2.UseVisualStyleBackColor = true;
+            this.btnLogout2.Click += new System.EventHandler(this.btnLogout2_Click);
+            // 
+            // btnTransactionHistory
+            // 
+            this.btnTransactionHistory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTransactionHistory.FlatAppearance.BorderSize = 0;
+            this.btnTransactionHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransactionHistory.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransactionHistory.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnTransactionHistory.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.btnTransactionHistory.IconColor = System.Drawing.Color.White;
+            this.btnTransactionHistory.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTransactionHistory.IconSize = 32;
+            this.btnTransactionHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTransactionHistory.Location = new System.Drawing.Point(0, 302);
+            this.btnTransactionHistory.Name = "btnTransactionHistory";
+            this.btnTransactionHistory.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnTransactionHistory.Size = new System.Drawing.Size(236, 60);
+            this.btnTransactionHistory.TabIndex = 5;
+            this.btnTransactionHistory.Text = "Transaction History";
+            this.btnTransactionHistory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTransactionHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTransactionHistory.UseVisualStyleBackColor = true;
+            this.btnTransactionHistory.Click += new System.EventHandler(this.btnTransactionHistory_Click);
+            // 
+            // btnCheckBalance2
+            // 
+            this.btnCheckBalance2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCheckBalance2.FlatAppearance.BorderSize = 0;
+            this.btnCheckBalance2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckBalance2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckBalance2.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCheckBalance2.IconChar = FontAwesome.Sharp.IconChar.Coins;
+            this.btnCheckBalance2.IconColor = System.Drawing.Color.White;
+            this.btnCheckBalance2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCheckBalance2.IconSize = 32;
+            this.btnCheckBalance2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCheckBalance2.Location = new System.Drawing.Point(0, 242);
+            this.btnCheckBalance2.Name = "btnCheckBalance2";
+            this.btnCheckBalance2.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnCheckBalance2.Size = new System.Drawing.Size(236, 60);
+            this.btnCheckBalance2.TabIndex = 4;
+            this.btnCheckBalance2.Text = "Check Balance";
+            this.btnCheckBalance2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCheckBalance2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCheckBalance2.UseVisualStyleBackColor = true;
+            this.btnCheckBalance2.Click += new System.EventHandler(this.btnCheckBalance2_Click);
+            // 
+            // btnDeposit2
+            // 
+            this.btnDeposit2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDeposit2.FlatAppearance.BorderSize = 0;
+            this.btnDeposit2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeposit2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeposit2.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnDeposit2.IconChar = FontAwesome.Sharp.IconChar.MoneyBillTransfer;
+            this.btnDeposit2.IconColor = System.Drawing.Color.White;
+            this.btnDeposit2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDeposit2.IconSize = 32;
+            this.btnDeposit2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeposit2.Location = new System.Drawing.Point(0, 182);
+            this.btnDeposit2.Name = "btnDeposit2";
+            this.btnDeposit2.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnDeposit2.Size = new System.Drawing.Size(236, 60);
+            this.btnDeposit2.TabIndex = 2;
+            this.btnDeposit2.Text = "Deposit";
+            this.btnDeposit2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeposit2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDeposit2.UseVisualStyleBackColor = true;
+            this.btnDeposit2.Click += new System.EventHandler(this.iconButton5_Click);
+            // 
+            // btnProfile
+            // 
+            this.btnProfile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProfile.FlatAppearance.BorderSize = 0;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfile.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnProfile.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
+            this.btnProfile.IconColor = System.Drawing.Color.White;
+            this.btnProfile.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnProfile.IconSize = 32;
+            this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfile.Location = new System.Drawing.Point(0, 122);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnProfile.Size = new System.Drawing.Size(236, 60);
+            this.btnProfile.TabIndex = 1;
+            this.btnProfile.Text = "Profile";
+            this.btnProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnProfile.UseVisualStyleBackColor = true;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(125)))), ((int)(((byte)(213)))));
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.lblregister);
-            this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel2.Location = new System.Drawing.Point(3, 77);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(255, 51);
-            this.panel2.TabIndex = 33;
-            this.panel2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseClick);
-            this.panel2.MouseEnter += new System.EventHandler(this.panel2_MouseEnter);
-            this.panel2.MouseLeave += new System.EventHandler(this.panel2_MouseLeave);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.add;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(18, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseClick);
-            this.pictureBox2.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
-            // 
-            // lblregister
-            // 
-            this.lblregister.AutoSize = true;
-            this.lblregister.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblregister.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblregister.ForeColor = System.Drawing.Color.White;
-            this.lblregister.Location = new System.Drawing.Point(55, 11);
-            this.lblregister.Name = "lblregister";
-            this.lblregister.Size = new System.Drawing.Size(184, 34);
-            this.lblregister.TabIndex = 0;
-            this.lblregister.Text = "Register Customer";
-            this.lblregister.Click += new System.EventHandler(this.lblregister_Click);
-            this.lblregister.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblregister_MouseClick);
-            this.lblregister.MouseEnter += new System.EventHandler(this.lblregister_MouseEnter);
-            this.lblregister.MouseLeave += new System.EventHandler(this.lblregister_MouseLeave);
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Controls.Add(this.lbldeposit);
-            this.panel4.Location = new System.Drawing.Point(3, 134);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(255, 51);
-            this.panel4.TabIndex = 34;
-            this.panel4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseClick);
-            this.panel4.MouseEnter += new System.EventHandler(this.panel4_MouseEnter);
-            this.panel4.MouseLeave += new System.EventHandler(this.panel4_MouseLeave);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.wallet;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(18, 8);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseClick);
-            this.pictureBox3.MouseEnter += new System.EventHandler(this.pictureBox3_MouseEnter);
-            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
-            // 
-            // lbldeposit
-            // 
-            this.lbldeposit.AutoSize = true;
-            this.lbldeposit.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldeposit.ForeColor = System.Drawing.Color.White;
-            this.lbldeposit.Location = new System.Drawing.Point(55, 11);
-            this.lbldeposit.Name = "lbldeposit";
-            this.lbldeposit.Size = new System.Drawing.Size(84, 34);
-            this.lbldeposit.TabIndex = 1;
-            this.lbldeposit.Text = "Deposit";
-            this.lbldeposit.Click += new System.EventHandler(this.lbldeposit_Click);
-            this.lbldeposit.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lbldeposit_MouseClick);
-            this.lbldeposit.MouseEnter += new System.EventHandler(this.lbldeposit_MouseEnter);
-            this.lbldeposit.MouseLeave += new System.EventHandler(this.lbldeposit_MouseLeave);
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.pictureBox4);
-            this.panel5.Controls.Add(this.lblwithdraw);
-            this.panel5.Location = new System.Drawing.Point(3, 191);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(255, 51);
-            this.panel5.TabIndex = 35;
-            this.panel5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseClick);
-            this.panel5.MouseEnter += new System.EventHandler(this.panel5_MouseEnter);
-            this.panel5.MouseLeave += new System.EventHandler(this.panel5_MouseLeave);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.cash_withdrawal;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(18, 8);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseClick);
-            this.pictureBox4.MouseEnter += new System.EventHandler(this.pictureBox4_MouseEnter);
-            this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
-            // 
-            // lblwithdraw
-            // 
-            this.lblwithdraw.AutoSize = true;
-            this.lblwithdraw.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblwithdraw.ForeColor = System.Drawing.Color.White;
-            this.lblwithdraw.Location = new System.Drawing.Point(55, 11);
-            this.lblwithdraw.Name = "lblwithdraw";
-            this.lblwithdraw.Size = new System.Drawing.Size(105, 34);
-            this.lblwithdraw.TabIndex = 2;
-            this.lblwithdraw.Text = "Withdraw";
-            this.lblwithdraw.Click += new System.EventHandler(this.lblwithdraw_Click);
-            this.lblwithdraw.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblwithdraw_MouseClick);
-            this.lblwithdraw.MouseEnter += new System.EventHandler(this.lblwithdraw_MouseEnter);
-            this.lblwithdraw.MouseLeave += new System.EventHandler(this.lblwithdraw_MouseLeave);
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.pictureBox5);
-            this.panel6.Controls.Add(this.lblcheck_bal);
-            this.panel6.Location = new System.Drawing.Point(3, 248);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(255, 51);
-            this.panel6.TabIndex = 36;
-            this.panel6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel6_MouseClick);
-            this.panel6.MouseEnter += new System.EventHandler(this.panel6_MouseEnter);
-            this.panel6.MouseLeave += new System.EventHandler(this.panel6_MouseLeave);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.receipt;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(18, 8);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseClick);
-            this.pictureBox5.MouseEnter += new System.EventHandler(this.pictureBox5_MouseEnter);
-            this.pictureBox5.MouseLeave += new System.EventHandler(this.pictureBox5_MouseLeave);
-            // 
-            // lblcheck_bal
-            // 
-            this.lblcheck_bal.AutoSize = true;
-            this.lblcheck_bal.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcheck_bal.ForeColor = System.Drawing.Color.White;
-            this.lblcheck_bal.Location = new System.Drawing.Point(55, 11);
-            this.lblcheck_bal.Name = "lblcheck_bal";
-            this.lblcheck_bal.Size = new System.Drawing.Size(150, 34);
-            this.lblcheck_bal.TabIndex = 3;
-            this.lblcheck_bal.Text = "Check Balance";
-            this.lblcheck_bal.Click += new System.EventHandler(this.lblcheck_bal_Click);
-            this.lblcheck_bal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblcheck_bal_MouseClick);
-            this.lblcheck_bal.MouseEnter += new System.EventHandler(this.lblcheck_bal_MouseEnter);
-            this.lblcheck_bal.MouseLeave += new System.EventHandler(this.lblcheck_bal_MouseLeave);
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.pictureBox6);
-            this.panel7.Controls.Add(this.lblcus_prof);
-            this.panel7.Location = new System.Drawing.Point(3, 305);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(255, 51);
-            this.panel7.TabIndex = 37;
-            this.panel7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel7_MouseClick);
-            this.panel7.MouseEnter += new System.EventHandler(this.panel7_MouseEnter);
-            this.panel7.MouseLeave += new System.EventHandler(this.panel7_MouseLeave);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.multiple_users_silhouette;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(18, 8);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox6_MouseClick);
-            this.pictureBox6.MouseEnter += new System.EventHandler(this.pictureBox6_MouseEnter);
-            this.pictureBox6.MouseLeave += new System.EventHandler(this.pictureBox6_MouseLeave);
-            // 
-            // lblcus_prof
-            // 
-            this.lblcus_prof.AutoSize = true;
-            this.lblcus_prof.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcus_prof.ForeColor = System.Drawing.Color.White;
-            this.lblcus_prof.Location = new System.Drawing.Point(55, 11);
-            this.lblcus_prof.Name = "lblcus_prof";
-            this.lblcus_prof.Size = new System.Drawing.Size(171, 34);
-            this.lblcus_prof.TabIndex = 4;
-            this.lblcus_prof.Text = "Customer Profile";
-            this.lblcus_prof.Click += new System.EventHandler(this.lblcus_prof_Click);
-            this.lblcus_prof.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblcus_prof_MouseClick);
-            this.lblcus_prof.MouseEnter += new System.EventHandler(this.lblcus_prof_MouseEnter);
-            this.lblcus_prof.MouseLeave += new System.EventHandler(this.lblcus_prof_MouseLeave);
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.pictureBox7);
-            this.panel8.Controls.Add(this.lbllogout);
-            this.panel8.Location = new System.Drawing.Point(3, 362);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(255, 51);
-            this.panel8.TabIndex = 38;
-            this.panel8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel8_MouseClick);
-            this.panel8.MouseEnter += new System.EventHandler(this.panel8_MouseEnter);
-            this.panel8.MouseLeave += new System.EventHandler(this.panel8_MouseLeave);
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.logout;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(18, 8);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox7.TabIndex = 6;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox7_MouseClick);
-            this.pictureBox7.MouseEnter += new System.EventHandler(this.pictureBox7_MouseEnter);
-            this.pictureBox7.MouseLeave += new System.EventHandler(this.pictureBox7_MouseLeave);
-            // 
-            // lbllogout
-            // 
-            this.lbllogout.AutoSize = true;
-            this.lbllogout.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbllogout.ForeColor = System.Drawing.Color.White;
-            this.lbllogout.Location = new System.Drawing.Point(55, 11);
-            this.lbllogout.Name = "lbllogout";
-            this.lbllogout.Size = new System.Drawing.Size(85, 34);
-            this.lbllogout.TabIndex = 5;
-            this.lbllogout.Text = "Log out";
-            this.lbllogout.Click += new System.EventHandler(this.lbllogout_Click);
-            this.lbllogout.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lbllogout_MouseClick);
-            this.lbllogout.MouseEnter += new System.EventHandler(this.lbllogout_MouseEnter);
-            this.lbllogout.MouseLeave += new System.EventHandler(this.lbllogout_MouseLeave);
-            // 
-            // mainPanelCustomer
-            // 
-            this.mainPanelCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(125)))), ((int)(((byte)(213)))));
-            this.mainPanelCustomer.Controls.Add(this.panel3);
-            this.mainPanelCustomer.Controls.Add(this.panel9);
-            this.mainPanelCustomer.Controls.Add(this.panel10);
-            this.mainPanelCustomer.Controls.Add(this.panel11);
-            this.mainPanelCustomer.Controls.Add(this.panel12);
-            this.mainPanelCustomer.Controls.Add(this.panel13);
-            this.mainPanelCustomer.Dock = System.Windows.Forms.DockStyle.Left;
-            this.mainPanelCustomer.Location = new System.Drawing.Point(257, 0);
-            this.mainPanelCustomer.MaximumSize = new System.Drawing.Size(257, 700);
-            this.mainPanelCustomer.MinimumSize = new System.Drawing.Size(67, 550);
-            this.mainPanelCustomer.Name = "mainPanelCustomer";
-            this.mainPanelCustomer.Size = new System.Drawing.Size(257, 700);
-            this.mainPanelCustomer.TabIndex = 42;
-            this.mainPanelCustomer.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanelCustomer_Paint);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(254, 68);
-            this.panel3.TabIndex = 33;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(15, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
+            this.panel2.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.panel2.Size = new System.Drawing.Size(236, 122);
+            this.panel2.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(66, 20);
+            this.label1.Font = new System.Drawing.Font("Britannic Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(70, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 34);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Menu";
+            this.label1.Size = new System.Drawing.Size(94, 34);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Bank\r\nCorporation";
             // 
-            // panel9
+            // pictureBox1
             // 
-            this.panel9.Controls.Add(this.pictureBox8);
-            this.panel9.Controls.Add(this.label2);
-            this.panel9.Location = new System.Drawing.Point(3, 77);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(255, 51);
-            this.panel9.TabIndex = 32;
-            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
-            this.panel9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel9_MouseClick);
-            this.panel9.MouseEnter += new System.EventHandler(this.panel9_MouseEnter);
-            this.panel9.MouseLeave += new System.EventHandler(this.panel9_MouseLeave);
+            this.pictureBox1.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.a2082dac_b7fc_4652_9f9f_c6a4b81a1a7a_removalai_preview;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Location = new System.Drawing.Point(10, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(70, 122);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // pictureBox8
+            // panel3
             // 
-            this.pictureBox8.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.wallet;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(18, 8);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox8.TabIndex = 3;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseClick);
-            this.pictureBox8.MouseEnter += new System.EventHandler(this.pictureBox8_MouseEnter);
-            this.pictureBox8.MouseLeave += new System.EventHandler(this.pictureBox8_MouseLeave);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(55, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 34);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Deposit";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            this.label2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label2_MouseClick);
-            this.label2.MouseEnter += new System.EventHandler(this.label2_MouseEnter);
-            this.label2.MouseLeave += new System.EventHandler(this.label2_MouseLeave);
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.pictureBox10);
-            this.panel10.Controls.Add(this.label5);
-            this.panel10.Location = new System.Drawing.Point(3, 134);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(254, 51);
-            this.panel10.TabIndex = 33;
-            this.panel10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel10_MouseClick);
-            this.panel10.MouseEnter += new System.EventHandler(this.panel10_MouseEnter);
-            this.panel10.MouseLeave += new System.EventHandler(this.panel10_MouseLeave);
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.receipt;
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox10.Location = new System.Drawing.Point(18, 8);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox10.TabIndex = 5;
-            this.pictureBox10.TabStop = false;
-            this.pictureBox10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox10_MouseClick);
-            this.pictureBox10.MouseEnter += new System.EventHandler(this.pictureBox10_MouseEnter);
-            this.pictureBox10.MouseLeave += new System.EventHandler(this.pictureBox10_MouseLeave);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(55, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(150, 34);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Check Balance";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            this.label5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label5_MouseClick);
-            this.label5.MouseEnter += new System.EventHandler(this.label5_MouseEnter);
-            this.label5.MouseLeave += new System.EventHandler(this.label5_MouseLeave);
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.pictureBox11);
-            this.panel11.Controls.Add(this.lbltransac_history);
-            this.panel11.Location = new System.Drawing.Point(3, 191);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(254, 51);
-            this.panel11.TabIndex = 33;
-            this.panel11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel11_MouseClick);
-            this.panel11.MouseEnter += new System.EventHandler(this.panel11_MouseEnter);
-            this.panel11.MouseLeave += new System.EventHandler(this.panel11_MouseLeave);
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.time_management;
-            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox11.Location = new System.Drawing.Point(18, 8);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox11.TabIndex = 9;
-            this.pictureBox11.TabStop = false;
-            this.pictureBox11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox11_MouseClick);
-            this.pictureBox11.MouseEnter += new System.EventHandler(this.pictureBox11_MouseEnter);
-            this.pictureBox11.MouseLeave += new System.EventHandler(this.pictureBox11_MouseLeave);
-            // 
-            // lbltransac_history
-            // 
-            this.lbltransac_history.AutoSize = true;
-            this.lbltransac_history.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltransac_history.ForeColor = System.Drawing.Color.White;
-            this.lbltransac_history.Location = new System.Drawing.Point(55, 11);
-            this.lbltransac_history.Name = "lbltransac_history";
-            this.lbltransac_history.Size = new System.Drawing.Size(189, 34);
-            this.lbltransac_history.TabIndex = 9;
-            this.lbltransac_history.Text = "Transaction history";
-            this.lbltransac_history.Click += new System.EventHandler(this.lbltransac_history_Click);
-            this.lbltransac_history.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lbltransac_history_MouseClick);
-            this.lbltransac_history.MouseEnter += new System.EventHandler(this.lbltransac_history_MouseEnter);
-            this.lbltransac_history.MouseLeave += new System.EventHandler(this.lbltransac_history_MouseLeave);
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.pictureBox12);
-            this.panel12.Controls.Add(this.lblprof);
-            this.panel12.Location = new System.Drawing.Point(3, 248);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(254, 51);
-            this.panel12.TabIndex = 33;
-            this.panel12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel12_MouseClick);
-            this.panel12.MouseEnter += new System.EventHandler(this.panel12_MouseEnter);
-            this.panel12.MouseLeave += new System.EventHandler(this.panel12_MouseLeave);
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.account;
-            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox12.Location = new System.Drawing.Point(18, 8);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox12.TabIndex = 10;
-            this.pictureBox12.TabStop = false;
-            this.pictureBox12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox12_MouseClick);
-            this.pictureBox12.MouseEnter += new System.EventHandler(this.pictureBox12_MouseEnter);
-            this.pictureBox12.MouseLeave += new System.EventHandler(this.pictureBox12_MouseLeave);
-            // 
-            // lblprof
-            // 
-            this.lblprof.AutoSize = true;
-            this.lblprof.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblprof.ForeColor = System.Drawing.Color.White;
-            this.lblprof.Location = new System.Drawing.Point(55, 11);
-            this.lblprof.Name = "lblprof";
-            this.lblprof.Size = new System.Drawing.Size(77, 34);
-            this.lblprof.TabIndex = 10;
-            this.lblprof.Text = "Profile";
-            this.lblprof.Click += new System.EventHandler(this.lblprof_Click);
-            this.lblprof.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblprof_MouseClick);
-            this.lblprof.MouseEnter += new System.EventHandler(this.lblprof_MouseEnter);
-            this.lblprof.MouseLeave += new System.EventHandler(this.lblprof_MouseLeave);
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.pictureBox9);
-            this.panel13.Controls.Add(this.lblllogout);
-            this.panel13.Location = new System.Drawing.Point(3, 305);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(254, 51);
-            this.panel13.TabIndex = 34;
-            this.panel13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel13_MouseClick);
-            this.panel13.MouseEnter += new System.EventHandler(this.panel13_MouseEnter);
-            this.panel13.MouseLeave += new System.EventHandler(this.panel13_MouseLeave);
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.logout;
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox9.Location = new System.Drawing.Point(18, 8);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox9.TabIndex = 7;
-            this.pictureBox9.TabStop = false;
-            this.pictureBox9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox9_MouseClick);
-            this.pictureBox9.MouseEnter += new System.EventHandler(this.pictureBox9_MouseEnter);
-            this.pictureBox9.MouseLeave += new System.EventHandler(this.pictureBox9_MouseLeave);
-            // 
-            // lblllogout
-            // 
-            this.lblllogout.AutoSize = true;
-            this.lblllogout.Font = new System.Drawing.Font("Microsoft Himalaya", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblllogout.ForeColor = System.Drawing.Color.White;
-            this.lblllogout.Location = new System.Drawing.Point(55, 11);
-            this.lblllogout.Name = "lblllogout";
-            this.lblllogout.Size = new System.Drawing.Size(85, 34);
-            this.lblllogout.TabIndex = 11;
-            this.lblllogout.Text = "Log out";
-            this.lblllogout.Click += new System.EventHandler(this.lblllogout_Click);
-            this.lblllogout.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lblllogout_MouseClick);
-            this.lblllogout.MouseEnter += new System.EventHandler(this.lblllogout_MouseEnter);
-            this.lblllogout.MouseLeave += new System.EventHandler(this.lblllogout_MouseLeave);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(728, 678);
+            this.panel3.TabIndex = 12;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Silver;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1200, 700);
+            this.ClientSize = new System.Drawing.Size(1200, 800);
             this.ControlBox = false;
-            this.Controls.Add(this.mainPanelCustomer);
-            this.Controls.Add(this.mainPanelSide);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.panelDesktop);
+            this.Controls.Add(this.panelTitleBar);
+            this.Controls.Add(this.panelMenu);
+            this.Controls.Add(this.panelCustomer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.mainPanelSide.ResumeLayout(false);
+            this.panelTitleBar.ResumeLayout(false);
+            this.panelTitleBar.PerformLayout();
+            this.panelDesktop.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
+            this.panelLogo.ResumeLayout(false);
+            this.panelLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoAC)).EndInit();
+            this.panelMenu.ResumeLayout(false);
+            this.panelCustomer.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.mainPanelCustomer.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox menuButton;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panelTitleBar;
+        private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Label lblLogo;
+        private System.Windows.Forms.PictureBox logoAC;
+        private FontAwesome.Sharp.IconButton btnRegisterCustomer;
+        private FontAwesome.Sharp.IconButton btnDeposit;
+        private FontAwesome.Sharp.IconButton btnWithdraw;
+        private FontAwesome.Sharp.IconButton btnCheckBalance;
+        private FontAwesome.Sharp.IconButton btnCustomerProfile;
+        private FontAwesome.Sharp.IconButton btnLogout;
+        private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Panel panelCustomer;
+        private FontAwesome.Sharp.IconButton btnLogout2;
+        private FontAwesome.Sharp.IconButton btnTransactionHistory;
+        private FontAwesome.Sharp.IconButton btnCheckBalance2;
+        private FontAwesome.Sharp.IconButton btnDeposit2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblregister;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label lbldeposit;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label lblwithdraw;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label lblcheck_bal;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label lblcus_prof;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label lbllogout;
-        public System.Windows.Forms.FlowLayoutPanel mainPanelSide;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Label lbltransac_history;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label lblprof;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Label lblllogout;
-        public System.Windows.Forms.FlowLayoutPanel mainPanelCustomer;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private FontAwesome.Sharp.IconButton btnProfile;
+        private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Label lblTitleChildForm;
+        public System.Windows.Forms.Panel panelDesktop;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 

@@ -53,32 +53,38 @@ namespace BankingSystem_AponteCatiban
                         return;
                     }
 
-
-                    if (username == "admin" && password == "admin")
-                    {
                     var mainform = this.FindForm() as MainForm;
 
+                if (username == "admin" && password == "admin")
+                    {
                     if (mainform != null)
-                        {
-                            mainform.registration.btn_cancel.Visible = false;
-                            mainform.dashboard_Admin.BringToFront();
-                            mainform.mainPanelSide.Visible = true;
-                            mainform.mainPanelCustomer.Visible = false;
-                        }
+                    {
+                        mainform.registration.btn_cancel.Visible = false;
+                        mainform.lblTitleChildForm.Text = "Welcome!";
+
+                        
+                        mainform.ClearCurrentUC();
+                        mainform.panelDesktop.Controls.Clear();
+
+                        
+                        mainform.panelDesktop.Controls.Add(mainform.login);
+                        mainform.panelDesktop.Controls.Add(mainform.registration);
+
+                        this.Hide();
+                        mainform.ShowAdminPanel();
+                        mainform.registration.panelTitle.Visible = false;
                     }
+                }
                     else if (matchingCustomer != null)
                     {
-                        var mainform = this.Parent as MainForm;
+                        
                         if (mainform != null)
                         {
-                            mainform.LoggedInCustomer = matchingCustomer; 
-                            mainform.dashboard_Cus.BringToFront();
-
-                            mainform.mainPanelCustomer.Visible = true;
-                            mainform.mainPanelSide.Visible = false;
-                        
-
-                        }
+                            mainform.LoggedInCustomer = matchingCustomer;
+                            this.Hide();
+                            mainform.ShowCustomerPanel();
+                            mainform.lblTitleChildForm.Text = "Welcome!";
+                    }
                     }
                     else
                     {
@@ -100,10 +106,15 @@ namespace BankingSystem_AponteCatiban
 
         private void lbl_Register_Click(object sender, EventArgs e)
         {
-            var mainform = this.Parent as MainForm;
+            var mainform = this.FindForm() as MainForm; 
+            if (mainform == null) return;
+
+            mainform.HidePanels(); 
             mainform.registration.btn_cancel.Visible = true;
-            mainform.registration.Show();
+            mainform.registration.Visible = true;
+            mainform.registration.Dock = DockStyle.Fill;
             mainform.registration.BringToFront();
+
             lbl_Register.ForeColor = Color.White;
             clearField();
         }
@@ -125,7 +136,19 @@ namespace BankingSystem_AponteCatiban
 
         }
 
-       
-        
+        private void UC_Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

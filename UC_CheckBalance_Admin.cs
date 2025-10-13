@@ -113,5 +113,10 @@ namespace BankingSystem_AponteCatiban
             }
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

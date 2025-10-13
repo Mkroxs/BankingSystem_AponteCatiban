@@ -35,67 +35,78 @@
             this.btnlogin = new System.Windows.Forms.Button();
             this.btnclose = new System.Windows.Forms.Button();
             this.lbl_Register = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblLogo = new System.Windows.Forms.Label();
+            this.logoAC = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.logoAC)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtbxuser
             // 
+            this.txtbxuser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbxuser.BackColor = System.Drawing.Color.LightGray;
-            this.txtbxuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxuser.Location = new System.Drawing.Point(187, 207);
-            this.txtbxuser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtbxuser.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxuser.Location = new System.Drawing.Point(416, 384);
+            this.txtbxuser.Margin = new System.Windows.Forms.Padding(4);
             this.txtbxuser.Name = "txtbxuser";
-            this.txtbxuser.Size = new System.Drawing.Size(257, 26);
+            this.txtbxuser.Size = new System.Drawing.Size(257, 27);
             this.txtbxuser.TabIndex = 0;
             this.txtbxuser.TextChanged += new System.EventHandler(this.txtbxuser_TextChanged);
             // 
             // txtbxpass
             // 
+            this.txtbxpass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbxpass.BackColor = System.Drawing.Color.LightGray;
-            this.txtbxpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxpass.Location = new System.Drawing.Point(187, 286);
-            this.txtbxpass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtbxpass.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.txtbxpass.Location = new System.Drawing.Point(416, 456);
+            this.txtbxpass.Margin = new System.Windows.Forms.Padding(4);
             this.txtbxpass.Name = "txtbxpass";
             this.txtbxpass.PasswordChar = '*';
-            this.txtbxpass.Size = new System.Drawing.Size(257, 26);
+            this.txtbxpass.Size = new System.Drawing.Size(257, 27);
             this.txtbxpass.TabIndex = 1;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(183, 182);
+            this.label1.Location = new System.Drawing.Point(412, 360);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 17);
+            this.label1.Size = new System.Drawing.Size(68, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Username";
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(183, 261);
+            this.label2.Location = new System.Drawing.Point(410, 428);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 17);
+            this.label2.Size = new System.Drawing.Size(66, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password";
             // 
             // btnlogin
             // 
-            this.btnlogin.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnlogin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(120)))));
             this.btnlogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnlogin.FlatAppearance.BorderSize = 0;
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnlogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogin.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.btnlogin.ForeColor = System.Drawing.Color.White;
-            this.btnlogin.Location = new System.Drawing.Point(320, 334);
-            this.btnlogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnlogin.Location = new System.Drawing.Point(554, 504);
+            this.btnlogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(124, 39);
             this.btnlogin.TabIndex = 4;
@@ -105,11 +116,12 @@
             // 
             // btnclose
             // 
+            this.btnclose.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnclose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnclose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclose.Location = new System.Drawing.Point(188, 334);
-            this.btnclose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnclose.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.btnclose.Location = new System.Drawing.Point(414, 504);
+            this.btnclose.Margin = new System.Windows.Forms.Padding(4);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(124, 39);
             this.btnclose.TabIndex = 5;
@@ -119,54 +131,91 @@
             // 
             // lbl_Register
             // 
+            this.lbl_Register.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_Register.AutoSize = true;
             this.lbl_Register.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_Register.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Register.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Register.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lbl_Register.Location = new System.Drawing.Point(188, 385);
+            this.lbl_Register.Location = new System.Drawing.Point(418, 546);
             this.lbl_Register.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Register.Name = "lbl_Register";
-            this.lbl_Register.Size = new System.Drawing.Size(52, 13);
+            this.lbl_Register.Size = new System.Drawing.Size(54, 14);
             this.lbl_Register.TabIndex = 6;
             this.lbl_Register.Text = "Register?";
             this.lbl_Register.Click += new System.EventHandler(this.lbl_Register_Click);
             this.lbl_Register.MouseEnter += new System.EventHandler(this.lbl_Register_MouseEnter);
             this.lbl_Register.MouseLeave += new System.EventHandler(this.lbl_Register_MouseLeave);
             // 
-            // label4
+            // lblLogo
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Himalaya", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(107, 84);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(371, 67);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "KNAB CENTRAL";
+            this.lblLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblLogo.AutoSize = true;
+            this.lblLogo.BackColor = System.Drawing.Color.Transparent;
+            this.lblLogo.Font = new System.Drawing.Font("Britannic Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblLogo.Location = new System.Drawing.Point(446, 188);
+            this.lblLogo.Name = "lblLogo";
+            this.lblLogo.Size = new System.Drawing.Size(278, 106);
+            this.lblLogo.TabIndex = 8;
+            this.lblLogo.Text = "Bank\r\nCorporation";
+            // 
+            // logoAC
+            // 
+            this.logoAC.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.logoAC.BackColor = System.Drawing.Color.Transparent;
+            this.logoAC.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.a2082dac_b7fc_4652_9f9f_c6a4b81a1a7a_removalai_preview;
+            this.logoAC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.logoAC.Location = new System.Drawing.Point(242, 98);
+            this.logoAC.Name = "logoAC";
+            this.logoAC.Size = new System.Drawing.Size(256, 258);
+            this.logoAC.TabIndex = 7;
+            this.logoAC.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1100, 800);
+            this.panel1.TabIndex = 10;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.txtbxpass);
+            this.panel2.Controls.Add(this.lblLogo);
+            this.panel2.Controls.Add(this.txtbxuser);
+            this.panel2.Controls.Add(this.lbl_Register);
+            this.panel2.Controls.Add(this.logoAC);
+            this.panel2.Controls.Add(this.btnclose);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.btnlogin);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1096, 796);
+            this.panel2.TabIndex = 7;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // UC_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.login_file;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.lbl_Register);
-            this.Controls.Add(this.txtbxuser);
-            this.Controls.Add(this.btnclose);
-            this.Controls.Add(this.txtbxpass);
-            this.Controls.Add(this.btnlogin);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_Login";
-            this.Size = new System.Drawing.Size(1600, 862);
+            this.Size = new System.Drawing.Size(1100, 800);
+            this.Load += new System.EventHandler(this.UC_Login_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.logoAC)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -179,6 +228,9 @@
         private System.Windows.Forms.Button btnlogin;
         private System.Windows.Forms.Button btnclose;
         private System.Windows.Forms.Label lbl_Register;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblLogo;
+        private System.Windows.Forms.PictureBox logoAC;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

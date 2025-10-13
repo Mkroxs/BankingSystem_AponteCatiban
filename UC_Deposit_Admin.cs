@@ -2,33 +2,37 @@
 using BankingSystem_AponteCatiban.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BankingSystem_AponteCatiban
 {
-    public partial class UC_Deposit_Admin: UserControl
+    public partial class UC_Deposit_Admin : UserControl
     {
         private List<Customer> customers;
         private Customer selectedCustomer;
         private decimal depositTotal = 0;
-        
+
         public UC_Deposit_Admin()
         {
             InitializeComponent();
             this.VisibleChanged += UC_Deposit_Admin_VisibleChanged;
         }
 
+        // ✅ REFRESH CUSTOMER LIST (called by MainForm)
         public void RefreshCustomerList()
         {
             LoadCustomers();
             SetupAccountNumberAutocomplete();
         }
+
+        private void UC_Deposit_Admin_Load(object sender, EventArgs e)
+        {
+            LoadCustomers();
+            SetupAccountNumberAutocomplete();
+            EnableDenominations(false);
+        }
+
         private void UC_Deposit_Admin_VisibleChanged(object sender, EventArgs e)
         {
             if (this.Visible)
@@ -37,6 +41,8 @@ namespace BankingSystem_AponteCatiban
                 SetupAccountNumberAutocomplete();
             }
         }
+
+        // ✅ LOAD CUSTOMERS
         private void LoadCustomers()
         {
             try
@@ -48,6 +54,7 @@ namespace BankingSystem_AponteCatiban
                 MessageBox.Show("Error loading customers:\n" + ex.Message);
             }
         }
+
         private void SetupAccountNumberAutocomplete()
         {
             if (customers == null || customers.Count == 0)
@@ -55,32 +62,74 @@ namespace BankingSystem_AponteCatiban
 
             txt_accnum.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             txt_accnum.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
             var autoComplete = new AutoCompleteStringCollection();
             autoComplete.AddRange(customers.Select(c => c.AccountNumber).ToArray());
             txt_accnum.AutoCompleteCustomSource = autoComplete;
         }
+
+        // ✅ CLEAR FIELDS
         private void ClearCustomerDisplay()
         {
             lbl_accname.Text = "-";
             lbl_currbal.Text = "₱0.00";
             depositTotal = 0;
             lbl_totalamount.Text = "₱0.00";
+            ClearDenominations();
         }
 
-        private void btn_cancel_Click(object sender, EventArgs e)
+        private void ClearDenominations()
         {
-            var mainform = this.Parent as MainForm;
-            mainform.dashboard_Admin.BringToFront();
-            ClearCustomerDisplay();
-            txt_accnum.Text = null;
-            selectedCustomer = null;
+            txt1000.Clear();
+            txt500.Clear();
+            txt200.Clear();
+            txt100.Clear();
+            txt50.Clear();
+            txt20.Clear();
+            txt10.Clear();
+            txt5.Clear();
+            txt1.Clear();
+            depositTotal = 0;
+            lbl_totalamount.Text = "₱0.00";
         }
 
-        private void UC_Deposit_Admin_Load(object sender, EventArgs e)
+        // ✅ ACCOUNT NUMBER CHANGE
+        private void txt_accnum_TextChanged(object sender, EventArgs e)
         {
+            if (customers == null || customers.Count == 0)
+                LoadCustomers();
+
+            string accNum = txt_accnum.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(accNum))
+            {
+                lbl_NoAccount.Visible = false;
+                ClearCustomerDisplay();
                 EnableDenominations(false);
+                selectedCustomer = null;
+                return;
+            }
+
+            selectedCustomer = customers.FirstOrDefault(c =>
+                c.AccountNumber.Equals(accNum, StringComparison.OrdinalIgnoreCase));
+
+            if (selectedCustomer != null)
+            {
+                lbl_NoAccount.Visible = false;
+                lbl_accname.Text = selectedCustomer.FullName;
+                lbl_currbal.Text = $"₱{selectedCustomer.Balance:N2}";
+                EnableDenominations(true);
+            }
+            else
+            {
+                lbl_NoAccount.Visible = true;
+                ClearCustomerDisplay();
+                EnableDenominations(false);
+                selectedCustomer = null;
+            }
         }
 
+        // ✅ ENABLE/DISABLE DENOMINATIONS
         private void EnableDenominations(bool enable)
         {
             txt1000.Enabled = enable;
@@ -93,36 +142,8 @@ namespace BankingSystem_AponteCatiban
             txt5.Enabled = enable;
             txt1.Enabled = enable;
         }
-        private void txt_accnum_TextChanged(object sender, EventArgs e)
-        {
 
-            string accNum = txt_accnum.Text.Trim();
-            if (string.IsNullOrWhiteSpace(accNum) || string.IsNullOrEmpty(accNum))
-            {
-                lbl_NoAccount.Visible = false;
-                ClearCustomerDisplay();
-                EnableDenominations(false);
-                return;
-            }
-
-            selectedCustomer = customers.FirstOrDefault(c => c.AccountNumber == accNum);
-            if (selectedCustomer != null)
-            {
-                lbl_NoAccount.Visible = false;
-                lbl_accname.Text = selectedCustomer.FullName;
-                lbl_currbal.Text = $"₱{selectedCustomer.Balance:N2}";
-                EnableDenominations(true);
-            }
-
-            else
-            {
-                lbl_NoAccount.Visible = true;
-                ClearCustomerDisplay();
-                EnableDenominations(false);
-            }
-            
-        }
-
+        // ✅ BUTTON: CONFIRM DEPOSIT
         private void btn_confirm_Click(object sender, EventArgs e)
         {
             if (selectedCustomer == null)
@@ -156,20 +177,63 @@ namespace BankingSystem_AponteCatiban
                 $"Deposit Successful!\n\nAccount: {selectedCustomer.AccountNumber}\nAmount: ₱{depositTotal:N2}\nNew Balance: ₱{selectedCustomer.Balance:N2}",
                 "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            var mainform = this.Parent as MainForm;
+            // ✅ Refresh other UserControls (safe access)
+            var mainform = this.FindForm() as MainForm;
+            if (mainform != null)
+            {
+                mainform.deposit_Admin?.RefreshCustomerList();
+                mainform.withdraw?.RefreshCustomerList();
+                mainform.checkBalance_Admin?.LoadCustomers();
+                mainform.checkBalance_Admin?.SetupAccountNumberAutocomplete();
+            }
 
-            
-            mainform.deposit_Admin.RefreshCustomerList();
-            mainform.withdraw.RefreshCustomerList();
-            mainform.checkBalance_Admin.LoadCustomers();
-            mainform.checkBalance_Admin.SetupAccountNumberAutocomplete();
-
-            
             ClearCustomerDisplay();
-            txt_accnum.Text = null;
+            txt_accnum.Clear();
             selectedCustomer = null;
-
         }
+
+        // ✅ BUTTON: CANCEL
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            ClearCustomerDisplay();
+            txt_accnum.Clear();
+            selectedCustomer = null;
+        }
+
+        // ✅ BUTTON: CLEAR DENOMINATIONS
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            ClearDenominations();
+        }
+
+        // ✅ ADD DEPOSIT HELPERS
+        private void AddDeposit(decimal amount)
+        {
+            depositTotal += amount;
+            lbl_totalamount.Text = $"₱{depositTotal:N2}";
+        }
+
+        // -------------------- Quick Add Buttons --------------------
+        private void btn_1000_Click(object sender, EventArgs e) => AddDeposit(1000);
+        private void btn_500_Click(object sender, EventArgs e) => AddDeposit(500);
+        private void btn_200_Click(object sender, EventArgs e) => AddDeposit(200);
+        private void btn_100_Click(object sender, EventArgs e) => AddDeposit(100);
+        private void btn_50_Click(object sender, EventArgs e) => AddDeposit(50);
+        private void btn_20_Click(object sender, EventArgs e) => AddDeposit(20);
+        private void btn_10_Click(object sender, EventArgs e) => AddDeposit(10);
+        private void btn_5_Click(object sender, EventArgs e) => AddDeposit(5);
+        private void btn_1_Click(object sender, EventArgs e) => AddDeposit(1);
+
+        // -------------------- Denomination Text Change --------------------
+        private void txt1000_TextChanged(object sender, EventArgs e) => CalculateDepositTotal();
+        private void txt500_TextChanged(object sender, EventArgs e) => CalculateDepositTotal();
+        private void txt200_TextChanged(object sender, EventArgs e) => CalculateDepositTotal();
+        private void txt100_TextChanged(object sender, EventArgs e) => CalculateDepositTotal();
+        private void txt50_TextChanged(object sender, EventArgs e) => CalculateDepositTotal();
+        private void txt20_TextChanged(object sender, EventArgs e) => CalculateDepositTotal();
+        private void txt10_TextChanged(object sender, EventArgs e) => CalculateDepositTotal();
+        private void txt5_TextChanged(object sender, EventArgs e) => CalculateDepositTotal();
+        private void txt1_TextChanged(object sender, EventArgs e) => CalculateDepositTotal();
 
         private void CalculateDepositTotal()
         {
@@ -196,329 +260,44 @@ namespace BankingSystem_AponteCatiban
             return 0;
         }
 
-        private void ClearDenominations()
-        {
-            txt1000.Text = "";
-            txt500.Text = "";
-            txt200.Text = "";
-            txt100.Text = "";
-            txt50.Text = "";
-            txt20.Text = "";
-            txt10.Text = "";
-            txt5.Text = "";
-            txt1.Text = "";
-            depositTotal = 0;
-            lbl_totalamount.Text = "₱0.00";
-        }
-
-        private void btn_clear_Click(object sender, EventArgs e)
-        {
-            ClearDenominations();
-        }
-        private void AddDeposit(decimal amount)
-        {
-            depositTotal += amount;
-            lbl_totalamount.Text = $"₱{depositTotal:N2}";
-        }
-
-        private void btn_1000_Click(object sender, EventArgs e)
-        {
-            AddDeposit(1000);
-        }
-
-        private void btn_500_Click(object sender, EventArgs e)
-        {
-            AddDeposit(500);
-
-        }
-
-        private void btn_200_Click(object sender, EventArgs e)
-        {
-            AddDeposit(200);
-
-        }
-
-        private void btn_100_Click(object sender, EventArgs e)
-        {
-            AddDeposit(100);
-
-        }
-
-        private void btn_50_Click(object sender, EventArgs e)
-        {
-            AddDeposit(50);
-
-        }
-
-        private void btn_20_Click(object sender, EventArgs e)
-        {
-            AddDeposit(20);
-
-        }
-
-        private void btn_10_Click(object sender, EventArgs e)
-        {
-            AddDeposit(10);
-
-        }
-
-        private void btn_5_Click(object sender, EventArgs e)
-        {
-            AddDeposit(5);
-
-        }
-
-        private void btn_1_Click(object sender, EventArgs e)
-        {
-            AddDeposit(1);
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt1000_TextChanged(object sender, EventArgs e)
-        {
-            CalculateDepositTotal();
-        }
-
-        private void txt100_TextChanged(object sender, EventArgs e)
-        {
-            CalculateDepositTotal();
-        }
-
-        private void txt10_TextChanged(object sender, EventArgs e)
-        {
-            CalculateDepositTotal();
-        }
-
-        private void txt500_TextChanged(object sender, EventArgs e)
-        {
-            CalculateDepositTotal();
-        }
-
-        private void txt50_TextChanged(object sender, EventArgs e)
-        {
-            CalculateDepositTotal();
-        }
-
-        private void txt5_TextChanged(object sender, EventArgs e)
-        {
-            CalculateDepositTotal();
-        }
-
-        private void txt200_TextChanged(object sender, EventArgs e)
-        {
-            CalculateDepositTotal();
-        }
-
-        private void txt20_TextChanged(object sender, EventArgs e)
-        {
-            CalculateDepositTotal();
-        }
-
-        private void txt1_TextChanged(object sender, EventArgs e)
-        {
-            CalculateDepositTotal();
-        }
-
-        private void txt1000_KeyPress(object sender, KeyPressEventArgs e)
+        // -------------------- TextBox KeyPress (Numeric Only) --------------------
+        private void TextBox_KeyPress_Numeric(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
                 e.Handled = true;
-            }
-            if (txt1000.Text.Length >= 6)
-            {
-                e.Handled = true;
-                return;
-            }
         }
 
-        private void txt500_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (txt500.Text.Length >= 6)
-            {
-                e.Handled = true;
-                return;
-            }
-        }
+        // ✅ Attach numeric restriction for all denomination boxes
+        private void txt1000_KeyPress(object sender, KeyPressEventArgs e) => TextBox_KeyPress_Numeric(sender, e);
+        private void txt500_KeyPress(object sender, KeyPressEventArgs e) => TextBox_KeyPress_Numeric(sender, e);
+        private void txt200_KeyPress(object sender, KeyPressEventArgs e) => TextBox_KeyPress_Numeric(sender, e);
+        private void txt100_KeyPress(object sender, KeyPressEventArgs e) => TextBox_KeyPress_Numeric(sender, e);
+        private void txt50_KeyPress(object sender, KeyPressEventArgs e) => TextBox_KeyPress_Numeric(sender, e);
+        private void txt20_KeyPress(object sender, KeyPressEventArgs e) => TextBox_KeyPress_Numeric(sender, e);
+        private void txt10_KeyPress(object sender, KeyPressEventArgs e) => TextBox_KeyPress_Numeric(sender, e);
+        private void txt5_KeyPress(object sender, KeyPressEventArgs e) => TextBox_KeyPress_Numeric(sender, e);
+        private void txt1_KeyPress(object sender, KeyPressEventArgs e) => TextBox_KeyPress_Numeric(sender, e);
+        private void txt_accnum_KeyPress(object sender, KeyPressEventArgs e) => TextBox_KeyPress_Numeric(sender, e);
 
-        private void txt200_KeyPress(object sender, KeyPressEventArgs e)
+        // -------------------- Focus Clear --------------------
+        private void TextBox_Enter_Clear(object sender, EventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (txt200.Text.Length >= 6)
-            {
-                e.Handled = true;
-                return;
-            }
-        }
-
-        private void txt100_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (txt100.Text.Length >= 6)
-            {
-                e.Handled = true;
-                return;
-            }
-        }
-
-        private void txt50_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (txt50.Text.Length >= 6)
-            {
-                e.Handled = true;
-                return;
-            }
-        }
-
-        private void txt20_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (txt20.Text.Length >= 6)
-            {
-                e.Handled = true;
-                return;
-            }
-        }
-
-        private void txt10_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (txt10.Text.Length >= 6)
-            {
-                e.Handled = true;
-                return;
-            }
-        }
-
-        private void txt5_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (txt5.Text.Length >= 6)
-            {
-                e.Handled = true;
-                return;
-            }
-        }
-
-        private void txt1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            if (txt1.Text.Length >= 6)
-            {
-                e.Handled = true;
-                return;
-            }
-        }
-
-        private void txt1000_Enter(object sender, EventArgs e)
-        {
-            TextBox tb = sender as TextBox;
-            if (tb != null)
+            if (sender is TextBox tb)
                 tb.Clear();
         }
 
-        private void txt500_Enter(object sender, EventArgs e)
-        {
-            TextBox tb = sender as TextBox;
-            if (tb != null)
-                tb.Clear();
-        }
+        private void txt1000_Enter(object sender, EventArgs e) => TextBox_Enter_Clear(sender, e);
+        private void txt500_Enter(object sender, EventArgs e) => TextBox_Enter_Clear(sender, e);
+        private void txt200_Enter(object sender, EventArgs e) => TextBox_Enter_Clear(sender, e);
+        private void txt100_Enter(object sender, EventArgs e) => TextBox_Enter_Clear(sender, e);
+        private void txt50_Enter(object sender, EventArgs e) => TextBox_Enter_Clear(sender, e);
+        private void txt20_Enter(object sender, EventArgs e) => TextBox_Enter_Clear(sender, e);
+        private void txt10_Enter(object sender, EventArgs e) => TextBox_Enter_Clear(sender, e);
+        private void txt5_Enter(object sender, EventArgs e) => TextBox_Enter_Clear(sender, e);
+        private void txt1_Enter(object sender, EventArgs e) => TextBox_Enter_Clear(sender, e);
 
-        private void txt200_Enter(object sender, EventArgs e)
-        {
-            TextBox tb = sender as TextBox;
-            if (tb != null)
-                tb.Clear();
-        }
-
-        private void txt100_Enter(object sender, EventArgs e)
-        {
-            TextBox tb = sender as TextBox;
-            if (tb != null)
-                tb.Clear();
-        }
-
-        private void txt50_Enter(object sender, EventArgs e)
-        {
-            TextBox tb = sender as TextBox;
-            if (tb != null)
-                tb.Clear();
-        }
-
-        private void txt20_Enter(object sender, EventArgs e)
-        {
-            TextBox tb = sender as TextBox;
-            if (tb != null)
-                tb.Clear();
-        }
-
-        private void UC_Deposit_Admin_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt10_Enter(object sender, EventArgs e)
-        {
-            TextBox tb = sender as TextBox;
-            if (tb != null)
-                tb.Clear();
-        }
-
-        private void txt5_Enter(object sender, EventArgs e)
-        {
-            TextBox tb = sender as TextBox;
-            if (tb != null)
-                tb.Clear();
-        }
-
-        private void txt1_Enter(object sender, EventArgs e)
-        {
-            TextBox tb = sender as TextBox;
-            if (tb != null)
-                tb.Clear();
-        }
-
-        private void txt_accnum_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsControl(e.KeyChar))
-                return;
-
-            if (!char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-                return;
-            }
-        }
+        // ✅ Dummy handlers for Designer references (prevents errors)
+        private void label6_Click(object sender, EventArgs e) { }
+        private void UC_Deposit_Admin_Enter(object sender, EventArgs e) { }
     }
 }

@@ -149,7 +149,6 @@ namespace BankingSystem_AponteCatiban
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             var mainform = this.FindForm() as MainForm;
-            mainform.dashboard_Cus.BringToFront();
         }
       
         

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BankingSystem_AponteCatiban.Helpers;
+using BankingSystem_AponteCatiban.Models;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,8 +11,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BankingSystem_AponteCatiban.Models;
-using Newtonsoft.Json;
 
 namespace BankingSystem_AponteCatiban
 {
@@ -30,6 +31,11 @@ namespace BankingSystem_AponteCatiban
         {
 
         }
+        public void RefreshCustomerData()
+        {
+            
+            var refreshedCustomers = DataStore.LoadCustomers();
+        }
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
@@ -44,8 +50,7 @@ namespace BankingSystem_AponteCatiban
                     List<Customer> customers = JsonConvert.DeserializeObject<List<Customer>>(jsonContent);
 
                     Customer matchingCustomer = customers.FirstOrDefault(c =>
-                        c.Email == username &&
-                        c.AccountNumber.Replace("-", "") == password);
+                        c.Email == username && c.AccountNumber == password);
 
                     if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                     {
@@ -64,7 +69,7 @@ namespace BankingSystem_AponteCatiban
 
                         
                         mainform.ClearCurrentUC();
-                        mainform.panelDesktop.Controls.Clear();
+                        
 
                         
                         mainform.panelDesktop.Controls.Add(mainform.login);
@@ -90,8 +95,9 @@ namespace BankingSystem_AponteCatiban
                     {
                         MessageBox.Show("Invalid username or password.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                
 
-                    }
+            }
                     catch { }
 
 
@@ -106,19 +112,30 @@ namespace BankingSystem_AponteCatiban
 
         private void lbl_Register_Click(object sender, EventArgs e)
         {
-            var mainform = this.FindForm() as MainForm; 
-            if (mainform == null) return;
+            var mainform = this.FindForm() as MainForm;
+            if (mainform != null)
+            {
+                this.Hide();
 
-            mainform.HidePanels(); 
-            mainform.registration.btn_cancel.Visible = true;
-            mainform.registration.Visible = true;
-            mainform.registration.Dock = DockStyle.Fill;
-            mainform.registration.BringToFront();
+                mainform.panelDesktop.Show();
+                mainform.registration.Dock = DockStyle.Fill;
 
-            lbl_Register.ForeColor = Color.White;
-            clearField();
+                if (!mainform.panelDesktop.Controls.Contains(mainform.registration))
+                {
+                    mainform.panelDesktop.Controls.Add(mainform.registration);
+                }
+
+                mainform.panelMenu.Hide();
+                mainform.panelCustomer.Hide();
+                mainform.panelTitleBar.Hide();
+
+                mainform.registration.panelTitle.Visible = true;
+                mainform.registration.BringToFront();
+                mainform.registration.Show();
+
+                mainform.lblTitleChildForm.Text = "Register Account";
+            }
         }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 

@@ -80,7 +80,7 @@ namespace BankingSystem_AponteCatiban
                 lbl_accnum.Text = $"{customer.AccountNumber}";
                 lbl_name.Text = $"{customer.FullName}";
                 lbl_gender.Text = $"{customer.Gender}";
-                lbl_bdate.Text = $"{customer.Birthdate}";
+                lbl_bdate.Text = customer.Birthdate.ToString("MMMM dd, yyyy");
                 lbl_address.Text = $"{customer.Address}";
                 lbl_cnum.Text = $"{customer.Contact}";
                 lbl_civilstatus.Text = $"{customer.CivilStatus}";
@@ -97,6 +97,11 @@ namespace BankingSystem_AponteCatiban
         private void UC_Profile_Load(object sender, EventArgs e)
         {
             LoadCustomerData();
+        }
+
+        private void lbl_bdate_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

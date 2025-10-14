@@ -122,12 +122,6 @@
     <Compile Include="UC_Withdraw.Designer.cs">
       <DependentUpon>UC_Withdraw.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_InitialDeposit.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_InitialDeposit.Designer.cs">
-      <DependentUpon>UC_InitialDeposit.cs</DependentUpon>
-    </Compile>
     <Compile Include="UC_Login.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -161,9 +155,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Deposit_Cus.resx">
       <DependentUpon>UC_Deposit_Cus.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_InitialDeposit.resx">
-      <DependentUpon>UC_InitialDeposit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Login.resx">
       <DependentUpon>UC_Login.cs</DependentUpon>

@@ -49,10 +49,9 @@
             this.txtbxuser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbxuser.BackColor = System.Drawing.Color.LightGray;
             this.txtbxuser.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxuser.Location = new System.Drawing.Point(416, 384);
-            this.txtbxuser.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbxuser.Location = new System.Drawing.Point(298, 312);
             this.txtbxuser.Name = "txtbxuser";
-            this.txtbxuser.Size = new System.Drawing.Size(257, 27);
+            this.txtbxuser.Size = new System.Drawing.Size(223, 27);
             this.txtbxuser.TabIndex = 0;
             this.txtbxuser.TextChanged += new System.EventHandler(this.txtbxuser_TextChanged);
             // 
@@ -61,11 +60,10 @@
             this.txtbxpass.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtbxpass.BackColor = System.Drawing.Color.LightGray;
             this.txtbxpass.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.txtbxpass.Location = new System.Drawing.Point(416, 456);
-            this.txtbxpass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbxpass.Location = new System.Drawing.Point(298, 370);
             this.txtbxpass.Name = "txtbxpass";
             this.txtbxpass.PasswordChar = '*';
-            this.txtbxpass.Size = new System.Drawing.Size(257, 27);
+            this.txtbxpass.Size = new System.Drawing.Size(223, 27);
             this.txtbxpass.TabIndex = 1;
             // 
             // label1
@@ -75,8 +73,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(412, 360);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(295, 292);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 16);
             this.label1.TabIndex = 2;
@@ -89,8 +86,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(410, 428);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(294, 348);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 16);
             this.label2.TabIndex = 3;
@@ -105,10 +101,9 @@
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlogin.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.btnlogin.ForeColor = System.Drawing.Color.White;
-            this.btnlogin.Location = new System.Drawing.Point(554, 504);
-            this.btnlogin.Margin = new System.Windows.Forms.Padding(4);
+            this.btnlogin.Location = new System.Drawing.Point(402, 410);
             this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(124, 39);
+            this.btnlogin.Size = new System.Drawing.Size(93, 32);
             this.btnlogin.TabIndex = 4;
             this.btnlogin.Text = "Log In";
             this.btnlogin.UseVisualStyleBackColor = false;
@@ -120,10 +115,9 @@
             this.btnclose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnclose.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.btnclose.Location = new System.Drawing.Point(414, 504);
-            this.btnclose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnclose.Location = new System.Drawing.Point(296, 410);
             this.btnclose.Name = "btnclose";
-            this.btnclose.Size = new System.Drawing.Size(124, 39);
+            this.btnclose.Size = new System.Drawing.Size(93, 32);
             this.btnclose.TabIndex = 5;
             this.btnclose.Text = "Close";
             this.btnclose.UseVisualStyleBackColor = false;
@@ -136,8 +130,7 @@
             this.lbl_Register.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Register.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Register.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lbl_Register.Location = new System.Drawing.Point(418, 546);
-            this.lbl_Register.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Register.Location = new System.Drawing.Point(294, 444);
             this.lbl_Register.Name = "lbl_Register";
             this.lbl_Register.Size = new System.Drawing.Size(54, 14);
             this.lbl_Register.TabIndex = 6;
@@ -153,7 +146,8 @@
             this.lblLogo.BackColor = System.Drawing.Color.Transparent;
             this.lblLogo.Font = new System.Drawing.Font("Britannic Bold", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblLogo.Location = new System.Drawing.Point(446, 188);
+            this.lblLogo.Location = new System.Drawing.Point(333, 153);
+            this.lblLogo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLogo.Name = "lblLogo";
             this.lblLogo.Size = new System.Drawing.Size(278, 106);
             this.lblLogo.TabIndex = 8;
@@ -165,9 +159,10 @@
             this.logoAC.BackColor = System.Drawing.Color.Transparent;
             this.logoAC.BackgroundImage = global::BankingSystem_AponteCatiban.Properties.Resources.a2082dac_b7fc_4652_9f9f_c6a4b81a1a7a_removalai_preview;
             this.logoAC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.logoAC.Location = new System.Drawing.Point(242, 98);
+            this.logoAC.Location = new System.Drawing.Point(181, 80);
+            this.logoAC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.logoAC.Name = "logoAC";
-            this.logoAC.Size = new System.Drawing.Size(256, 258);
+            this.logoAC.Size = new System.Drawing.Size(192, 210);
             this.logoAC.TabIndex = 7;
             this.logoAC.TabStop = false;
             // 
@@ -177,8 +172,9 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1100, 800);
+            this.panel1.Size = new System.Drawing.Size(825, 650);
             this.panel1.TabIndex = 10;
             // 
             // panel2
@@ -194,22 +190,22 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1096, 796);
+            this.panel2.Size = new System.Drawing.Size(821, 646);
             this.panel2.TabIndex = 7;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // UC_Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_Login";
-            this.Size = new System.Drawing.Size(1100, 800);
+            this.Size = new System.Drawing.Size(825, 650);
             this.Load += new System.EventHandler(this.UC_Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logoAC)).EndInit();
             this.panel1.ResumeLayout(false);

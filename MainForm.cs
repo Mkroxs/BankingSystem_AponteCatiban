@@ -9,7 +9,7 @@ namespace BankingSystem_AponteCatiban
 {
     public partial class MainForm : Form
     {
-        // --- All user controls ---
+       
         public UC_Login login = new UC_Login();
         public UC_Deposit_Admin deposit_Admin = new UC_Deposit_Admin();
         public UC_Deposit_Cus deposit_customer = new UC_Deposit_Cus();
@@ -20,7 +20,6 @@ namespace BankingSystem_AponteCatiban
         public UC_Profile profile = new UC_Profile();
         public UC_TransactionHistory transactionHistory = new UC_TransactionHistory();
         public UC_Withdraw withdraw = new UC_Withdraw();
-        public UC_InitialDeposit initialDeposit = new UC_InitialDeposit();
 
         public Customer LoggedInCustomer { get; set; }
 
@@ -32,30 +31,30 @@ namespace BankingSystem_AponteCatiban
         {
             InitializeComponent();
 
-            // --- Default size when launching ---
+            
             this.Size = new Size(1100, 700);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.MinimumSize = new Size(1000, 700);
 
-            // --- Prepare navigation indicator ---
+            
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
             panelCustomer.Controls.Add(leftBorderBtn);
 
-            // --- Style adjustments ---
+            
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
 
-            // --- Preload all UCs ---
+            
             PreloadUserControls();
 
             login.Dock = DockStyle.Fill;
             registration.Dock = DockStyle.Fill;
 
-            // ✅ Add login and registration to the same panelDesktop
+            
             panelDesktop.Controls.Add(login);
             panelDesktop.Controls.Add(registration);
         }
@@ -67,7 +66,7 @@ namespace BankingSystem_AponteCatiban
                 deposit_Admin, deposit_customer, registration,
                 checkBalance_Admin, checkBalance_Cus,
                 customerProfile, profile, transactionHistory,
-                withdraw, initialDeposit
+                withdraw
             };
 
             foreach (var uc in ucs)
@@ -84,13 +83,13 @@ namespace BankingSystem_AponteCatiban
             login.Show();
         }
 
-        // --- Hide panels when not logged in ---
+        
         public void HidePanels()
         {
             panelCustomer.Hide();
             panelMenu.Hide();
             panelTitleBar.Hide();
-            panelDesktop.Hide();
+           
         }
 
         public void ShowAdminPanel()
@@ -109,7 +108,7 @@ namespace BankingSystem_AponteCatiban
             panelDesktop.Show();
         }
 
-        // --- Colors ---
+       
         private struct RGBColors
         {
             public static Color color1 = Color.LightBlue;
@@ -126,7 +125,7 @@ namespace BankingSystem_AponteCatiban
 
             DisableButton();
             currentBtn = (IconButton)senderBtn;
-            currentBtn.BackColor = Color.FromArgb(37, 36, 81);
+            currentBtn.BackColor = Color.FromArgb(0, 40, 65);
             currentBtn.ForeColor = color;
             currentBtn.TextAlign = ContentAlignment.MiddleCenter;
             currentBtn.IconColor = color;
@@ -152,18 +151,27 @@ namespace BankingSystem_AponteCatiban
             }
         }
 
-        // --- UC management ---
+        
         public void OpenChildControl(UserControl childControl)
         {
+            if (childControl == null) return;
+
+            
             if (currentUC != null)
             {
-                panelDesktop.Controls.Remove(currentUC);
+                currentUC.Hide();
             }
 
             currentUC = childControl;
-            panelDesktop.Controls.Add(childControl);
-            childControl.Dock = DockStyle.Fill;
+
+            if (!panelDesktop.Controls.Contains(childControl))
+            {
+                panelDesktop.Controls.Add(childControl);
+                childControl.Dock = DockStyle.Fill;
+            }
+
             childControl.BringToFront();
+            childControl.Show();
         }
 
         public void ClearCurrentUC()
@@ -171,23 +179,19 @@ namespace BankingSystem_AponteCatiban
             if (currentUC != null)
             {
                 panelDesktop.Controls.Remove(currentUC);
-                currentUC.Dispose();
+                currentUC.Hide();
                 currentUC = null;
             }
         }
 
-        // --- Buttons ---
+        
         private void btnRegisterCustomer_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
 
-            if (!panelDesktop.Controls.Contains(registration))
-            {
-                registration.Dock = DockStyle.Fill;
-                panelDesktop.Controls.Add(registration);
-            }
-
+           
             OpenChildControl(registration);
+
             lblTitleChildForm.Text = "Registration";
             registration.panelTitle.Visible = false;
         }
@@ -224,16 +228,15 @@ namespace BankingSystem_AponteCatiban
         private void btnLogout_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
-            ClearCurrentUC();
-            panelDesktop.Controls.Clear();
+            currentUC?.Hide();
 
-            panelDesktop.Controls.Add(login);
-            panelDesktop.Controls.Add(registration);
-
-            login.BringToFront();
+            // Reset to login screen
             login.Show();
+            login.BringToFront();
+
             HidePanels();
             registration.panelTitle.Visible = true;
+            registration.btn_cancel.Visible = true;
         }
 
        
@@ -268,18 +271,15 @@ namespace BankingSystem_AponteCatiban
         private void btnLogout2_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
-            ClearCurrentUC();
-            panelDesktop.Controls.Clear();
+            currentUC?.Hide();
 
-            panelDesktop.Controls.Add(login);
-            panelDesktop.Controls.Add(registration);
-
-            login.BringToFront();
             login.Show();
+            login.BringToFront();
+
             HidePanels();
         }
 
-        // --- Allow dragging form window ---
+        
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -289,6 +289,11 @@ namespace BankingSystem_AponteCatiban
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

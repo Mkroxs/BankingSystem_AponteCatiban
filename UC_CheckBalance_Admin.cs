@@ -42,6 +42,8 @@ namespace BankingSystem_AponteCatiban
 
         public void SetupAccountNumberAutocomplete()
         {
+            
+            customers = DataStore.LoadCustomers();
             if (customers == null || customers.Count == 0)
                 return;
 

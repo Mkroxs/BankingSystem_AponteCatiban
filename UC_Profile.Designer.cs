@@ -44,7 +44,6 @@
             this.lbl_cnum = new System.Windows.Forms.Label();
             this.lbl_civilstatus = new System.Windows.Forms.Label();
             this.lbl_address = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_email = new System.Windows.Forms.Label();
@@ -212,14 +211,6 @@
             this.lbl_address.TabIndex = 32;
             this.lbl_address.Text = "text";
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 682);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1246, 21);
-            this.flowLayoutPanel1.TabIndex = 38;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -256,7 +247,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lbl_email);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.lbl_civilstatus);
             this.Controls.Add(this.lbl_cnum);
             this.Controls.Add(this.lbl_address);
@@ -303,7 +293,6 @@
         private System.Windows.Forms.Label lbl_cnum;
         private System.Windows.Forms.Label lbl_civilstatus;
         private System.Windows.Forms.Label lbl_address;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_email;
     }

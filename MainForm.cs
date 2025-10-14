@@ -271,7 +271,7 @@ namespace BankingSystem_AponteCatiban
         {
             ActivateButton(sender, RGBColors.color1);
             currentUC?.Hide();
-
+            transactionHistory.ResetLabels();
             login.Show();
             login.BringToFront();
 

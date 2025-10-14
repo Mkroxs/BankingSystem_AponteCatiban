@@ -92,7 +92,7 @@ namespace BankingSystem_AponteCatiban
             if (this.Visible)
                 LoadTransactionHistory(); 
         }
-        private void ResetLabels()
+        public void ResetLabels()
         {
             lbl_dateoftrans.Text = "—";
             lbl_transtype.Text = "—";

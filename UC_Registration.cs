@@ -89,7 +89,7 @@ namespace BankingSystem_AponteCatiban
             return 0;
         }
 
-        private void ClearFields()
+        public void ClearFields()
         {
             txtbx_name.Clear();
             txtbx_address.Clear();

@@ -232,7 +232,7 @@ namespace BankingSystem_AponteCatiban
 
             login.Show();
             login.BringToFront();
-
+            registration.ClearFields();
             HidePanels();
             registration.panelTitle.Visible = true;
             registration.btn_cancel.Visible = true;

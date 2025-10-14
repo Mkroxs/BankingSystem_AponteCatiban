@@ -53,7 +53,7 @@ namespace BankingSystem_AponteCatiban
 
             var mainform = this.FindForm() as MainForm;
 
-            // --- ADMIN LOGIN ---
+            
             if (username == "admin" && password == "admin")
             {
                 if (mainform != null)
@@ -89,7 +89,7 @@ namespace BankingSystem_AponteCatiban
 
                 Customer matchingCustomer = customers.FirstOrDefault(c =>
                     string.Equals(c.Email?.Trim(), username, StringComparison.OrdinalIgnoreCase) &&
-                    c.AccountNumber.Replace("-", "") == password);
+                    c.AccountNumber == password);
 
                 if (matchingCustomer != null)
                 {

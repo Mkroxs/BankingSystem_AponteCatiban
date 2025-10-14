@@ -297,7 +297,6 @@ namespace BankingSystem_AponteCatiban
         private void txt5_Enter(object sender, EventArgs e) => TextBox_Enter_Clear(sender, e);
         private void txt1_Enter(object sender, EventArgs e) => TextBox_Enter_Clear(sender, e);
 
-        // ✅ Dummy handlers for Designer references (prevents errors)
         private void label6_Click(object sender, EventArgs e) { }
         private void UC_Deposit_Admin_Enter(object sender, EventArgs e) { }
     }

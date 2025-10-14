@@ -230,7 +230,6 @@ namespace BankingSystem_AponteCatiban
             ActivateButton(sender, RGBColors.color6);
             currentUC?.Hide();
 
-            // Reset to login screen
             login.Show();
             login.BringToFront();
 

@@ -30,7 +30,6 @@ namespace BankingSystem_AponteCatiban
             clearField();
         }
 
-        // ✅ Loads all customers into DataGridView
         public bool LoadCustomerData(bool showMessageIfEmpty = false)
         {
             try
@@ -49,15 +48,12 @@ namespace BankingSystem_AponteCatiban
 
                 dgv_cuslist.DataSource = customers;
 
-                // Hide unnecessary columns
                 dgv_cuslist.Columns["ImagePath"].Visible = false;
                 if (dgv_cuslist.Columns.Contains("Balance"))
-                    dgv_cuslist.Columns["Balance"].Visible = false; // ❌ hide balance
+                    dgv_cuslist.Columns["Balance"].Visible = false;
 
-                // Format date
                 dgv_cuslist.Columns["Birthdate"].DefaultCellStyle.Format = "yyyy-MM-dd";
 
-                // Rename headers for clarity
                 dgv_cuslist.Columns["CustomerId"].HeaderText = "Customer ID";
                 dgv_cuslist.Columns["AccountNumber"].HeaderText = "Account Number";
                 dgv_cuslist.Columns["FullName"].HeaderText = "Full Name";
@@ -68,7 +64,6 @@ namespace BankingSystem_AponteCatiban
                 dgv_cuslist.Columns["Email"].HeaderText = "Email Address";
                 dgv_cuslist.Columns["CivilStatus"].HeaderText = "Civil Status";
 
-                // 🧭 Lock editing — make grid read-only
                 dgv_cuslist.ReadOnly = true;
                 dgv_cuslist.AllowUserToAddRows = false;
                 dgv_cuslist.AllowUserToDeleteRows = false;
@@ -77,7 +72,6 @@ namespace BankingSystem_AponteCatiban
                 dgv_cuslist.MultiSelect = false;
                 dgv_cuslist.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-                // Apply styling
                 dgv_cuslist.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
                 dgv_cuslist.ColumnHeadersDefaultCellStyle.BackColor = Color.LightSteelBlue;
                 dgv_cuslist.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;

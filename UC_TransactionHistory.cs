@@ -59,7 +59,6 @@ namespace BankingSystem_AponteCatiban
 
                 dgv_cuslist.DataSource = customerTransactions;
 
-                // 🧭 Make the grid read-only and locked
                 dgv_cuslist.ReadOnly = true;
                 dgv_cuslist.AllowUserToAddRows = false;
                 dgv_cuslist.AllowUserToDeleteRows = false;
@@ -67,7 +66,6 @@ namespace BankingSystem_AponteCatiban
                 dgv_cuslist.RowHeadersVisible = false;
                 dgv_cuslist.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
-                // 🪶 Improve headers
                 dgv_cuslist.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
                 dgv_cuslist.ColumnHeadersDefaultCellStyle.BackColor = Color.LightSteelBlue;
                 dgv_cuslist.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
@@ -83,7 +81,6 @@ namespace BankingSystem_AponteCatiban
                 dgv_cuslist.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgv_cuslist.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
 
-                // ✨ Format currency columns with ₱ sign
                 if (dgv_cuslist.Columns.Contains("amount"))
                 {
                     dgv_cuslist.Columns["amount"].HeaderText = "Transaction Amount";

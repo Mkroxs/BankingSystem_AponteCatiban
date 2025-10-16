@@ -31,7 +31,6 @@ namespace BankingSystem_AponteCatiban
         {
             tbxInitialDeposit.KeyPress += (s, e) =>
             {
-                // Allow only digits and control keys
                 if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
                 {
                     e.Handled = true;
@@ -51,7 +50,6 @@ namespace BankingSystem_AponteCatiban
 
                 if (decimal.TryParse(text, out decimal value))
                 {
-                    // Prevent overflow or negative
                     if (value > 9999999999M)
                     {
                         MessageBox.Show("Value too large. Please enter a smaller amount.",
@@ -61,7 +59,6 @@ namespace BankingSystem_AponteCatiban
                         return;
                     }
 
-                    // Format with peso and commas
                     tbxInitialDeposit.Text = $"₱{value:N0}";
                     tbxInitialDeposit.SelectionStart = tbxInitialDeposit.Text.Length;
                 }
@@ -91,7 +88,6 @@ namespace BankingSystem_AponteCatiban
         {
             try
             {
-                // FULL NAME VALIDATION
                 string fullName = txtbx_name.Text.Trim();
                 if (string.IsNullOrWhiteSpace(fullName) || !fullName.Contains(" "))
                 {
@@ -99,7 +95,6 @@ namespace BankingSystem_AponteCatiban
                     return;
                 }
 
-                // GENDER VALIDATION
                 string gender = rbtn_male.Checked ? "Male" : rbtn_female.Checked ? "Female" : "";
                 if (string.IsNullOrEmpty(gender))
                 {
@@ -107,7 +102,6 @@ namespace BankingSystem_AponteCatiban
                     return;
                 }
 
-                // BIRTHDATE VALIDATION
                 DateTime birthdate = dateTimePicker1.Value;
                 int age = DateTime.Now.Year - birthdate.Year;
                 if (birthdate > DateTime.Now.AddYears(-age)) age--;
@@ -117,14 +111,12 @@ namespace BankingSystem_AponteCatiban
                     return;
                 }
 
-                // ADDRESS VALIDATION
                 if (string.IsNullOrWhiteSpace(txtbx_address.Text))
                 {
                     MessageBox.Show("Please enter an address.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                // CONTACT VALIDATION
                 string contact = txtbx_cnum.Text.Trim();
                 if (!Regex.IsMatch(contact, @"^09\d{9}$"))
                 {
@@ -132,14 +124,12 @@ namespace BankingSystem_AponteCatiban
                     return;
                 }
 
-                // CIVIL STATUS VALIDATION
                 if (cbx_civilstatus.SelectedIndex == -1)
                 {
                     MessageBox.Show("Please select a civil status.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                // EMAIL VALIDATION
                 string email = txtbx_eaddress.Text.Trim();
                 string emailPattern = @"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$";
                 if (!Regex.IsMatch(email, emailPattern))
@@ -155,7 +145,6 @@ namespace BankingSystem_AponteCatiban
                     return;
                 }
 
-                // INITIAL DEPOSIT VALIDATION (allow ₱ and commas)
                 string cleaned = tbxInitialDeposit.Text.Replace("₱", "").Replace(",", "").Trim();
                 if (!decimal.TryParse(cleaned, out decimal depositAmount) || depositAmount < 500)
                 {
@@ -163,7 +152,6 @@ namespace BankingSystem_AponteCatiban
                     return;
                 }
 
-                // IMAGE VALIDATION
                 if (string.IsNullOrEmpty(selectedImagePath) || !File.Exists(selectedImagePath))
                 {
                     MessageBox.Show("Please upload a profile picture.", "Missing Image", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -194,7 +182,6 @@ namespace BankingSystem_AponteCatiban
                 customers.Add(newCustomer);
                 DataStore.SaveCustomers(customers);
 
-                // INITIAL DEPOSIT TRANSACTION
                 Transaction transaction = new Transaction
                 {
                     customerAccountNumber = accountNumber,
@@ -298,7 +285,6 @@ namespace BankingSystem_AponteCatiban
             }
         }
 
-        // ---- EMPTY EVENT HANDLERS ----
         private void UC_Registration_Load(object sender, EventArgs e) { }
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e) { }
         private void txtbx_name_TextChanged(object sender, EventArgs e) { }

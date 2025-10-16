@@ -20,7 +20,6 @@ namespace BankingSystem_AponteCatiban
         {
             InitializeComponent();
 
-            // 🧭 Enable responsive scaling for all monitors
             this.AutoScaleMode = AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
@@ -35,7 +34,6 @@ namespace BankingSystem_AponteCatiban
             var mainform = this.Parent as MainForm;
         }
 
-        // 🖼️ Make profile image circular
         private void MakePictureBoxCircular()
         {
             try
@@ -57,14 +55,12 @@ namespace BankingSystem_AponteCatiban
             catch { }
         }
 
-        // 📷 Load customer image safely
         private void LoadCustomerImage(string ImagePath)
         {
             try
             {
                 string fullImagePath = ImagePath;
 
-                // Allow both relative and absolute image paths
                 if (ImagePath.StartsWith("Images/", StringComparison.OrdinalIgnoreCase) ||
                     Path.IsPathRooted(ImagePath) == false)
                 {
@@ -86,7 +82,6 @@ namespace BankingSystem_AponteCatiban
             catch { }
         }
 
-        // 🧮 Load data of the currently logged-in customer
         public void LoadCustomerData()
         {
             try
@@ -110,7 +105,6 @@ namespace BankingSystem_AponteCatiban
                 lbl_email.Text = $"{customer.Email}";
                 LoadCustomerImage(customer.ImagePath);
 
-                // 🧠 Compute and show age
                 int age = DateTime.Now.Year - customer.Birthdate.Year;
                 if (customer.Birthdate > DateTime.Now.AddYears(-age)) age--;
                 if (age == 1) lblage.Text = $"{age} year old";

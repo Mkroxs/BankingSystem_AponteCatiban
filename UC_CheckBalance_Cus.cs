@@ -47,7 +47,6 @@ namespace BankingSystem_AponteCatiban
                 lbl_accnum.Text = customer.AccountNumber;
                 lbl_accname.Text = customer.FullName;
 
-                // ✅ Properly formatted remaining balance with peso sign and commas
                 lbl_rembal.Text = $"₱{customer.Balance:N2}";
             }
             catch (Exception ex)

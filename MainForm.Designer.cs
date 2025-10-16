@@ -69,10 +69,11 @@
             this.panelTitleBar.Controls.Add(this.lblTitleChildForm);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(354, 0);
-            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2);
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(546, 99);
             this.panelTitleBar.TabIndex = 2;
+            this.panelTitleBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTitleBar_Paint);
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
             // lblTitleChildForm
@@ -92,7 +93,7 @@
             this.panelDesktop.Controls.Add(this.panel1);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(354, 99);
-            this.panelDesktop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelDesktop.Margin = new System.Windows.Forms.Padding(2);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(546, 551);
             this.panelDesktop.TabIndex = 3;
@@ -102,7 +103,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(546, 551);
             this.panel1.TabIndex = 8;
@@ -111,7 +112,7 @@
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(546, 551);
             this.panel3.TabIndex = 12;
@@ -123,7 +124,7 @@
             this.panelLogo.Controls.Add(this.logoAC);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(2);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
             this.panelLogo.Size = new System.Drawing.Size(177, 99);
@@ -147,7 +148,7 @@
             this.logoAC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.logoAC.Dock = System.Windows.Forms.DockStyle.Left;
             this.logoAC.Location = new System.Drawing.Point(8, 0);
-            this.logoAC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logoAC.Margin = new System.Windows.Forms.Padding(2);
             this.logoAC.Name = "logoAC";
             this.logoAC.Size = new System.Drawing.Size(52, 99);
             this.logoAC.TabIndex = 0;
@@ -166,7 +167,7 @@
             this.btnRegisterCustomer.IconSize = 32;
             this.btnRegisterCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegisterCustomer.Location = new System.Drawing.Point(0, 295);
-            this.btnRegisterCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegisterCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegisterCustomer.Name = "btnRegisterCustomer";
             this.btnRegisterCustomer.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
             this.btnRegisterCustomer.Size = new System.Drawing.Size(177, 49);
@@ -190,7 +191,7 @@
             this.btnDeposit.IconSize = 32;
             this.btnDeposit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeposit.Location = new System.Drawing.Point(0, 197);
-            this.btnDeposit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeposit.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeposit.Name = "btnDeposit";
             this.btnDeposit.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
             this.btnDeposit.Size = new System.Drawing.Size(177, 49);
@@ -214,7 +215,7 @@
             this.btnWithdraw.IconSize = 32;
             this.btnWithdraw.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnWithdraw.Location = new System.Drawing.Point(0, 148);
-            this.btnWithdraw.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnWithdraw.Margin = new System.Windows.Forms.Padding(2);
             this.btnWithdraw.Name = "btnWithdraw";
             this.btnWithdraw.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
             this.btnWithdraw.Size = new System.Drawing.Size(177, 49);
@@ -238,7 +239,7 @@
             this.btnCheckBalance.IconSize = 32;
             this.btnCheckBalance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCheckBalance.Location = new System.Drawing.Point(0, 246);
-            this.btnCheckBalance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCheckBalance.Margin = new System.Windows.Forms.Padding(2);
             this.btnCheckBalance.Name = "btnCheckBalance";
             this.btnCheckBalance.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
             this.btnCheckBalance.Size = new System.Drawing.Size(177, 49);
@@ -262,7 +263,7 @@
             this.btnCustomerProfile.IconSize = 32;
             this.btnCustomerProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCustomerProfile.Location = new System.Drawing.Point(0, 99);
-            this.btnCustomerProfile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCustomerProfile.Margin = new System.Windows.Forms.Padding(2);
             this.btnCustomerProfile.Name = "btnCustomerProfile";
             this.btnCustomerProfile.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
             this.btnCustomerProfile.Size = new System.Drawing.Size(177, 49);
@@ -286,7 +287,7 @@
             this.btnLogout.IconSize = 32;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.Location = new System.Drawing.Point(0, 601);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
             this.btnLogout.Size = new System.Drawing.Size(177, 49);
@@ -309,7 +310,7 @@
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(177, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(177, 650);
             this.panelMenu.TabIndex = 1;
@@ -325,7 +326,7 @@
             this.panelCustomer.Controls.Add(this.panel2);
             this.panelCustomer.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelCustomer.Location = new System.Drawing.Point(0, 0);
-            this.panelCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.panelCustomer.Name = "panelCustomer";
             this.panelCustomer.Size = new System.Drawing.Size(177, 650);
             this.panelCustomer.TabIndex = 4;
@@ -343,7 +344,7 @@
             this.btnLogout2.IconSize = 32;
             this.btnLogout2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout2.Location = new System.Drawing.Point(0, 601);
-            this.btnLogout2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogout2.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout2.Name = "btnLogout2";
             this.btnLogout2.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
             this.btnLogout2.Size = new System.Drawing.Size(177, 49);
@@ -367,7 +368,7 @@
             this.btnTransactionHistory.IconSize = 32;
             this.btnTransactionHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTransactionHistory.Location = new System.Drawing.Point(0, 246);
-            this.btnTransactionHistory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTransactionHistory.Margin = new System.Windows.Forms.Padding(2);
             this.btnTransactionHistory.Name = "btnTransactionHistory";
             this.btnTransactionHistory.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
             this.btnTransactionHistory.Size = new System.Drawing.Size(177, 49);
@@ -391,7 +392,7 @@
             this.btnCheckBalance2.IconSize = 32;
             this.btnCheckBalance2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCheckBalance2.Location = new System.Drawing.Point(0, 197);
-            this.btnCheckBalance2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCheckBalance2.Margin = new System.Windows.Forms.Padding(2);
             this.btnCheckBalance2.Name = "btnCheckBalance2";
             this.btnCheckBalance2.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
             this.btnCheckBalance2.Size = new System.Drawing.Size(177, 49);
@@ -415,7 +416,7 @@
             this.btnDeposit2.IconSize = 32;
             this.btnDeposit2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeposit2.Location = new System.Drawing.Point(0, 148);
-            this.btnDeposit2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeposit2.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeposit2.Name = "btnDeposit2";
             this.btnDeposit2.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
             this.btnDeposit2.Size = new System.Drawing.Size(177, 49);
@@ -439,7 +440,7 @@
             this.btnProfile.IconSize = 32;
             this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProfile.Location = new System.Drawing.Point(0, 99);
-            this.btnProfile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProfile.Margin = new System.Windows.Forms.Padding(2);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
             this.btnProfile.Size = new System.Drawing.Size(177, 49);
@@ -456,7 +457,7 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
             this.panel2.Size = new System.Drawing.Size(177, 99);
@@ -480,7 +481,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Location = new System.Drawing.Point(8, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(52, 99);
             this.pictureBox1.TabIndex = 0;
@@ -499,7 +500,7 @@
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelCustomer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ShowIcon = false;

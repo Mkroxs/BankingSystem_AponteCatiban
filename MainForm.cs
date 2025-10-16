@@ -32,13 +32,13 @@ namespace BankingSystem_AponteCatiban
             InitializeComponent();
 
             
-            this.Size = new Size(1100, 700);
+            this.Size = new Size(1200, 700);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.MinimumSize = new Size(1000, 700);
 
             
             leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7, 60);
+            leftBorderBtn.Size = new Size(7, 50);
             panelMenu.Controls.Add(leftBorderBtn);
             panelCustomer.Controls.Add(leftBorderBtn);
 
@@ -95,6 +95,8 @@ namespace BankingSystem_AponteCatiban
         public void ShowAdminPanel()
         {
             panelCustomer.Hide();
+            
+
             panelMenu.Show();
             panelTitleBar.Show();
             panelDesktop.Show();
@@ -291,6 +293,11 @@ namespace BankingSystem_AponteCatiban
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelTitleBar_Paint(object sender, PaintEventArgs e)
         {
 
         }

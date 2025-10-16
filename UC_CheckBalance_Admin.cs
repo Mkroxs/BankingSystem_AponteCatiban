@@ -20,6 +20,9 @@ namespace BankingSystem_AponteCatiban
         public UC_CheckBalance_Admin()
         {
             InitializeComponent();
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            this.AutoSize = true;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
         }
 
         private void UC_CheckBalance_Admin_Load(object sender, EventArgs e)

@@ -14,57 +14,79 @@ using System.Drawing.Drawing2D;
 
 namespace BankingSystem_AponteCatiban
 {
-    public partial class UC_Profile: UserControl
+    public partial class UC_Profile : UserControl
     {
         public UC_Profile()
         {
             InitializeComponent();
+
+            // 🧭 Enable responsive scaling for all monitors
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            this.AutoSize = true;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
         }
 
         private void lbl_address_Click(object sender, EventArgs e)
         {
-
         }
 
         private void btn_close_Click(object sender, EventArgs e)
         {
             var mainform = this.Parent as MainForm;
         }
+
+        // 🖼️ Make profile image circular
         private void MakePictureBoxCircular()
         {
-            if (pictureBox1.Width != pictureBox1.Height)
+            try
             {
-                int size = Math.Min(pictureBox1.Width, pictureBox1.Height);
-                pictureBox1.Size = new Size(size, size); 
+                if (pictureBox1.Width != pictureBox1.Height)
+                {
+                    int size = Math.Min(pictureBox1.Width, pictureBox1.Height);
+                    pictureBox1.Size = new Size(size, size);
+                }
+
+                using (GraphicsPath path = new GraphicsPath())
+                {
+                    path.AddEllipse(0, 0, pictureBox1.Width - 1, pictureBox1.Height - 1);
+                    pictureBox1.Region = new Region(path);
+                }
+
+                pictureBox1.Refresh();
             }
-            using (GraphicsPath path = new GraphicsPath())
-            {
-                path.AddEllipse(0, 0, pictureBox1.Width - 1, pictureBox1.Height - 1);
-                pictureBox1.Region = new Region(path);
-            }
-            pictureBox1.Refresh();
+            catch { }
         }
+
+        // 📷 Load customer image safely
         private void LoadCustomerImage(string ImagePath)
         {
             try
             {
                 string fullImagePath = ImagePath;
 
+                // Allow both relative and absolute image paths
                 if (ImagePath.StartsWith("Images/", StringComparison.OrdinalIgnoreCase) ||
                     Path.IsPathRooted(ImagePath) == false)
                 {
                     fullImagePath = Path.Combine(Application.StartupPath, ImagePath);
                 }
+
                 if (File.Exists(fullImagePath))
                 {
                     pictureBox1.Image = Image.FromFile(fullImagePath);
                     pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
                 }
+                else
+                {
+                    pictureBox1.Image = null;
+                }
+
                 MakePictureBoxCircular();
             }
             catch { }
         }
 
+        // 🧮 Load data of the currently logged-in customer
         public void LoadCustomerData()
         {
             try
@@ -74,6 +96,7 @@ namespace BankingSystem_AponteCatiban
                 {
                     return;
                 }
+
                 Customer customer = mainform.LoggedInCustomer;
 
                 lbl_cusid.Text = $"{customer.CustomerId}";
@@ -87,10 +110,16 @@ namespace BankingSystem_AponteCatiban
                 lbl_email.Text = $"{customer.Email}";
                 LoadCustomerImage(customer.ImagePath);
 
+                // 🧠 Compute and show age
+                int age = DateTime.Now.Year - customer.Birthdate.Year;
+                if (customer.Birthdate > DateTime.Now.AddYears(-age)) age--;
+                if (age == 1) lblage.Text = $"{age} year old";
+                else lblage.Text = $"{age} years old";
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error loading profile: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -100,6 +129,10 @@ namespace BankingSystem_AponteCatiban
         }
 
         private void lbl_bdate_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void lblage_Click(object sender, EventArgs e)
         {
 
         }

@@ -26,6 +26,9 @@ namespace BankingSystem_AponteCatiban
             InitializeComponent();
             
             this.Load += UC_Deposit_Cus_Load;
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            this.AutoSize = true;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
 
         }
 

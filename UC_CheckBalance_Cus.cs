@@ -9,21 +9,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using BankingSystem_AponteCatiban.Models;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using Newtonsoft.Json;
 
 namespace BankingSystem_AponteCatiban
 {
-    public partial class UC_CheckBalance_Cus: UserControl
+    public partial class UC_CheckBalance_Cus : UserControl
     {
         public UC_CheckBalance_Cus()
         {
             InitializeComponent();
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            this.AutoSize = true;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
         }
 
         private void lbl_accnum_Click(object sender, EventArgs e)
         {
-            
         }
 
         private void btn_close_Click(object sender, EventArgs e)
@@ -35,24 +36,26 @@ namespace BankingSystem_AponteCatiban
         {
             try
             {
-                var mainform = this.FindForm() as MainForm; 
+                var mainform = this.FindForm() as MainForm;
                 if (mainform == null || mainform.LoggedInCustomer == null)
                 {
                     return;
                 }
+
                 Customer customer = mainform.LoggedInCustomer;
 
                 lbl_accnum.Text = customer.AccountNumber;
                 lbl_accname.Text = customer.FullName;
-                lbl_rembal.Text = $"₱{customer.Balance:F2}";
 
+                // ✅ Properly formatted remaining balance with peso sign and commas
+                lbl_rembal.Text = $"₱{customer.Balance:N2}";
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error loading balance: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
+
         protected override void OnVisibleChanged(EventArgs e)
         {
             base.OnVisibleChanged(e);
@@ -61,7 +64,6 @@ namespace BankingSystem_AponteCatiban
                 LoadCustomerData();
             }
         }
-
 
         private void UC_CheckBalance_Cus_Load(object sender, EventArgs e)
         {

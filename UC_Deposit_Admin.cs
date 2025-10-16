@@ -17,6 +17,9 @@ namespace BankingSystem_AponteCatiban
         {
             InitializeComponent();
             this.VisibleChanged += UC_Deposit_Admin_VisibleChanged;
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            this.AutoSize = true;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
         }
 
         

@@ -19,6 +19,9 @@ namespace BankingSystem_AponteCatiban
         public UC_Login()
         {
             InitializeComponent();
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            this.AutoSize = true;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
         }
 
         private void clearField()
@@ -144,6 +147,7 @@ namespace BankingSystem_AponteCatiban
                 mainform.registration.Show();
 
                 mainform.lblTitleChildForm.Text = "Register Account";
+                clearField();
             }
         }
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -174,6 +178,11 @@ namespace BankingSystem_AponteCatiban
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

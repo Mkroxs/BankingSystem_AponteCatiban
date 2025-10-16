@@ -30,9 +30,11 @@ namespace BankingSystem_AponteCatiban
         public MainForm()
         {
             InitializeComponent();
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            this.AutoSize = true;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
 
-            
-            this.Size = new Size(1200, 700);
+            this.Size = new Size(1000, 800);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.MinimumSize = new Size(1000, 700);
 

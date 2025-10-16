@@ -82,6 +82,7 @@ namespace BankingSystem_AponteCatiban
             selectedImagePath = "";
             tbxInitialDeposit.Clear();
             initialValue = 0;
+            dateTimePicker1.Value = DateTime.Today;
         }
 
         private void btn_deposit_Click(object sender, EventArgs e)

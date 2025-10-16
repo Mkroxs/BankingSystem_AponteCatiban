@@ -57,9 +57,9 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.lblage = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -81,7 +81,7 @@
             this.label6.Location = new System.Drawing.Point(14, 14);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(93, 19);
+            this.label6.Size = new System.Drawing.Size(120, 23);
             this.label6.TabIndex = 24;
             this.label6.Text = "Civil Status:";
             // 
@@ -92,7 +92,7 @@
             this.label5.Location = new System.Drawing.Point(14, 14);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(142, 19);
+            this.label5.Size = new System.Drawing.Size(179, 23);
             this.label5.TabIndex = 23;
             this.label5.Text = "Contact Number:";
             // 
@@ -103,7 +103,7 @@
             this.label4.Location = new System.Drawing.Point(14, 14);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 19);
+            this.label4.Size = new System.Drawing.Size(94, 23);
             this.label4.TabIndex = 22;
             this.label4.Text = "Address:";
             // 
@@ -114,7 +114,7 @@
             this.label3.Location = new System.Drawing.Point(14, 14);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 19);
+            this.label3.Size = new System.Drawing.Size(102, 23);
             this.label3.TabIndex = 21;
             this.label3.Text = "Birthdate:";
             // 
@@ -125,7 +125,7 @@
             this.label2.Location = new System.Drawing.Point(14, 14);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 19);
+            this.label2.Size = new System.Drawing.Size(90, 23);
             this.label2.TabIndex = 20;
             this.label2.Text = "Gender:";
             // 
@@ -136,7 +136,7 @@
             this.label8.Location = new System.Drawing.Point(14, 14);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 19);
+            this.label8.Size = new System.Drawing.Size(76, 23);
             this.label8.TabIndex = 19;
             this.label8.Text = "Name:";
             // 
@@ -147,7 +147,7 @@
             this.label7.Location = new System.Drawing.Point(14, 14);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 19);
+            this.label7.Size = new System.Drawing.Size(136, 23);
             this.label7.TabIndex = 25;
             this.label7.Text = "Customer ID:";
             // 
@@ -158,7 +158,7 @@
             this.label9.Location = new System.Drawing.Point(14, 14);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(147, 19);
+            this.label9.Size = new System.Drawing.Size(184, 23);
             this.label9.TabIndex = 26;
             this.label9.Text = "Account Number:";
             // 
@@ -169,7 +169,7 @@
             this.lbl_cusid.Location = new System.Drawing.Point(162, 14);
             this.lbl_cusid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_cusid.Name = "lbl_cusid";
-            this.lbl_cusid.Size = new System.Drawing.Size(60, 21);
+            this.lbl_cusid.Size = new System.Drawing.Size(72, 23);
             this.lbl_cusid.TabIndex = 27;
             this.lbl_cusid.Text = "Cus ID";
             // 
@@ -180,7 +180,7 @@
             this.lbl_accnum.Location = new System.Drawing.Point(222, 14);
             this.lbl_accnum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_accnum.Name = "lbl_accnum";
-            this.lbl_accnum.Size = new System.Drawing.Size(84, 21);
+            this.lbl_accnum.Size = new System.Drawing.Size(103, 23);
             this.lbl_accnum.TabIndex = 28;
             this.lbl_accnum.Text = "Acc Num";
             // 
@@ -191,7 +191,7 @@
             this.lbl_name.Location = new System.Drawing.Point(128, 14);
             this.lbl_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(42, 21);
+            this.lbl_name.Size = new System.Drawing.Size(47, 23);
             this.lbl_name.TabIndex = 29;
             this.lbl_name.Text = "text";
             // 
@@ -202,7 +202,7 @@
             this.lbl_gender.Location = new System.Drawing.Point(128, 14);
             this.lbl_gender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_gender.Name = "lbl_gender";
-            this.lbl_gender.Size = new System.Drawing.Size(42, 21);
+            this.lbl_gender.Size = new System.Drawing.Size(47, 23);
             this.lbl_gender.TabIndex = 30;
             this.lbl_gender.Text = "text";
             // 
@@ -213,7 +213,7 @@
             this.lbl_bdate.Location = new System.Drawing.Point(126, 12);
             this.lbl_bdate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_bdate.Name = "lbl_bdate";
-            this.lbl_bdate.Size = new System.Drawing.Size(42, 21);
+            this.lbl_bdate.Size = new System.Drawing.Size(47, 23);
             this.lbl_bdate.TabIndex = 31;
             this.lbl_bdate.Text = "text";
             this.lbl_bdate.Click += new System.EventHandler(this.lbl_bdate_Click);
@@ -225,7 +225,7 @@
             this.lbl_cnum.Location = new System.Drawing.Point(222, 14);
             this.lbl_cnum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_cnum.Name = "lbl_cnum";
-            this.lbl_cnum.Size = new System.Drawing.Size(42, 21);
+            this.lbl_cnum.Size = new System.Drawing.Size(47, 23);
             this.lbl_cnum.TabIndex = 33;
             this.lbl_cnum.Text = "text";
             // 
@@ -236,7 +236,7 @@
             this.lbl_civilstatus.Location = new System.Drawing.Point(154, 12);
             this.lbl_civilstatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_civilstatus.Name = "lbl_civilstatus";
-            this.lbl_civilstatus.Size = new System.Drawing.Size(42, 21);
+            this.lbl_civilstatus.Size = new System.Drawing.Size(47, 23);
             this.lbl_civilstatus.TabIndex = 34;
             this.lbl_civilstatus.Text = "text";
             // 
@@ -247,7 +247,7 @@
             this.lbl_address.Location = new System.Drawing.Point(128, 12);
             this.lbl_address.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_address.Name = "lbl_address";
-            this.lbl_address.Size = new System.Drawing.Size(42, 21);
+            this.lbl_address.Size = new System.Drawing.Size(47, 23);
             this.lbl_address.TabIndex = 32;
             this.lbl_address.Text = "text";
             // 
@@ -256,7 +256,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(20, 24);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(190, 165);
             this.pictureBox1.TabIndex = 0;
@@ -269,7 +269,7 @@
             this.label1.Location = new System.Drawing.Point(14, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 19);
+            this.label1.Size = new System.Drawing.Size(68, 23);
             this.label1.TabIndex = 42;
             this.label1.Text = "Email:";
             // 
@@ -280,7 +280,7 @@
             this.lbl_email.Location = new System.Drawing.Point(100, 16);
             this.lbl_email.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_email.Name = "lbl_email";
-            this.lbl_email.Size = new System.Drawing.Size(42, 21);
+            this.lbl_email.Size = new System.Drawing.Size(47, 23);
             this.lbl_email.TabIndex = 43;
             this.lbl_email.Text = "text";
             // 
@@ -389,29 +389,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(900, 298);
             this.flowLayoutPanel1.TabIndex = 46;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(14, 14);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 19);
-            this.label10.TabIndex = 28;
-            this.label10.Text = "Age:";
-            // 
-            // lblage
-            // 
-            this.lblage.AutoSize = true;
-            this.lblage.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.lblage.Location = new System.Drawing.Point(118, 14);
-            this.lblage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblage.Name = "lblage";
-            this.lblage.Size = new System.Drawing.Size(42, 21);
-            this.lblage.TabIndex = 29;
-            this.lblage.Text = "text";
-            this.lblage.Click += new System.EventHandler(this.lblage_Click);
-            // 
             // panel10
             // 
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -422,6 +399,29 @@
             this.panel10.Size = new System.Drawing.Size(420, 52);
             this.panel10.TabIndex = 47;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label10.Location = new System.Drawing.Point(14, 14);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(57, 23);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "Age:";
+            // 
+            // lblage
+            // 
+            this.lblage.AutoSize = true;
+            this.lblage.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.lblage.Location = new System.Drawing.Point(92, 14);
+            this.lblage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblage.Name = "lblage";
+            this.lblage.Size = new System.Drawing.Size(47, 23);
+            this.lblage.TabIndex = 29;
+            this.lblage.Text = "text";
+            this.lblage.Click += new System.EventHandler(this.lblage_Click);
+            // 
             // UC_Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -431,7 +431,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_Profile";
             this.Size = new System.Drawing.Size(1600, 862);
             this.Load += new System.EventHandler(this.UC_Profile_Load);

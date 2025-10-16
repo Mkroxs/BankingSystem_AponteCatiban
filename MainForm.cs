@@ -303,5 +303,10 @@ namespace BankingSystem_AponteCatiban
         {
 
         }
+
+        private void lblLogo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

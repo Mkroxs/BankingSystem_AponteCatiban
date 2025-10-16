@@ -51,9 +51,9 @@
             this.txtbxuser.BackColor = System.Drawing.Color.LightGray;
             this.txtbxuser.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxuser.Location = new System.Drawing.Point(348, 385);
-            this.txtbxuser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtbxuser.Margin = new System.Windows.Forms.Padding(4);
             this.txtbxuser.Name = "txtbxuser";
-            this.txtbxuser.Size = new System.Drawing.Size(296, 30);
+            this.txtbxuser.Size = new System.Drawing.Size(296, 36);
             this.txtbxuser.TabIndex = 0;
             this.txtbxuser.TextChanged += new System.EventHandler(this.txtbxuser_TextChanged);
             // 
@@ -63,10 +63,10 @@
             this.txtbxpass.BackColor = System.Drawing.Color.LightGray;
             this.txtbxpass.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxpass.Location = new System.Drawing.Point(348, 456);
-            this.txtbxpass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtbxpass.Margin = new System.Windows.Forms.Padding(4);
             this.txtbxpass.Name = "txtbxpass";
             this.txtbxpass.PasswordChar = '*';
-            this.txtbxpass.Size = new System.Drawing.Size(296, 30);
+            this.txtbxpass.Size = new System.Drawing.Size(296, 36);
             this.txtbxpass.TabIndex = 1;
             // 
             // label1
@@ -79,7 +79,7 @@
             this.label1.Location = new System.Drawing.Point(344, 360);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 16);
+            this.label1.Size = new System.Drawing.Size(88, 21);
             this.label1.TabIndex = 2;
             this.label1.Text = "Username";
             // 
@@ -93,7 +93,7 @@
             this.label2.Location = new System.Drawing.Point(343, 429);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 16);
+            this.label2.Size = new System.Drawing.Size(86, 21);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password";
             // 
@@ -107,7 +107,7 @@
             this.btnlogin.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.btnlogin.ForeColor = System.Drawing.Color.White;
             this.btnlogin.Location = new System.Drawing.Point(489, 502);
-            this.btnlogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnlogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(124, 39);
             this.btnlogin.TabIndex = 4;
@@ -122,7 +122,7 @@
             this.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnclose.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.btnclose.Location = new System.Drawing.Point(348, 502);
-            this.btnclose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnclose.Margin = new System.Windows.Forms.Padding(4);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(124, 39);
             this.btnclose.TabIndex = 5;
@@ -137,10 +137,10 @@
             this.lbl_Register.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Register.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Register.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lbl_Register.Location = new System.Drawing.Point(608, 546);
+            this.lbl_Register.Location = new System.Drawing.Point(566, 546);
             this.lbl_Register.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Register.Name = "lbl_Register";
-            this.lbl_Register.Size = new System.Drawing.Size(54, 16);
+            this.lbl_Register.Size = new System.Drawing.Size(69, 21);
             this.lbl_Register.TabIndex = 6;
             this.lbl_Register.Text = "Sign up";
             this.lbl_Register.Click += new System.EventHandler(this.lbl_Register_Click);
@@ -156,7 +156,7 @@
             this.lblLogo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblLogo.Location = new System.Drawing.Point(395, 189);
             this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(278, 106);
+            this.lblLogo.Size = new System.Drawing.Size(348, 134);
             this.lblLogo.TabIndex = 8;
             this.lblLogo.Text = "Bank\r\nCorporation";
             // 
@@ -212,7 +212,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label3.Location = new System.Drawing.Point(348, 548);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 16);
+            this.label3.Size = new System.Drawing.Size(206, 19);
             this.label3.TabIndex = 9;
             this.label3.Text = "Don\'t have an account?";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -225,7 +225,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_Login";
             this.Size = new System.Drawing.Size(1000, 800);
             this.Load += new System.EventHandler(this.UC_Login_Load);

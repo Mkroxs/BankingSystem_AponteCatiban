@@ -50,7 +50,7 @@
             this.lbl_rembal.Location = new System.Drawing.Point(290, 20);
             this.lbl_rembal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_rembal.Name = "lbl_rembal";
-            this.lbl_rembal.Size = new System.Drawing.Size(22, 22);
+            this.lbl_rembal.Size = new System.Drawing.Size(29, 30);
             this.lbl_rembal.TabIndex = 31;
             this.lbl_rembal.Text = "--";
             // 
@@ -62,7 +62,7 @@
             this.lbl_accname.Location = new System.Drawing.Point(238, 22);
             this.lbl_accname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_accname.Name = "lbl_accname";
-            this.lbl_accname.Size = new System.Drawing.Size(22, 22);
+            this.lbl_accname.Size = new System.Drawing.Size(29, 30);
             this.lbl_accname.TabIndex = 30;
             this.lbl_accname.Text = "--";
             // 
@@ -74,7 +74,7 @@
             this.lbl_accnum.Location = new System.Drawing.Point(258, 22);
             this.lbl_accnum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_accnum.Name = "lbl_accnum";
-            this.lbl_accnum.Size = new System.Drawing.Size(22, 22);
+            this.lbl_accnum.Size = new System.Drawing.Size(29, 30);
             this.lbl_accnum.TabIndex = 29;
             this.lbl_accnum.Text = "--";
             this.lbl_accnum.Click += new System.EventHandler(this.lbl_accnum_Click);
@@ -87,7 +87,7 @@
             this.label4.Location = new System.Drawing.Point(14, 22);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(196, 23);
+            this.label4.Size = new System.Drawing.Size(246, 28);
             this.label4.TabIndex = 28;
             this.label4.Text = "Remaining Balance:";
             // 
@@ -99,7 +99,7 @@
             this.label3.Location = new System.Drawing.Point(14, 22);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(155, 23);
+            this.label3.Size = new System.Drawing.Size(196, 28);
             this.label3.TabIndex = 27;
             this.label3.Text = "Account Name:";
             // 
@@ -111,35 +111,38 @@
             this.label2.Location = new System.Drawing.Point(14, 22);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 23);
+            this.label2.Size = new System.Drawing.Size(218, 28);
             this.label2.TabIndex = 26;
             this.label2.Text = "Account Number:";
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.lbl_rembal);
             this.panel1.Location = new System.Drawing.Point(14, 190);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(670, 68);
+            this.panel1.Size = new System.Drawing.Size(795, 68);
             this.panel1.TabIndex = 32;
             // 
             // panel2
             // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.lbl_accname);
             this.panel2.Location = new System.Drawing.Point(14, 20);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(670, 68);
+            this.panel2.Size = new System.Drawing.Size(795, 68);
             this.panel2.TabIndex = 33;
             // 
             // panel3
             // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.lbl_accnum);
             this.panel3.Location = new System.Drawing.Point(14, 104);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(670, 68);
+            this.panel3.Size = new System.Drawing.Size(795, 68);
             this.panel3.TabIndex = 33;
             // 
             // UC_CheckBalance_Cus
@@ -151,9 +154,9 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_CheckBalance_Cus";
-            this.Size = new System.Drawing.Size(1600, 862);
+            this.Size = new System.Drawing.Size(1629, 862);
             this.Load += new System.EventHandler(this.UC_CheckBalance_Cus_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

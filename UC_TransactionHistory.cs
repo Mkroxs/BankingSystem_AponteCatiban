@@ -36,6 +36,7 @@ namespace BankingSystem_AponteCatiban
         public void LoadTransactionHistory()
         {
             var mainform = this.FindForm() as MainForm;
+
             if (mainform == null || mainform.LoggedInCustomer == null)
                 return;
 
@@ -115,6 +116,12 @@ namespace BankingSystem_AponteCatiban
             {
                 MessageBox.Show("Error loading transactions: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            if (dgv_cuslist.Columns.Contains("customerAccountNumber"))
+            {
+                dgv_cuslist.Columns["customerAccountNumber"].HeaderText = "Account Number";
+            }
+
         }
 
         private void dgv_cuslist_CellClick(object sender, DataGridViewCellEventArgs e)

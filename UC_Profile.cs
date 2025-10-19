@@ -70,7 +70,7 @@ namespace BankingSystem_AponteCatiban
                 if (File.Exists(fullImagePath))
                 {
                     pictureBox1.Image = Image.FromFile(fullImagePath);
-                    pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+                    pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
                 else
                 {
@@ -127,6 +127,11 @@ namespace BankingSystem_AponteCatiban
         }
 
         private void lblage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

@@ -226,6 +226,8 @@ namespace BankingSystem_AponteCatiban
             ActivateButton(sender, RGBColors.color5);
             OpenChildControl(customerProfile);
             lblTitleChildForm.Text = "Customer Profile";
+            customerProfile.LoadCustomerData();
+            
         }
 
         
@@ -255,6 +257,7 @@ namespace BankingSystem_AponteCatiban
             ActivateButton(sender, RGBColors.color1);
             OpenChildControl(profile);
             lblTitleChildForm.Text = "Profile";
+            profile.LoadCustomerData();
         }
 
         private void btnCheckBalance2_Click(object sender, EventArgs e)

@@ -22,6 +22,7 @@ namespace BankingSystem_AponteCatiban
             this.AutoScaleMode = AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            
         }
 
         private void clearField()
@@ -42,7 +43,10 @@ namespace BankingSystem_AponteCatiban
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-
+            txtbxpass.PasswordChar = hidepass.PasswordChar;
+            iconButton1.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
+            iconButton1.IconColor = Color.FromArgb(64, 64, 64);
+            txtbxpass.PasswordChar = hidepass.PasswordChar;
             string filePath = Path.Combine(Application.StartupPath, "Data", "customers.txt");
 
             string username = txtbxuser.Text.Trim();
@@ -125,6 +129,10 @@ namespace BankingSystem_AponteCatiban
 
         private void lbl_Register_Click(object sender, EventArgs e)
         {
+            txtbxpass.PasswordChar = hidepass.PasswordChar;
+            iconButton1.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
+            iconButton1.IconColor = Color.FromArgb(64, 64, 64);
+            txtbxpass.PasswordChar = hidepass.PasswordChar;
             var mainform = this.FindForm() as MainForm;
             if (mainform != null)
             {
@@ -183,6 +191,30 @@ namespace BankingSystem_AponteCatiban
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+
+
+            if (txtbxpass.PasswordChar == hidepass.PasswordChar)
+            {
+                iconButton1.IconChar = FontAwesome.Sharp.IconChar.Eye;
+                txtbxpass.PasswordChar = showpass.PasswordChar;
+                iconButton1.IconColor = Color.Black;
+
+            }else if (txtbxpass.PasswordChar == showpass.PasswordChar)
+            {
+                iconButton1.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
+                iconButton1.IconColor = Color.FromArgb(64, 64, 64);
+                txtbxpass.PasswordChar = hidepass.PasswordChar;
+            }
+            
+        }
+
+        private void txtbxpass_TextChanged(object sender, EventArgs e)
         {
 
         }

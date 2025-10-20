@@ -73,7 +73,7 @@ namespace BankingSystem_AponteCatiban
         }
 
         
-        private void ClearCustomerDisplay()
+        public void ClearCustomerDisplay()
         {
             lbl_accname.Text = "-";
             lbl_currbal.Text = "₱0.00";
@@ -82,7 +82,7 @@ namespace BankingSystem_AponteCatiban
             ClearDenominations();
         }
 
-        private void ClearDenominations()
+        public void ClearDenominations()
         {
             txt1000.Clear();
             txt500.Clear();

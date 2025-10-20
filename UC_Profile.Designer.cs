@@ -272,7 +272,7 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.lbl_cusid);
             this.panel1.Location = new System.Drawing.Point(162, 72);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(284, 43);
             this.panel1.TabIndex = 44;
@@ -283,7 +283,7 @@
             this.panel2.Controls.Add(this.lbl_accnum);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Location = new System.Drawing.Point(162, 26);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(284, 43);
             this.panel2.TabIndex = 45;
@@ -294,7 +294,7 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.lbl_email);
             this.panel3.Location = new System.Drawing.Point(2, 143);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(669, 43);
             this.panel3.TabIndex = 45;
@@ -304,10 +304,10 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.lbl_civilstatus);
-            this.panel4.Location = new System.Drawing.Point(322, 49);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Location = new System.Drawing.Point(402, 96);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(348, 43);
+            this.panel4.Size = new System.Drawing.Size(270, 43);
             this.panel4.TabIndex = 45;
             // 
             // panel5
@@ -315,10 +315,10 @@
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.lbl_cnum);
-            this.panel5.Location = new System.Drawing.Point(322, 2);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Location = new System.Drawing.Point(2, 96);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(348, 43);
+            this.panel5.Size = new System.Drawing.Size(396, 43);
             this.panel5.TabIndex = 45;
             // 
             // panel6
@@ -327,7 +327,7 @@
             this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.lbl_address);
             this.panel6.Location = new System.Drawing.Point(2, 190);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(669, 43);
             this.panel6.TabIndex = 45;
@@ -337,10 +337,10 @@
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.label3);
             this.panel7.Controls.Add(this.lbl_bdate);
-            this.panel7.Location = new System.Drawing.Point(322, 96);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Location = new System.Drawing.Point(402, 49);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(348, 43);
+            this.panel7.Size = new System.Drawing.Size(270, 43);
             this.panel7.TabIndex = 45;
             // 
             // panel8
@@ -349,9 +349,9 @@
             this.panel8.Controls.Add(this.label2);
             this.panel8.Controls.Add(this.lbl_gender);
             this.panel8.Location = new System.Drawing.Point(2, 49);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(316, 43);
+            this.panel8.Size = new System.Drawing.Size(396, 43);
             this.panel8.TabIndex = 45;
             // 
             // panel9
@@ -360,25 +360,25 @@
             this.panel9.Controls.Add(this.label8);
             this.panel9.Controls.Add(this.lbl_name);
             this.panel9.Location = new System.Drawing.Point(2, 2);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(316, 43);
+            this.panel9.Size = new System.Drawing.Size(396, 43);
             this.panel9.TabIndex = 45;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.panel9);
-            this.flowLayoutPanel1.Controls.Add(this.panel5);
-            this.flowLayoutPanel1.Controls.Add(this.panel8);
-            this.flowLayoutPanel1.Controls.Add(this.panel4);
             this.flowLayoutPanel1.Controls.Add(this.panel10);
+            this.flowLayoutPanel1.Controls.Add(this.panel8);
             this.flowLayoutPanel1.Controls.Add(this.panel7);
+            this.flowLayoutPanel1.Controls.Add(this.panel5);
+            this.flowLayoutPanel1.Controls.Add(this.panel4);
             this.flowLayoutPanel1.Controls.Add(this.panel3);
             this.flowLayoutPanel1.Controls.Add(this.panel6);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(14, 161);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(675, 242);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(812, 242);
             this.flowLayoutPanel1.TabIndex = 46;
             // 
             // panel10
@@ -386,10 +386,10 @@
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel10.Controls.Add(this.label10);
             this.panel10.Controls.Add(this.lblage);
-            this.panel10.Location = new System.Drawing.Point(2, 96);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel10.Location = new System.Drawing.Point(402, 2);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(316, 43);
+            this.panel10.Size = new System.Drawing.Size(270, 43);
             this.panel10.TabIndex = 47;
             // 
             // label10

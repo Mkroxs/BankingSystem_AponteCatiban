@@ -198,6 +198,7 @@ namespace BankingSystem_AponteCatiban
 
             lblTitleChildForm.Text = "Registration";
             registration.panelTitle.Visible = false;
+            registration.ClearFields();
         }
 
         private void btnDeposit_Click(object sender, EventArgs e)
@@ -205,6 +206,9 @@ namespace BankingSystem_AponteCatiban
             ActivateButton(sender, RGBColors.color2);
             OpenChildControl(deposit_Admin);
             lblTitleChildForm.Text = "Deposit";
+            deposit_Admin.ClearCustomerDisplay();
+            deposit_Admin.ClearDenominations();
+            deposit_Admin.txt_accnum.Text = string.Empty;
         }
 
         private void btnWithdraw_Click(object sender, EventArgs e)
@@ -212,6 +216,7 @@ namespace BankingSystem_AponteCatiban
             ActivateButton(sender, RGBColors.color3);
             OpenChildControl(withdraw);
             lblTitleChildForm.Text = "Withdraw";
+            withdraw.ClearField();
         }
 
         private void btnCheckBalance_Click(object sender, EventArgs e)
@@ -219,6 +224,7 @@ namespace BankingSystem_AponteCatiban
             ActivateButton(sender, RGBColors.color4);
             OpenChildControl(checkBalance_Admin);
             lblTitleChildForm.Text = "Check Balance";
+            checkBalance_Admin.clearField();
         }
 
         private void btnCustomerProfile_Click(object sender, EventArgs e)
@@ -227,6 +233,7 @@ namespace BankingSystem_AponteCatiban
             OpenChildControl(customerProfile);
             lblTitleChildForm.Text = "Customer Profile";
             customerProfile.LoadCustomerData();
+            customerProfile.clearField();
             
         }
 
@@ -250,6 +257,7 @@ namespace BankingSystem_AponteCatiban
             ActivateButton(sender, RGBColors.color2);
             OpenChildControl(deposit_customer);
             lblTitleChildForm.Text = "Deposit";
+            deposit_customer.ClearDenominations();
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
@@ -272,6 +280,7 @@ namespace BankingSystem_AponteCatiban
             ActivateButton(sender, RGBColors.color4);
             OpenChildControl(transactionHistory);
             lblTitleChildForm.Text = "Transaction History";
+            transactionHistory.ResetLabels();
         }
 
         private void btnLogout2_Click(object sender, EventArgs e)

@@ -92,6 +92,13 @@ namespace BankingSystem_AponteCatiban
             }
         }
 
+        public void clearField()
+        {
+            tbxAccountNumber.Text = string.Empty;
+            lbl_accnum.Text = "-";
+            lbl_accname.Text = "-";
+            lbl_rembal.Text = "₱0.00";
+        }
         
 
         private void lbl_accnum_Click(object sender, EventArgs e) { }

@@ -98,7 +98,7 @@
             this.lbl_cnum.BackColor = System.Drawing.Color.Transparent;
             this.lbl_cnum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_cnum.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_cnum.Location = new System.Drawing.Point(134, 5);
+            this.lbl_cnum.Location = new System.Drawing.Point(148, 4);
             this.lbl_cnum.Name = "lbl_cnum";
             this.lbl_cnum.Size = new System.Drawing.Size(19, 20);
             this.lbl_cnum.TabIndex = 57;
@@ -171,7 +171,7 @@
             this.lbl_cusid.BackColor = System.Drawing.Color.Transparent;
             this.lbl_cusid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_cusid.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_cusid.Location = new System.Drawing.Point(105, 3);
+            this.lbl_cusid.Location = new System.Drawing.Point(110, 2);
             this.lbl_cusid.Name = "lbl_cusid";
             this.lbl_cusid.Size = new System.Drawing.Size(19, 20);
             this.lbl_cusid.TabIndex = 51;
@@ -307,9 +307,10 @@
             this.dgv_cuslist.Location = new System.Drawing.Point(3, 345);
             this.dgv_cuslist.Name = "dgv_cuslist";
             this.dgv_cuslist.RowHeadersWidth = 51;
-            this.dgv_cuslist.Size = new System.Drawing.Size(790, 190);
+            this.dgv_cuslist.Size = new System.Drawing.Size(757, 190);
             this.dgv_cuslist.TabIndex = 62;
             this.dgv_cuslist.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_cuslist_CellClick);
+            this.dgv_cuslist.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_cuslist_CellContentClick);
             // 
             // pictureBox1
             // 
@@ -336,17 +337,18 @@
             this.flowLayoutPanel1.Controls.Add(this.panel6);
             this.flowLayoutPanel1.Controls.Add(this.panel7);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 4);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(791, 316);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(758, 316);
             this.flowLayoutPanel1.TabIndex = 64;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // panel10
             // 
             this.panel10.Controls.Add(this.panel8);
             this.panel10.Controls.Add(this.panel9);
             this.panel10.Location = new System.Drawing.Point(152, 2);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(325, 98);
             this.panel10.TabIndex = 52;
@@ -357,7 +359,7 @@
             this.panel8.Controls.Add(this.label7);
             this.panel8.Controls.Add(this.lbl_cusid);
             this.panel8.Location = new System.Drawing.Point(2, 16);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(320, 34);
             this.panel8.TabIndex = 1;
@@ -368,7 +370,7 @@
             this.panel9.Controls.Add(this.label9);
             this.panel9.Controls.Add(this.lbl_accnum);
             this.panel9.Location = new System.Drawing.Point(2, 50);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(320, 34);
             this.panel9.TabIndex = 1;
@@ -376,7 +378,7 @@
             // panel11
             // 
             this.panel11.Location = new System.Drawing.Point(481, 2);
-            this.panel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(237, 65);
             this.panel11.TabIndex = 53;
@@ -387,7 +389,7 @@
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.lbl_name);
             this.panel2.Location = new System.Drawing.Point(2, 124);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(422, 34);
             this.panel2.TabIndex = 1;
@@ -399,9 +401,9 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.lbl_cnum);
             this.panel1.Location = new System.Drawing.Point(428, 124);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(358, 34);
+            this.panel1.Size = new System.Drawing.Size(326, 34);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -411,7 +413,7 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.lbl_gender);
             this.panel3.Location = new System.Drawing.Point(2, 162);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(422, 34);
             this.panel3.TabIndex = 1;
@@ -422,10 +424,11 @@
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.lbl_civilstatus);
             this.panel4.Location = new System.Drawing.Point(428, 162);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(358, 34);
+            this.panel4.Size = new System.Drawing.Size(326, 34);
             this.panel4.TabIndex = 1;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // panel12
             // 
@@ -433,7 +436,7 @@
             this.panel12.Controls.Add(this.label1);
             this.panel12.Controls.Add(this.lblage);
             this.panel12.Location = new System.Drawing.Point(2, 200);
-            this.panel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(422, 34);
             this.panel12.TabIndex = 56;
@@ -467,10 +470,11 @@
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.lbl_bdate);
             this.panel5.Location = new System.Drawing.Point(428, 200);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(358, 34);
+            this.panel5.Size = new System.Drawing.Size(326, 34);
             this.panel5.TabIndex = 2;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // panel6
             // 
@@ -478,10 +482,11 @@
             this.panel6.Controls.Add(this.label11);
             this.panel6.Controls.Add(this.lbl_eaddress);
             this.panel6.Location = new System.Drawing.Point(2, 238);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(784, 34);
+            this.panel6.Size = new System.Drawing.Size(752, 34);
             this.panel6.TabIndex = 2;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // panel7
             // 
@@ -489,10 +494,11 @@
             this.panel7.Controls.Add(this.label4);
             this.panel7.Controls.Add(this.lbl_address);
             this.panel7.Location = new System.Drawing.Point(2, 276);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(784, 34);
+            this.panel7.Size = new System.Drawing.Size(752, 34);
             this.panel7.TabIndex = 2;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // UC_CustomerProfile
             // 
@@ -504,7 +510,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.DoubleBuffered = true;
             this.Name = "UC_CustomerProfile";
-            this.Size = new System.Drawing.Size(1200, 700);
+            this.Size = new System.Drawing.Size(1212, 700);
             this.Load += new System.EventHandler(this.UC_CustomerProfile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_cuslist)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -108,7 +108,7 @@ namespace BankingSystem_AponteCatiban
                 if (birthdate > DateTime.Now.AddYears(-age)) age--;
                 if (birthdate > DateTime.Now || age <= 0)
                 {
-                    MessageBox.Show("Birthdate cannot be 0 years old", "Invalid Birthdate", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Age cannot be 0", "Invalid Birthdate", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -296,6 +296,20 @@ namespace BankingSystem_AponteCatiban
         private void btnClear_Click(object sender, EventArgs e)
         {
             ClearFields() ;
+        }
+
+        private void tbxInitialDeposit_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbx_name_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                return;
+            }
         }
     }
 }

@@ -17,7 +17,7 @@ namespace BankingSystem_AponteCatiban
             InitializeComponent();
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 
-            // Enable responsive scaling
+            
             this.AutoScaleMode = AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
@@ -119,7 +119,7 @@ namespace BankingSystem_AponteCatiban
             clearField();
         }
 
-        private void clearField()
+        public void clearField()
         {
             lbl_cusid.Text = "—";
             lbl_accnum.Text = "—";
@@ -174,5 +174,35 @@ namespace BankingSystem_AponteCatiban
         private void lbl_eaddress_Click(object sender, EventArgs e) { }
         private void lbl_cusid_Click(object sender, EventArgs e) { }
         private void panel1_Paint(object sender, PaintEventArgs e) { }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgv_cuslist_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

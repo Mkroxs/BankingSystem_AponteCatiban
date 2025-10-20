@@ -146,6 +146,7 @@
             this.txtbx_name.Size = new System.Drawing.Size(380, 26);
             this.txtbx_name.TabIndex = 8;
             this.txtbx_name.TextChanged += new System.EventHandler(this.txtbx_name_TextChanged);
+            this.txtbx_name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbx_name_KeyPress);
             // 
             // txtbx_address
             // 
@@ -264,7 +265,7 @@
             this.btn_upload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_upload.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btn_upload.ForeColor = System.Drawing.Color.Black;
-            this.btn_upload.Location = new System.Drawing.Point(632, 176);
+            this.btn_upload.Location = new System.Drawing.Point(618, 176);
             this.btn_upload.Name = "btn_upload";
             this.btn_upload.Size = new System.Drawing.Size(89, 32);
             this.btn_upload.TabIndex = 35;
@@ -330,7 +331,7 @@
             this.panel1.Controls.Add(this.txtbx_cnum);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 89);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1200, 611);
             this.panel1.TabIndex = 82;
@@ -356,15 +357,16 @@
             // 
             this.tbxInitialDeposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxInitialDeposit.Location = new System.Drawing.Point(168, 320);
-            this.tbxInitialDeposit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxInitialDeposit.Margin = new System.Windows.Forms.Padding(2);
             this.tbxInitialDeposit.Name = "tbxInitialDeposit";
             this.tbxInitialDeposit.Size = new System.Drawing.Size(114, 26);
             this.tbxInitialDeposit.TabIndex = 82;
+            this.tbxInitialDeposit.TextChanged += new System.EventHandler(this.tbxInitialDeposit_TextChanged);
             // 
             // pbx_profile
             // 
             this.pbx_profile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbx_profile.Location = new System.Drawing.Point(586, 24);
+            this.pbx_profile.Location = new System.Drawing.Point(572, 24);
             this.pbx_profile.Name = "pbx_profile";
             this.pbx_profile.Size = new System.Drawing.Size(185, 139);
             this.pbx_profile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

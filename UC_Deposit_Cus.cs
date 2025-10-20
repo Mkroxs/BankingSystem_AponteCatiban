@@ -65,7 +65,7 @@ namespace BankingSystem_AponteCatiban
             return 0;
         }
 
-        private void ClearDenominations()
+        public void ClearDenominations()
         {
             txt1000.Text = "";
             txt500.Text = "";

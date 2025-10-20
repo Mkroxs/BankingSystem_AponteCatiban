@@ -68,10 +68,10 @@
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
             this.panelTitleBar.Controls.Add(this.lblTitleChildForm);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(443, 0);
+            this.panelTitleBar.Location = new System.Drawing.Point(456, 0);
             this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(457, 99);
+            this.panelTitleBar.Size = new System.Drawing.Size(444, 99);
             this.panelTitleBar.TabIndex = 2;
             this.panelTitleBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTitleBar_Paint);
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
@@ -92,10 +92,10 @@
             this.panelDesktop.BackColor = System.Drawing.Color.Silver;
             this.panelDesktop.Controls.Add(this.panel1);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(443, 99);
+            this.panelDesktop.Location = new System.Drawing.Point(456, 99);
             this.panelDesktop.Margin = new System.Windows.Forms.Padding(2);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(457, 551);
+            this.panelDesktop.Size = new System.Drawing.Size(444, 551);
             this.panelDesktop.TabIndex = 3;
             // 
             // panel1
@@ -105,7 +105,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(457, 551);
+            this.panel1.Size = new System.Drawing.Size(444, 551);
             this.panel1.TabIndex = 8;
             // 
             // panel3
@@ -114,7 +114,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(457, 551);
+            this.panel3.Size = new System.Drawing.Size(444, 551);
             this.panel3.TabIndex = 12;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -127,18 +127,18 @@
             this.panelLogo.Margin = new System.Windows.Forms.Padding(2);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
-            this.panelLogo.Size = new System.Drawing.Size(217, 99);
+            this.panelLogo.Size = new System.Drawing.Size(228, 99);
             this.panelLogo.TabIndex = 0;
             // 
             // lblLogo
             // 
             this.lblLogo.AutoSize = true;
-            this.lblLogo.Font = new System.Drawing.Font("Britannic Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogo.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblLogo.Location = new System.Drawing.Point(74, 34);
+            this.lblLogo.Location = new System.Drawing.Point(76, 28);
             this.lblLogo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(109, 42);
+            this.lblLogo.Size = new System.Drawing.Size(121, 46);
             this.lblLogo.TabIndex = 1;
             this.lblLogo.Text = "Bank\r\nCorporation";
             this.lblLogo.Click += new System.EventHandler(this.lblLogo_Click);
@@ -160,18 +160,18 @@
             this.btnRegisterCustomer.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRegisterCustomer.FlatAppearance.BorderSize = 0;
             this.btnRegisterCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegisterCustomer.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnRegisterCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegisterCustomer.ForeColor = System.Drawing.SystemColors.Control;
             this.btnRegisterCustomer.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
             this.btnRegisterCustomer.IconColor = System.Drawing.Color.White;
             this.btnRegisterCustomer.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRegisterCustomer.IconSize = 32;
             this.btnRegisterCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegisterCustomer.Location = new System.Drawing.Point(0, 307);
+            this.btnRegisterCustomer.Location = new System.Drawing.Point(0, 391);
             this.btnRegisterCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegisterCustomer.Name = "btnRegisterCustomer";
             this.btnRegisterCustomer.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
-            this.btnRegisterCustomer.Size = new System.Drawing.Size(217, 49);
+            this.btnRegisterCustomer.Size = new System.Drawing.Size(228, 73);
             this.btnRegisterCustomer.TabIndex = 1;
             this.btnRegisterCustomer.Text = "Register Customer";
             this.btnRegisterCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -184,18 +184,18 @@
             this.btnDeposit.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDeposit.FlatAppearance.BorderSize = 0;
             this.btnDeposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeposit.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnDeposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeposit.ForeColor = System.Drawing.SystemColors.Control;
             this.btnDeposit.IconChar = FontAwesome.Sharp.IconChar.MoneyBillTransfer;
             this.btnDeposit.IconColor = System.Drawing.Color.White;
             this.btnDeposit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDeposit.IconSize = 32;
             this.btnDeposit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeposit.Location = new System.Drawing.Point(0, 209);
+            this.btnDeposit.Location = new System.Drawing.Point(0, 245);
             this.btnDeposit.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeposit.Name = "btnDeposit";
             this.btnDeposit.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
-            this.btnDeposit.Size = new System.Drawing.Size(217, 49);
+            this.btnDeposit.Size = new System.Drawing.Size(228, 73);
             this.btnDeposit.TabIndex = 2;
             this.btnDeposit.Text = "Deposit";
             this.btnDeposit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -208,18 +208,18 @@
             this.btnWithdraw.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnWithdraw.FlatAppearance.BorderSize = 0;
             this.btnWithdraw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWithdraw.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnWithdraw.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnWithdraw.ForeColor = System.Drawing.SystemColors.Control;
             this.btnWithdraw.IconChar = FontAwesome.Sharp.IconChar.MoneyBillAlt;
             this.btnWithdraw.IconColor = System.Drawing.Color.White;
             this.btnWithdraw.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnWithdraw.IconSize = 32;
             this.btnWithdraw.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnWithdraw.Location = new System.Drawing.Point(0, 160);
+            this.btnWithdraw.Location = new System.Drawing.Point(0, 172);
             this.btnWithdraw.Margin = new System.Windows.Forms.Padding(2);
             this.btnWithdraw.Name = "btnWithdraw";
             this.btnWithdraw.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
-            this.btnWithdraw.Size = new System.Drawing.Size(217, 49);
+            this.btnWithdraw.Size = new System.Drawing.Size(228, 73);
             this.btnWithdraw.TabIndex = 3;
             this.btnWithdraw.Text = "Withdraw";
             this.btnWithdraw.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -232,18 +232,18 @@
             this.btnCheckBalance.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCheckBalance.FlatAppearance.BorderSize = 0;
             this.btnCheckBalance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheckBalance.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnCheckBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckBalance.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCheckBalance.IconChar = FontAwesome.Sharp.IconChar.Coins;
             this.btnCheckBalance.IconColor = System.Drawing.Color.White;
             this.btnCheckBalance.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCheckBalance.IconSize = 32;
             this.btnCheckBalance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCheckBalance.Location = new System.Drawing.Point(0, 258);
+            this.btnCheckBalance.Location = new System.Drawing.Point(0, 318);
             this.btnCheckBalance.Margin = new System.Windows.Forms.Padding(2);
             this.btnCheckBalance.Name = "btnCheckBalance";
             this.btnCheckBalance.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
-            this.btnCheckBalance.Size = new System.Drawing.Size(217, 49);
+            this.btnCheckBalance.Size = new System.Drawing.Size(228, 73);
             this.btnCheckBalance.TabIndex = 4;
             this.btnCheckBalance.Text = "Check Balance";
             this.btnCheckBalance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -256,7 +256,7 @@
             this.btnCustomerProfile.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCustomerProfile.FlatAppearance.BorderSize = 0;
             this.btnCustomerProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomerProfile.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomerProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCustomerProfile.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCustomerProfile.IconChar = FontAwesome.Sharp.IconChar.User;
             this.btnCustomerProfile.IconColor = System.Drawing.Color.White;
@@ -267,7 +267,7 @@
             this.btnCustomerProfile.Margin = new System.Windows.Forms.Padding(2);
             this.btnCustomerProfile.Name = "btnCustomerProfile";
             this.btnCustomerProfile.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
-            this.btnCustomerProfile.Size = new System.Drawing.Size(217, 61);
+            this.btnCustomerProfile.Size = new System.Drawing.Size(228, 73);
             this.btnCustomerProfile.TabIndex = 5;
             this.btnCustomerProfile.Text = "Customer Profile";
             this.btnCustomerProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -280,7 +280,7 @@
             this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLogout.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
             this.btnLogout.IconColor = System.Drawing.Color.White;
@@ -291,7 +291,7 @@
             this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
-            this.btnLogout.Size = new System.Drawing.Size(217, 70);
+            this.btnLogout.Size = new System.Drawing.Size(228, 70);
             this.btnLogout.TabIndex = 6;
             this.btnLogout.Text = "Log out";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -310,10 +310,10 @@
             this.panelMenu.Controls.Add(this.btnLogout);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu.Location = new System.Drawing.Point(226, 0);
+            this.panelMenu.Location = new System.Drawing.Point(228, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(217, 650);
+            this.panelMenu.Size = new System.Drawing.Size(228, 650);
             this.panelMenu.TabIndex = 1;
             // 
             // panelCustomer
@@ -329,7 +329,7 @@
             this.panelCustomer.Location = new System.Drawing.Point(0, 0);
             this.panelCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.panelCustomer.Name = "panelCustomer";
-            this.panelCustomer.Size = new System.Drawing.Size(226, 650);
+            this.panelCustomer.Size = new System.Drawing.Size(228, 650);
             this.panelCustomer.TabIndex = 4;
             // 
             // btnLogout2
@@ -337,7 +337,7 @@
             this.btnLogout2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnLogout2.FlatAppearance.BorderSize = 0;
             this.btnLogout2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout2.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLogout2.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
             this.btnLogout2.IconColor = System.Drawing.Color.White;
@@ -348,7 +348,7 @@
             this.btnLogout2.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout2.Name = "btnLogout2";
             this.btnLogout2.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
-            this.btnLogout2.Size = new System.Drawing.Size(226, 70);
+            this.btnLogout2.Size = new System.Drawing.Size(228, 70);
             this.btnLogout2.TabIndex = 6;
             this.btnLogout2.Text = "Log out";
             this.btnLogout2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -361,18 +361,18 @@
             this.btnTransactionHistory.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTransactionHistory.FlatAppearance.BorderSize = 0;
             this.btnTransactionHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTransactionHistory.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnTransactionHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTransactionHistory.ForeColor = System.Drawing.SystemColors.Control;
             this.btnTransactionHistory.IconChar = FontAwesome.Sharp.IconChar.Receipt;
             this.btnTransactionHistory.IconColor = System.Drawing.Color.White;
             this.btnTransactionHistory.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTransactionHistory.IconSize = 32;
             this.btnTransactionHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTransactionHistory.Location = new System.Drawing.Point(0, 246);
+            this.btnTransactionHistory.Location = new System.Drawing.Point(0, 318);
             this.btnTransactionHistory.Margin = new System.Windows.Forms.Padding(2);
             this.btnTransactionHistory.Name = "btnTransactionHistory";
             this.btnTransactionHistory.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
-            this.btnTransactionHistory.Size = new System.Drawing.Size(226, 49);
+            this.btnTransactionHistory.Size = new System.Drawing.Size(228, 73);
             this.btnTransactionHistory.TabIndex = 5;
             this.btnTransactionHistory.Text = "Transaction History";
             this.btnTransactionHistory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -385,18 +385,18 @@
             this.btnCheckBalance2.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCheckBalance2.FlatAppearance.BorderSize = 0;
             this.btnCheckBalance2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheckBalance2.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnCheckBalance2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckBalance2.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCheckBalance2.IconChar = FontAwesome.Sharp.IconChar.Coins;
             this.btnCheckBalance2.IconColor = System.Drawing.Color.White;
             this.btnCheckBalance2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCheckBalance2.IconSize = 32;
             this.btnCheckBalance2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCheckBalance2.Location = new System.Drawing.Point(0, 197);
+            this.btnCheckBalance2.Location = new System.Drawing.Point(0, 245);
             this.btnCheckBalance2.Margin = new System.Windows.Forms.Padding(2);
             this.btnCheckBalance2.Name = "btnCheckBalance2";
             this.btnCheckBalance2.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
-            this.btnCheckBalance2.Size = new System.Drawing.Size(226, 49);
+            this.btnCheckBalance2.Size = new System.Drawing.Size(228, 73);
             this.btnCheckBalance2.TabIndex = 4;
             this.btnCheckBalance2.Text = "Check Balance";
             this.btnCheckBalance2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -409,18 +409,18 @@
             this.btnDeposit2.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDeposit2.FlatAppearance.BorderSize = 0;
             this.btnDeposit2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeposit2.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnDeposit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeposit2.ForeColor = System.Drawing.SystemColors.Control;
             this.btnDeposit2.IconChar = FontAwesome.Sharp.IconChar.MoneyBillTransfer;
             this.btnDeposit2.IconColor = System.Drawing.Color.White;
             this.btnDeposit2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDeposit2.IconSize = 32;
             this.btnDeposit2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeposit2.Location = new System.Drawing.Point(0, 148);
+            this.btnDeposit2.Location = new System.Drawing.Point(0, 172);
             this.btnDeposit2.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeposit2.Name = "btnDeposit2";
             this.btnDeposit2.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
-            this.btnDeposit2.Size = new System.Drawing.Size(226, 49);
+            this.btnDeposit2.Size = new System.Drawing.Size(228, 73);
             this.btnDeposit2.TabIndex = 2;
             this.btnDeposit2.Text = "Deposit";
             this.btnDeposit2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -433,7 +433,7 @@
             this.btnProfile.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnProfile.FlatAppearance.BorderSize = 0;
             this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfile.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile.ForeColor = System.Drawing.SystemColors.Control;
             this.btnProfile.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
             this.btnProfile.IconColor = System.Drawing.Color.White;
@@ -444,7 +444,7 @@
             this.btnProfile.Margin = new System.Windows.Forms.Padding(2);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
-            this.btnProfile.Size = new System.Drawing.Size(226, 49);
+            this.btnProfile.Size = new System.Drawing.Size(228, 73);
             this.btnProfile.TabIndex = 1;
             this.btnProfile.Text = "Profile";
             this.btnProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -461,18 +461,18 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(8, 0, 15, 0);
-            this.panel2.Size = new System.Drawing.Size(226, 99);
+            this.panel2.Size = new System.Drawing.Size(228, 99);
             this.panel2.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Britannic Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Britannic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(74, 34);
+            this.label1.Location = new System.Drawing.Point(76, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 42);
+            this.label1.Size = new System.Drawing.Size(121, 46);
             this.label1.TabIndex = 1;
             this.label1.Text = "Bank\r\nCorporation";
             // 

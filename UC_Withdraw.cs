@@ -12,7 +12,7 @@ namespace BankingSystem_AponteCatiban
     {
         private List<Customer> customers = new List<Customer>();
         private Customer selectedCustomer = null;
-
+        private bool isFormatting = false;
         public UC_Withdraw()
         {
             InitializeComponent();
@@ -26,6 +26,7 @@ namespace BankingSystem_AponteCatiban
         private void UC_Withdraw_Load(object sender, EventArgs e)
         {
             LoadCustomerData();
+            SetupAmountTextbox(txtbx_amount);
         }
 
         private void UC_Withdraw_VisibleChanged(object sender, EventArgs e)
@@ -102,43 +103,91 @@ namespace BankingSystem_AponteCatiban
                 e.Handled = true;
         }
 
+        private void SetupAmountTextbox(TextBox textBox)
+        {
+            bool isEditing = false;
+
+         
+            textBox.KeyPress += (s, e) =>
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+                {
+                    e.Handled = true;
+                    return;
+                }
+
+                
+                if (e.KeyChar == '.' && (textBox.Text.Contains('.') || textBox.Text.Length == 0))
+                {
+                    e.Handled = true;
+                }
+            };
+
+            textBox.TextChanged += (s, e) =>
+            {
+                if (isEditing) return;
+                isEditing = true;
+
+                if (selectedCustomer == null)
+                {
+                    lblAmount.Text = "₱0.00";
+                    lbl_newbal.Text = "₱0.00";
+                    isEditing = false;
+                    return;
+                }
+
+                int cursorPos = textBox.SelectionStart;
+                int digitsBeforeCursor = textBox.Text.Substring(0, cursorPos).Count(c => char.IsDigit(c) || c == '.');
+
+                string cleanText = textBox.Text.Replace("₱", "").Replace(",", "").Trim();
+
+                if (string.IsNullOrEmpty(cleanText))
+                {
+                    lblAmount.Text = "₱0.00";
+                    lbl_newbal.Text = $"₱{selectedCustomer.Balance:N2}";
+                    isEditing = false;
+                    return;
+                }
+
+                if (decimal.TryParse(cleanText, out decimal value))
+                {
+                    if (value > selectedCustomer.Balance)
+                        value = selectedCustomer.Balance;
+
+                    textBox.Text = $"₱{value:N2}";
+
+                    int newCursor = 0;
+                    int digitCount = 0;
+                    foreach (char c in textBox.Text)
+                    {
+                        if (char.IsDigit(c) || c == '.')
+                            digitCount++;
+                        newCursor++;
+                        if (digitCount >= digitsBeforeCursor)
+                            break;
+                    }
+                    textBox.SelectionStart = Math.Min(newCursor, textBox.Text.Length);
+
+                    lblAmount.Text = $"₱{value:N2}";
+                    lbl_newbal.Text = $"₱{selectedCustomer.Balance - value:N2}";
+                }
+                else
+                {
+                    lblAmount.Text = "₱0.00";
+                    lbl_newbal.Text = $"₱{selectedCustomer.Balance:N2}";
+                }
+
+                isEditing = false;
+            };
+        }
+
 
         private void txtbx_amount_TextChanged(object sender, EventArgs e)
         {
-            if (selectedCustomer == null)
-            {
-                lblAmount.Text = "₱0.00";
-                lbl_newbal.Text = "₱0.00";
-                return;
-            }
-
-            if (decimal.TryParse(txtbx_amount.Text, out decimal enteredAmount))
-            {
-                if (enteredAmount > selectedCustomer.Balance)
-                {
-                    enteredAmount = selectedCustomer.Balance;
-                    txtbx_amount.Text = enteredAmount.ToString("0.00");
-                    txtbx_amount.SelectionStart = txtbx_amount.Text.Length;
-                }
-
-                lblAmount.Text = $"₱{enteredAmount:N2}";
-                lbl_newbal.Text = $"₱{selectedCustomer.Balance - enteredAmount:N2}";
-            }
-            else
-            {
-                lblAmount.Text = "₱0.00";
-                lbl_newbal.Text = $"₱{selectedCustomer.Balance:N2}";
-            }
         }
 
         private void txtbx_amount_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
-                e.Handled = true;
-
-            if (e.KeyChar == '.' && (sender as TextBox).Text.Contains("."))
-                e.Handled = true;
         }
 
 
@@ -206,7 +255,7 @@ namespace BankingSystem_AponteCatiban
         }
 
 
-        private void ClearField()
+        public void ClearField()
         {
             txtbx_accnum.Clear();
             txtbx_amount.Clear();
@@ -220,6 +269,11 @@ namespace BankingSystem_AponteCatiban
 
 
         private void lblAccountName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbx_amount_KeyUp(object sender, KeyEventArgs e)
         {
 
         }

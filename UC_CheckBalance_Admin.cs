@@ -16,7 +16,7 @@ namespace BankingSystem_AponteCatiban
     {
         private List<Customer> customers = new List<Customer>();
         private Customer selectedCustomer = null;
-
+       
         public UC_CheckBalance_Admin()
         {
             InitializeComponent();
